@@ -4,11 +4,19 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import configureStore from './redux/store/configure-store';
+import { loadProducts } from './redux/actions/product-actions';
+import { Provider } from 'react-redux';
+
+const store = configureStore();
+store.dispatch(loadProducts());
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+	<React.StrictMode>
+		<Provider store={store}>
+			<App />
+		</Provider>
+	</React.StrictMode>,
   document.getElementById('root')
 );
 
