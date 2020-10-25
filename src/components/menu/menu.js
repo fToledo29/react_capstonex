@@ -17,13 +17,22 @@ export const Menu = () => {
 					<NavLink className="nav-link" activeClassName="active" to="/about">About</NavLink>
 					<NavLink className="nav-link" activeClassName="active" to="/products">Products</NavLink>
 				</Nav>
-				<Form inline>
+				<Form className="nav-buttons" inline>
+					
 					<Button variant="outline-info">
 						<NavLink activeClassName="active" to="/login">
 							<FontAwesomeIcon size="1x" className="icons" icon={"sign-in-alt"} />	
 							<span className="login-label">Login</span>
 						</NavLink>
 					</Button>
+
+					<Button variant="outline-info">
+						<NavLink activeClassName="active" to="/register">
+							<FontAwesomeIcon size="1x" className="icons" icon={"user-plus"} />	
+							<span className="login-label">Register</span>
+						</NavLink>
+					</Button>
+
 				</Form>
 			</Navbar>
 		</div>

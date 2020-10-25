@@ -1,3 +1,7 @@
 .login-label {
 	margin-left: 0.5rem;
 }
+
+.nav-buttons button {
+	margin-right: 1rem;
+}

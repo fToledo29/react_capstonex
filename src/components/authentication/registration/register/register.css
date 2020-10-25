@@ -1,0 +1,26 @@
+
+@media only screen and (min-width: 768px) {
+	.register-component {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1rem;
+		width: 50vw;
+	}
+	
+}
+
+@media only screen and (max-width: 767px) {
+	.register-component {
+		margin-left: auto;
+		margin-right: auto;
+		width: 90vw;
+	}
+}
+
+.register-component h1 {
+	text-align: center;
+}
+
+.custom-control.custom-switch {
+	padding: 0px;
+}
