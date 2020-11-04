@@ -14,6 +14,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 // import { ProductList } from './components/productManagemen/all-products-page/viewProductList/viewProductList';
 import AllProductsPage from './components/productManagemen/all-products-page/all-products-page';
 import { Register } from './components/authentication/registration/register/register';
+import { AddProduct } from './components/productManagemen/addProduct/addProduct';
 library.add(fas);
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
 				<Route path="/login" component={SignIn} />
 				<Route path="/register" component={Register} />
 				<Route path="/products" component={AllProductsPage} />
-				{/* <Route path="/addProduct" component={AddProductPage} />
+				<Route path="/addProduct" component={AddProduct} />
+				{/* 
 				<Route path="/product/:productName" component={ProductDetail} /> */}
 			</Switch>
 		</Router>
