@@ -5,6 +5,7 @@ import * as productActions from '../../../redux/actions/product-actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { ProductList } from './viewProductList/viewProductList';
+import { Button } from 'react-bootstrap';
 
 class AllProductsPage extends React.Component {
 
@@ -16,19 +17,23 @@ class AllProductsPage extends React.Component {
 
 		return (
 			<div>
-				{/* <h1>Product list</h1> */}
+				<h1>Product List</h1>
 
 				<div className="product-list">
 					
+					<Button className="add-button" variant="info">
+						<Link 
+						to={{ pathname: '/addProduct' }}
+						> 
+							Add Products
+						</Link>
+					</Button>
+					
 					<ProductList data={this.props.products}></ProductList>
+
 				</div>
 
 				<div>
-					<Link 
-					to={{ pathname: '/addProduct' }}
-					> 
-						Add Products
-					</Link>
 				</div>		
 			</div>
 		)

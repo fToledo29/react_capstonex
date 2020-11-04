@@ -11,7 +11,7 @@ export const ProductList = (props) => {
 
 	return (
 		<div className="product-list">
-			<h1>Product List</h1>
+			{/* <h1>Product List</h1> */}
 			<Table striped bordered hover>
 				<thead>
 					<tr>
