@@ -24,6 +24,13 @@
 			"firstName": "Jonh",
 			"lastName": "Conner",
 			"password": "test123"
+		},
+		{
+			"id": 2,
+			"userName": "fernandotoledo",
+			"firstName": "Fernando",
+			"lastName": "Toledo",
+			"password": "test123"
 		}
 	]
 }

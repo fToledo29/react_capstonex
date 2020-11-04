@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "TV",
+      "description": "Cillum duis mollit ut magna.",
+      "manufacturer": "LG",
+      "price": 422,
+      "quantity": 21
+    },
+    {
+      "id": 2,
+      "productName": "Laptop",
+      "description": "Quis amet sunt amet qui magna qui irure qui tempor fugiat qui voluptate incididunt qui.",
+      "manufacturer": "HP",
+      "price": 1000,
+      "quantity": 15
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "jonhConner",
+      "firstName": "Jonh",
+      "lastName": "Conner",
+      "password": "test123"
+    }
+  ]
+}
