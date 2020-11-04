@@ -1,10 +1,27 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button, Card, FormControl, FormLabel, NavLink } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import UserApi from '../../../api-collection/userApi';
 import './signIn.css';
 
 export const SignIn = () => {
+
+	let userNameInput = useRef(null);
+
+	let passInput = useRef(null);
+
+	const login = () => {
+
+		UserApi.login(userNameInput.value, passInput.value).then((data) => {
+
+
+
+			console.log('Data from login request: ', data);
+		});
+	}
+
+
 	return (
 		<div className="sign-in-container">
 			
@@ -18,16 +35,13 @@ export const SignIn = () => {
 
 				<Card.Body>
 					<FormLabel  >Username</FormLabel>
-					<FormControl type="text"/>
+					<FormControl ref={value => userNameInput = value} type="text"/>
 					<FormLabel>Password</FormLabel>
-					<FormControl type="password"/>
+					<FormControl ref={value => passInput = value} type="password"/>
 				</Card.Body>
 
 				<Card.Footer className="sign-in-buttons">
-					
-				
-					
-					{/* href="/register"  */}
+
 					<Button 
 					className="sign-in-button" 
 					variant="info" 
@@ -37,7 +51,7 @@ export const SignIn = () => {
 						>Register</Link>
 					</Button>
 
-					<Button className="sign-in-button" variant="primary" type="info">
+					<Button onClick={() => login()} className="sign-in-button" variant="primary" type="info">
 						Login
 					</Button>
 
