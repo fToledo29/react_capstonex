@@ -1,0 +1,54 @@
+.product-form {
+	margin-left: auto;
+	margin-right: auto;
+	width: 40rem;
+	height: 15rem;
+	display: flex;
+	flex-flow: column;
+}
+
+.product-form .product-form-container label {
+
+	width: 10rem;
+	padding-right: 3rem;
+	justify-content: flex-end;
+	display: flex;
+}
+
+.add-buttons .add-button {
+	width: calc(100% / 2);
+	margin: 0 10px;
+	padding: 0px;
+	height: 2.3rem;
+	display: grid;
+	align-content: center;
+}
+
+.add-buttons {
+	justify-content: center;
+	display: flex;
+}
+
+.product-form button {
+	align-self: center;
+	width: 10rem;
+}
+
+.product-form-container {
+	margin: 1rem;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: wrap;
+}
+
+.product-form-container .form-field { 
+	margin-right: .5rem;
+	width: 20rem;
+}
+
+.product-form-container span {
+	display: block;
+	float: right;
+	text-align: end;
+	width: 100%;
+}

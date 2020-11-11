@@ -1,36 +1,74 @@
 {
-	"products": [
-		{
-			"id": 1,
-			"productName": "TV",
-			"description": "Cillum duis mollit ut magna.",
-			"manufacturer": "LG",
-			"price": 422,
-			"quantity": 21
-		},
-		{
-			"id": 2,
-			"productName": "Laptop",
-			"description": "Quis amet sunt amet qui magna qui irure qui tempor fugiat qui voluptate incididunt qui.",
-			"manufacturer": "HP",
-			"price": 1000,
-			"quantity": 15
-		}
-	],
-	"users": [
-		{
-			"id": 1,
-			"userName": "jonhConner",
-			"firstName": "Jonh",
-			"lastName": "Conner",
-			"password": "test123"
-		},
-		{
-			"id": 2,
-			"userName": "fernandotoledo",
-			"firstName": "Fernando",
-			"lastName": "Toledo",
-			"password": "test123"
-		}
-	]
+  "products": [
+    {
+      "id": 1,
+      "productName": "TV",
+      "description": "Cillum duis mollit ut magna.",
+      "manufacturer": "LG",
+      "price": 422,
+      "quantity": 21
+    },
+    {
+      "id": 2,
+      "productName": "Laptop",
+      "description": "Quis amet sunt amet qui magna qui irure qui tempor fugiat qui voluptate incididunt qui.",
+      "manufacturer": "HP",
+      "price": 1000,
+      "quantity": 15
+    },
+    {
+      "productName": "Fernando",
+      "quantity": 252,
+      "price": 65,
+      "id": "36c58b52-4676-484f-8b9f-31914784ae5b"
+    },
+    {
+      "productName": "Toledo",
+      "quantity": 45,
+      "price": 56,
+      "id": "8d6ef680-edef-406e-9cfc-cdd702776519"
+    },
+    {
+      "productName": "Jorge",
+      "quantity": 0,
+      "price": 0,
+      "id": "6f3307ee-a176-432c-8e64-877930878f44"
+    },
+    {
+      "productName": "Fernando",
+      "quantity": 566,
+      "price": 656,
+      "id": "c72b1f95-b62e-446e-88a0-3ed13fc9d2b9"
+    },
+    {
+      "description": "Dolor incididunt Lorem aliqua minim nulla anim ullamco amet ut consequat cillum exercitation sit enim.",
+      "productName": "Fernando",
+      "quantity": 656,
+      "price": 65,
+      "id": "1826b9a8-1739-4a1e-94e1-8af9eff14015"
+    },
+    {
+      "description": "Eu sint occaecat mollit elit reprehenderit et quis excepteur adipisicing aute.",
+      "productName": "TV LSD",
+      "quantity": 654,
+      "price": 656,
+      "id": "7bc94a67-7435-462f-b9f2-006dabf40634"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "jonhConner",
+      "firstName": "Jonh",
+      "lastName": "Conner",
+      "password": "test123"
+    },
+    {
+      "id": 2,
+      "userName": "fernandotoledo",
+      "firstName": "Fernando",
+      "lastName": "Toledo",
+      "password": "test123"
+    }
+  ]
 }

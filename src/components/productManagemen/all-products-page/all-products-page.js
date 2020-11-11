@@ -1,7 +1,7 @@
 import React from 'react';
 import './all-products-page.css';
 import { Link } from 'react-router-dom';
-import * as productActions from '../../../redux/actions/product-actions';
+import * as productActions from '../../../redux/actions/productActions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { ProductList } from './viewProductList/viewProductList';
