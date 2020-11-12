@@ -17,7 +17,7 @@ class AllProductsPage extends React.Component {
 
 		return (
 			<div>
-				<h1>Product List</h1>
+				<h1 className="all-products-title">Product List</h1>
 
 				<div className="product-list">
 					

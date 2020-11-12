@@ -20,7 +20,7 @@ class AddProductPage extends React.Component {
 		this.props.actions.addProduct(product)
 		.then(() => toastr.success('User added'))
 		.catch(error => {
-			alert(error)
+			alert(error);
 		})
 		this.props.history.push('/products');
 	}
