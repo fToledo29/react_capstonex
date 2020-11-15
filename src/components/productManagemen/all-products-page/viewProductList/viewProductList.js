@@ -24,18 +24,13 @@ export const ProductList = (props) => {
 					</tr>
 				</thead>
 				<tbody>
-				{productData.map((el, index) => {
+				{productData.products ? productData.products.map((el, index) => {
 					return <Product
 					key={index}
-					id={el.id}
-					productName={el.productName}
-					description={el.description}
-					manufacturer={el.manufacturer}
-					quantity={el.quantity}
-					price={el.price}
+					product={el}
 					></Product>
 
-				})}
+				}) : null}
 				</tbody>
 			</Table>
 		</div>

@@ -29,7 +29,7 @@ class AllProductsPage extends React.Component {
 						</Link>
 					</Button>
 					
-					<ProductList data={this.props.products}></ProductList>
+					<ProductList data={this.props.data}></ProductList>
 
 				</div>
 
@@ -42,7 +42,7 @@ class AllProductsPage extends React.Component {
 
 function mapStateToProps(state, ownProps) {
 	return {
-		products: state.products
+		data: state.data
 	}
 }
 

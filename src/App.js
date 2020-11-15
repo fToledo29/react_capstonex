@@ -11,10 +11,8 @@ import { Home } from './components/home/home';
 import { SignIn } from './components/authentication/signIn/signIn';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-// import { ProductList } from './components/productManagemen/all-products-page/viewProductList/viewProductList';
 import AllProductsPage from './components/productManagemen/all-products-page/all-products-page';
 import { Register } from './components/authentication/registration/register/register';
-import { AddProduct } from './components/productManagemen/addProduct/addProduct';
 import AddProductPage from './components/productManagemen/addProduct/addProductPage/addProductPage';
 library.add(fas);
 
@@ -30,6 +28,7 @@ function App() {
 				<Route path="/register" component={Register} />
 				<Route path="/products" component={AllProductsPage} />
 				<Route path="/addProduct" component={AddProductPage} />
+				<Route path="/updateProduct/:id" component={AddProductPage} />
 				{/* 
 				<Route path="/product/:productName" component={ProductDetail} /> */}
 			</Switch>

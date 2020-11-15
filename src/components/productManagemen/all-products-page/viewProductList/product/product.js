@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom';
+import { setProductToUpdate } from '../../../../../redux/actions/productActions';
 
 class Product extends React.Component {
 
@@ -22,12 +23,14 @@ class Product extends React.Component {
 
 	render() {
 
-		const path = `/product/${this.props.productName}`;
+		const path = `/updateProduct/${this.props.product.id}`;
+
+		setProductToUpdate(this.props.product);
 
 		return (
 			<tr>
 				<td>
-					{this.props.id}
+					{this.props.product.id}
 				</td>
 
 				<td>
@@ -35,24 +38,24 @@ class Product extends React.Component {
 					onMouseEnter={() => this.handleClick()}
 					onMouseLeave={() => this.handleClickMouseLeave()}
 					to={{ pathname: path }}> 
-						{this.props.productName} 
+						{this.props.product.productName} 
 					</Link>
 				</td>
 
 				<td>
-					{this.props.description}
+					{this.props.product.description}
 				</td>
 
 				<td>
-					{this.props.manufacturer}
+					{this.props.product.manufacturer}
 				</td>
 
 				<td>
-					{this.props.quantity}
+					{this.props.product.quantity}
 				</td>
 
 				<td>
-					{this.props.price}
+					{this.props.product.price}
 				</td>
 			</tr>
 		)

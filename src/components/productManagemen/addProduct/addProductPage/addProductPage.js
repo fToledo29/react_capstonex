@@ -5,20 +5,52 @@ import { withRouter } from 'react-router-dom';
 import FormikAddForm from '../addForm/addForm';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import toastr from 'toastr';
+// import toastr from 'toastr';
 
 
 class AddProductPage extends React.Component {
 
+	product = {};
+
 	constructor(props) {
 		super(props);
+
 		this.saveProduct = this.saveProduct.bind(this);
+	}
+
+	componentDidMount() {
+
+		const productId = this.props.match.params.id;
+
+		console.log('productName: ', productId);
+
+		if (productId) {
+
+			this.getProduct(productId);
+		}
+	}
+
+	getProduct(productId) {
+
+		this.props.actions.getProduct(productId)
+		.then((product) => {
+			// TODO: Add toastr
+		})
+		.catch(error => {
+			alert(error);
+		})
 	}
 
 	saveProduct(product) {
 
 		this.props.actions.addProduct(product)
-		.then(() => toastr.success('User added'))
+		.then((res) => {
+
+			// TODO: Add toastr
+
+			console.log('Success adding product!: ', res);
+
+		})
 		.catch(error => {
 			alert(error);
 		})
@@ -30,7 +62,13 @@ class AddProductPage extends React.Component {
 		return (
 			<>
 				<h1>Add Product</h1>
-				<FormikAddForm onSave={this.saveProduct}></FormikAddForm>
+				<FormikAddForm 
+				onSave={this.saveProduct}
+				description={this.props.product.description}
+				productName={this.props.product.productName}
+				quantity={this.props.product.quantity}
+				price={this.props.product.price}
+				></FormikAddForm>
 			</>
 		)
 	}
@@ -38,7 +76,7 @@ class AddProductPage extends React.Component {
 
 function mapStateToProps(state, ownProps) {
 	return {
-		products: state.products
+		product: state.data.productToUpdate
 	}
 }
 

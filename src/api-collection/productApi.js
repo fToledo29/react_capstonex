@@ -19,6 +19,10 @@ export default class ProductsApi {
 		});
 	}
 
+	static getProduct(productId) {
+		return axios.get('http://localhost:3004/products/' + productId).then(res => res.data);
+	}
+
 	static getAllProducts() {
 		return axios.get('http://localhost:3004/products/').then(res => res.data);
 	}

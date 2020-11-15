@@ -20,7 +20,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 						<div className="product-form-container">
 							<label>Product Name:</label>
 							<Field
-							className="form-field"
+							className="form-field form-control"
 							type="text"
 							value={values.productName}
 							name="productName"
@@ -31,7 +31,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 						<div className="product-form-container">
 							<label>Quantity:</label>
 							<Field 
-							className="form-field"
+							className="form-field form-control"
 							type="number"
 							value={values.quantity}
 							name="quantity"
@@ -42,7 +42,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 						<div className="product-form-container">
 							<label>Price:</label>
 							<Field
-							className="form-field"
+							className="form-field form-control"
 							type="number"
 							value={values.price}
 							name="price" 
@@ -53,8 +53,9 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 						<div className="product-form-container">
 							<label>Description:</label>
 							<Field
-							className="form-field"
+							className="form-field form-control"
 							as="textarea"
+							value={values.description}
 							name="description" 
 							placeholder="Description"/>
 						</div>
@@ -74,6 +75,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 }
 
 const FormikAddForm = withFormik({
+	enableReinitialize: true,
 	mapPropsToValues({description, productName, quantity, price}){
 		return {
 			description: description || '',
