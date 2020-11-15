@@ -8,8 +8,18 @@
 }
 
 .product-form .product-form-container label {
+	width: calc(100% / 1.5);
+	display: flex;
+}
 
-	width: 10rem;
+.product-form .product-form-container .product-form-desc {
+	text-align: justify;
+}
+
+.product-form .product-form-container .product-form-title {
+
+	/* width: 10rem; */
+	width: calc(100% / 3);
 	padding-right: 3rem;
 	justify-content: flex-end;
 	display: flex;

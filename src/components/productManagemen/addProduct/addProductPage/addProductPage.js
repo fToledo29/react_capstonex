@@ -12,7 +12,10 @@ class AddProductPage extends React.Component {
 
 	product = {};
 
+	productId = null;
+
 	constructor(props) {
+
 		super(props);
 
 		this.saveProduct = this.saveProduct.bind(this);
@@ -20,13 +23,13 @@ class AddProductPage extends React.Component {
 
 	componentDidMount() {
 
-		const productId = this.props.match.params.id;
+		this.productId = this.props.match.params.id;
 
-		console.log('productName: ', productId);
+		console.log('productName: ', this.productId);
 
-		if (productId) {
+		if (this.productId) {
 
-			this.getProduct(productId);
+			this.getProduct(this.productId);
 		}
 	}
 
@@ -43,18 +46,35 @@ class AddProductPage extends React.Component {
 
 	saveProduct(product) {
 
-		this.props.actions.addProduct(product)
-		.then((res) => {
+		if (this.productId) {
+			this.props.actions.updateProduct(product)
+			.then((res) => {
+	
+				// TODO: Add toastr
+				this.props.history.push('/products');
 
-			// TODO: Add toastr
+				console.log('Success adding product!: ', res);
+	
+			})
+			.catch(error => {
+				alert(error);
+			})
+		} else {
+			this.props.actions.addProduct(product)
+			.then((res) => {
+	
+				// TODO: Add toastr
 
-			console.log('Success adding product!: ', res);
-
-		})
-		.catch(error => {
-			alert(error);
-		})
-		this.props.history.push('/products');
+				
+				this.props.history.push('/products');
+	
+				console.log('Success adding product!: ', res);
+	
+			})
+			.catch(error => {
+				alert(error);
+			})
+		}
 	}
 
 
@@ -68,6 +88,8 @@ class AddProductPage extends React.Component {
 				productName={this.props.product.productName}
 				quantity={this.props.product.quantity}
 				price={this.props.product.price}
+				id={this.props.product.id}
+				updating={false}
 				></FormikAddForm>
 			</>
 		)

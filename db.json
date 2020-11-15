@@ -6,14 +6,16 @@
       "description": "Quis amet sunt amet qui magna qui irure qui tempor fugiat qui voluptate incididunt qui.",
       "manufacturer": "HP",
       "price": 1000,
-      "quantity": 15
+      "quantity": 152,
+      "updating": false
     },
     {
       "productName": "Fernando",
       "description": "Quis amet sunt amet qui magna qui irure qui tempor fugiat qui voluptate incididunt qui.",
       "quantity": 252,
       "price": 65,
-      "id": "36c58b52-4676-484f-8b9f-31914784ae5b"
+      "id": "36c58b52-4676-484f-8b9f-31914784ae5b",
+      "updating": false
     },
     {
       "description": "Lorem impus test",
@@ -55,7 +57,8 @@
       "productName": "Test 007",
       "quantity": 123,
       "price": 456,
-      "id": "a1fd5112-d010-4cc1-ba3e-ed4ce1678445"
+      "id": "a1fd5112-d010-4cc1-ba3e-ed4ce1678445",
+      "updating": false
     },
     {
       "description": "Desc Test Desc Test",
@@ -79,8 +82,8 @@
       "id": "36ea5ce2-d393-47a0-bbc0-1a3e2fbec478"
     },
     {
-      "description": "T$Es Tesa2 Tesa2",
-      "productName": "Test 0010",
+      "description": "T$Es Tesa2 Tesa2 xxxxx",
+      "productName": "Test 0010 FFFFFFFFFF",
       "quantity": 523,
       "price": 32,
       "id": "3c716f27-f6bc-4c48-8919-846465db521d"
@@ -94,10 +97,24 @@
     },
     {
       "description": "SDfsdfsd",
-      "productName": "iuiiu",
+      "productName": "iuiiu XXXXXXXXXXXXXX",
       "quantity": 5,
       "price": 321,
       "id": "9d134efe-f223-4b03-8430-9132af269f67"
+    },
+    {
+      "description": "111111  Test 1111 test",
+      "productName": "Test 012 dddddone XXXXXXX",
+      "quantity": 3215,
+      "price": 65,
+      "id": "b261a7c1-eddb-4cc5-8722-9dc2306035cc"
+    },
+    {
+      "description": " This is loremimpus description",
+      "productName": "Test 013",
+      "quantity": 89735,
+      "price": 8465,
+      "id": "d18cdce9-e5dd-4b16-afae-a5e70118dde6"
     }
   ],
   "users": [

@@ -55,7 +55,7 @@ class Product extends React.Component {
 				</td>
 
 				<td>
-					{this.props.product.price}
+					${this.props.product.price}
 				</td>
 			</tr>
 		)

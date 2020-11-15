@@ -38,6 +38,15 @@ export function getProduct(productID) {
 	};
 }
 
+export function updateProduct(product) {
+	return function (dispatch) {
+		return ProductsApi.updateProduct(product).then((result) => {
+			dispatch(getProductSuccess(result));
+		})
+		.catch(error => console.log('[Error while getting product]: ', error));
+	};
+}
+
 
 export function loadProducts() {
 	return function(dispatch) {
