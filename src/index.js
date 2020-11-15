@@ -7,9 +7,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import configureStore from './redux/store/configure-store';
 import { loadProducts } from './redux/actions/productActions';
 import { Provider } from 'react-redux';
+import { getUser } from './redux/actions/userActions';
 
 const store = configureStore();
 store.dispatch(loadProducts());
+store.dispatch(getUser('', ''));
 
 ReactDOM.render(
 	<React.StrictMode>
