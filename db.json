@@ -6,7 +6,7 @@
       "description": "Quis amet sunt amet qui magna qui irure qui tempor fugiat qui voluptate incididunt qui.",
       "manufacturer": "HP",
       "price": 1000,
-      "quantity": 152,
+      "quantity": 15222,
       "updating": false
     },
     {
@@ -131,6 +131,22 @@
       "firstName": "Fernando",
       "lastName": "Toledo",
       "password": "test123"
+    },
+    {
+      "email": "fernandotoledo23@gmail.com",
+      "firstName": "Fernando",
+      "lastName": "Toledo",
+      "mobileNumber": "2489915129",
+      "password": "123456789TestXXX",
+      "id": "d54cd695-e3c7-4ddc-9aa5-101def89d677"
+    },
+    {
+      "email": "fernandotoledo23@gmail.com",
+      "firstName": "Fernando",
+      "lastName": "Toledo",
+      "mobileNumber": "2489915129",
+      "password": "Test123",
+      "id": "311e482a-f3f5-4165-86bd-9ec3cb0db84b"
     }
   ]
 }

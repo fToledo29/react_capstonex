@@ -12,6 +12,11 @@ export default function userReducer(state = initialState, action) {
 				user: action.user,
 				loggedIn: !!action.user,
 			};
+		case actionTypes.SAVE_USER:
+			return {
+				user: action.user,
+				loggedIn: !!action.user,
+			};
 		default:
 			return state;
 	}

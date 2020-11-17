@@ -10,5 +10,5 @@ export const LOAD_PRODUCTS_SUCCESS = 'LOAD_PRODUCTS_SUCCESS';
  * User Action
  */
 export const GET_USER = 'GET_USER';
-export const ADD_USER = 'ADD_USER';
+export const SAVE_USER = 'SAVE_USER';
 export const LOGGED_IN_USER = 'LOGGED_IN_USER';

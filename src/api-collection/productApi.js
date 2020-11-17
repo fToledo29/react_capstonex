@@ -1,6 +1,5 @@
 import axios from 'axios';
 import uuidv4 from 'uuidv4';
-// import { uuid } from 'uuidv4';
 export default class ProductsApi {
 
 	static productsEndpoint = 'http://localhost:3004/products/';

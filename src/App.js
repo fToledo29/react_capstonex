@@ -12,7 +12,7 @@ import { SignIn } from './components/authentication/signIn/signIn';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import AllProductsPage from './components/productManagemen/all-products-page/all-products-page';
-import { Register } from './components/authentication/registration/register/register';
+import Register from './components/authentication/registration/register/register';
 import AddProductPage from './components/productManagemen/addProduct/addProductPage/addProductPage';
 library.add(fas);
 

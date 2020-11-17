@@ -1,16 +1,23 @@
 import axios from 'axios';
-import uuid from 'uuidv4';
+import uuidv4 from 'uuidv4';
 export default class UserApi {
 
-	static saveProduct(product) {
+	static usersEndpoint = 'http://localhost:3004/users/';
 
-		product.id = uuid();
-		return axios.post('http://localhost:3004/products/', product)
-		.then(res => res.data);
+	static saveUser(user) {
+
+		user.id = uuidv4(); 
+
+		return axios.post(this.usersEndpoint, user).then(res => {
+			return res.data;
+		}).catch(error => {
+
+			console.log('[Error whwn calling endpoint "saveUser"]: ', error)
+		});
 	}
 
-	static getAllProducts() {
-		return axios.get('http://localhost:3004/products/').then(res => res.data);
+	static getAllUsers() {
+		return axios.get(this.usersEndpoint).then(res => res.data);
 	}
 
 	static login(userName, pass) {
