@@ -1,5 +1,6 @@
 import React from 'react';
 import { withFormik, Form, Field } from 'formik';
+import { LoremIpsum } from 'lorem-ipsum';
 import './addForm.css';
 import * as Yup from 'yup';
 import { 
@@ -31,6 +32,23 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 									name="productName"
 									placeholder="Product Name"/>
 									{touched.productName && errors.productName && <span style={{color: "red"}}>{errors.productName}</span> }
+									</div>
+							})() }
+						</div>
+
+						<div className="product-form-container">
+							<label className="product-form-title">Manufacturer:</label>
+							
+							{updating ? <label>{values.manufacturer}</label> : (() => {
+								return <div>
+									<Field
+									disabled={updating}
+									className="form-field form-control"
+									type="text"
+									value={values.manufacturer}
+									name="manufacturer"
+									placeholder="Manufacturer"/>
+									{touched.manufacturer && errors.manufacturer && <span style={{color: "red"}}>{errors.manufacturer}</span> }
 									</div>
 							})() }
 						</div>
@@ -104,12 +122,29 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 
 const FormikAddForm = withFormik({
 	enableReinitialize: true,
-	mapPropsToValues({description, productName, quantity, price, id, updating}){
+	mapPropsToValues({
+		description,
+		productName,
+		manufacturer,
+		quantity,
+		price,
+		id,
+		updating}){
+
+			const lorem = new LoremIpsum({
+				sentencesPerParagraph: {
+				  max: 2,
+				  min: 1
+				}
+			    });
+
+
 		return {
-			description: description || '',
-			productName: productName || '',
-			quantity: quantity || 0,
-			price: price || 0,
+			description:  lorem.generateSentences(1), // description || '',
+			productName: lorem.generateWords(3), // productName || '',
+			manufacturer: lorem.generateWords(3), // manufacturer || '',
+			quantity: Math.floor(Math.random(100) * 900), // quantity || 0,
+			price: Math.floor(Math.random(100) * 900), // price || 0,
 			id: id,
 			updating: updating,
 		};

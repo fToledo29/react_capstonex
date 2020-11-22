@@ -2,7 +2,7 @@
 	padding-bottom: 2rem;
 }
 
-.add-button a {
+.product-list-button a {
 	text-decoration: none;
 	color: #fff;
 	display: block;
@@ -11,12 +11,12 @@
 	margin: 0px;
 }
 
-.add-button a:hover {
+.product-list-button a:hover {
 	text-decoration: none;
 	color: #fff;
 }
 
-.add-button {
+.product-list-button {
 	margin: 1.5rem;
 	float: right;
 }
@@ -25,3 +25,31 @@
 	margin-top: 1.5rem;
 	text-align: center;
 }
+
+button.product-list-button.add {
+	padding: 0;
+  }
+  
+  button.product-list-button.add a {
+	padding: 0.4rem;
+  }
+
+  .spinner-container {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .spinner-container .spinner-border {
+	height: 6rem;
+	width: 6rem;
+	border-top-width: .7rem;
+	border-right-width: .7rem;
+	border-bottom-width: .7rem;
+	border-left-width: .7rem;
+  }

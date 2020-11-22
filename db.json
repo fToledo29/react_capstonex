@@ -1,120 +1,31 @@
 {
   "products": [
     {
-      "id": 2,
-      "productName": "Laptop",
-      "description": "Quis amet sunt amet qui magna qui irure qui tempor fugiat qui voluptate incididunt qui.",
-      "manufacturer": "HP",
-      "price": 1000,
-      "quantity": 15222,
+      "description": "Laborum nisi adipisicing ipsum velit sint Lorem nostrud ipsum aliqua veniam.",
+      "productName": "ex excepteur laborum",
+      "manufacturer": "sint commodo dolore",
+      "quantity": 562,
+      "price": 518,
+      "id": 6393,
       "updating": false
     },
     {
-      "productName": "Fernando",
-      "description": "Quis amet sunt amet qui magna qui irure qui tempor fugiat qui voluptate incididunt qui.",
-      "quantity": 252,
-      "price": 65,
-      "id": "36c58b52-4676-484f-8b9f-31914784ae5b",
+      "description": "Aliquip nostrud occaecat enim velit aliquip dolore est occaecat consectetur veniam reprehenderit non aliquip.",
+      "productName": "occaecat elit consequat",
+      "manufacturer": "aliquip ex dolore",
+      "quantity": 158,
+      "price": 826,
+      "id": 6783,
       "updating": false
     },
     {
-      "description": "Lorem impus test",
-      "productName": "Test 002",
-      "quantity": 155,
-      "price": 455,
-      "id": "30d3ddc4-7319-4da6-b0f6-23185f52141f"
-    },
-    {
-      "description": "Description test",
-      "productName": "Test 003",
-      "quantity": 452,
-      "price": 4522,
-      "id": "5579c8df-3bc5-4f16-ba01-21f2b3d634d6"
-    },
-    {
-      "description": "TEst teste teste",
-      "productName": "Test 004",
-      "quantity": 456,
-      "price": 213,
-      "id": "ef3e51d7-9a53-489f-9707-106f8b6e5fe4"
-    },
-    {
-      "description": "Test test test",
-      "productName": "Test 005",
-      "quantity": 213,
-      "price": 213,
-      "id": "11d9d742-e1d7-4cff-9430-cfa5dcdaf052"
-    },
-    {
-      "description": "Desc test Test test",
-      "productName": "Test 006",
-      "quantity": 2132,
-      "price": 321,
-      "id": "d8f8251f-4d80-40da-9774-38ce77cefc8f"
-    },
-    {
-      "description": "Desc Desc Desc",
-      "productName": "Test 007",
-      "quantity": 123,
-      "price": 456,
-      "id": "a1fd5112-d010-4cc1-ba3e-ed4ce1678445",
+      "description": "Est ut et duis aliqua sunt do enim labore enim.",
+      "productName": "sunt velit minim",
+      "manufacturer": "officia officia do",
+      "quantity": 673,
+      "price": 182,
+      "id": 5985,
       "updating": false
-    },
-    {
-      "description": "Desc Test Desc Test",
-      "productName": "Test 007",
-      "quantity": 546,
-      "price": 212,
-      "id": "1ede2217-e71b-4a47-8b76-bf9883a48bff"
-    },
-    {
-      "description": "Test Desc Test Desc",
-      "productName": "Test 008",
-      "quantity": 213,
-      "price": 2133,
-      "id": "ef6665ba-cbbf-4fe5-a791-7310987f1d8a"
-    },
-    {
-      "description": "Desc Test Desc Test",
-      "productName": "Test 009",
-      "quantity": 546,
-      "price": 212,
-      "id": "36ea5ce2-d393-47a0-bbc0-1a3e2fbec478"
-    },
-    {
-      "description": "T$Es Tesa2 Tesa2 xxxxx",
-      "productName": "Test 0010 FFFFFFFFFF",
-      "quantity": 523,
-      "price": 32,
-      "id": "3c716f27-f6bc-4c48-8919-846465db521d"
-    },
-    {
-      "description": "3df4rfdsfsdlkfsdklf",
-      "productName": "Test 011",
-      "quantity": 212,
-      "price": 32,
-      "id": "83368764-ea39-4eb6-a45d-097026712535"
-    },
-    {
-      "description": "SDfsdfsd",
-      "productName": "iuiiu XXXXXXXXXXXXXX",
-      "quantity": 5,
-      "price": 321,
-      "id": "9d134efe-f223-4b03-8430-9132af269f67"
-    },
-    {
-      "description": "111111  Test 1111 test",
-      "productName": "Test 012 dddddone XXXXXXX",
-      "quantity": 3215,
-      "price": 65,
-      "id": "b261a7c1-eddb-4cc5-8722-9dc2306035cc"
-    },
-    {
-      "description": " This is loremimpus description",
-      "productName": "Test 013",
-      "quantity": 89735,
-      "price": 8465,
-      "id": "d18cdce9-e5dd-4b16-afae-a5e70118dde6"
     }
   ],
   "users": [

@@ -25,8 +25,6 @@ class AddProductPage extends React.Component {
 
 		this.productId = this.props.match.params.id;
 
-		console.log('productName: ', this.productId);
-
 		if (this.productId) {
 
 			this.getProduct(this.productId);
@@ -86,6 +84,7 @@ class AddProductPage extends React.Component {
 				onSave={this.saveProduct}
 				description={this.props.product.description}
 				productName={this.props.product.productName}
+				manufacturer={this.props.product.manufacturer}
 				quantity={this.props.product.quantity}
 				price={this.props.product.price}
 				id={this.props.product.id}

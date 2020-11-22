@@ -1,23 +1,42 @@
 import React from 'react'
+import { Form } from 'react-bootstrap';
+import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import * as productActions from '../../../../../redux/actions/productActions';
 import { setProductToUpdate } from '../../../../../redux/actions/productActions';
 
 class Product extends React.Component {
 
 
-	constructor() {
-		super();
-		this.state = { viewDetails: false };
+
+
+	constructor(props) {
+		super(props);
+		this.state = { 
+			viewDetails: false,
+			selectedItems: [],
+			someData: '',
+		};
+
+		this.selectedItems = [];
+
+		// this.onSelectItem = this.onSelectItem.bind(this);
 	}
 	
 	async handleClick() {
-
 		await this.setState({ viewDetails: true });
 	}
 
 	async handleClickMouseLeave() {
 
 		await this.setState({ viewDetails: false });
+	}
+
+	onSelectItem(e) {
+		if (e.target.checked) {
+			this.props.actions.addProductToDelete(e.target);
+		}
 	}
 
 
@@ -29,6 +48,11 @@ class Product extends React.Component {
 
 		return (
 			<tr>
+				<td>
+					<Form.Group controlId="formBasicCheckbox">
+						<Form.Check id={this.props.product.id} value={this.props.product.id} onChange={e => this.onSelectItem(e)} type="checkbox"/>
+					</Form.Group>
+				</td>
 				<td>
 					{this.props.product.id}
 				</td>
@@ -63,4 +87,17 @@ class Product extends React.Component {
 	
 }
 
-export default withRouter(Product);
+function mapStateToProps(state, ownProps) {
+	return {
+		data: state.data
+	}
+}
+
+function mapDispatchToProps(dispatch) {
+	return {
+		actions: bindActionCreators(productActions, dispatch)
+	}
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Product));

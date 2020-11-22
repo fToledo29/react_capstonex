@@ -12,6 +12,18 @@ export function setProductToUpdate(product) {
 	};
 }
 
+export function clearProductsToDelete() {
+	return { type: actionTypes.CLEAR_PRODUCTS_TO_DELETE, product: [] };
+}
+
+export function setProductToDelete(product) {
+	return { type: actionTypes.PRODUCT_TO_DELETE, product };
+}
+
+export function afterDeleteProduct(products) {
+	return { type: actionTypes.DELETE_PRODUCT, products };
+}
+
 export function getProductSuccess(product) {
 	return { type: actionTypes.PRODUCT_TO_UPDATE, product };
 }
@@ -19,6 +31,19 @@ export function getProductSuccess(product) {
 export function loadProductsSuccess(products) {
 	return { type: actionTypes.LOAD_PRODUCTS_SUCCESS, products };
 }
+
+export function addProductToDelete(productId) {
+	return function (dispatch) {
+		return dispatch(setProductToDelete(productId));
+	};
+}
+
+export function clearProductsToDeleteArray() {
+	return function (dispatch) {
+		return dispatch(clearProductsToDelete());
+	};
+}
+
 
 export function addProduct(product) {
 	return function (dispatch) {
@@ -47,12 +72,25 @@ export function updateProduct(product) {
 	};
 }
 
-
 export function loadProducts() {
 	return function(dispatch) {
 		return ProductsApi.getAllProducts().then(products => {
 			dispatch(loadProductsSuccess(products));
 		})
 		.catch(error => console.log('[Error loading products]: ', error));
+	}
+}
+
+export function deleteProduct(productsToDelete) {
+	return async function(dispatch) {
+		try {
+			return await ProductsApi.deleteProduct(productsToDelete).then(products => {
+				dispatch(loadProducts());
+			})
+			.catch(error => console.log('[Error deleting products]: ', error));
+
+		} catch(err) {
+			console.log('[Error in try catch calling delete API]: ', err)
+		}
 	}
 }
