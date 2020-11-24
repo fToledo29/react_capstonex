@@ -1,0 +1,9 @@
+.app-chart {
+	margin-top: 5rem;
+}
+
+.app-chart, .row-chart, .mixed-chart {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
