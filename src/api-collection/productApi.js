@@ -6,6 +6,7 @@ let ids = 0;
 export default class ProductsApi {
 
 	static productsEndpoint = 'http://localhost:3004/products/';
+	static visitsEndpoint = 'http://localhost:3004/visits/';
 
 	static saveProduct(product) {
 
@@ -30,11 +31,41 @@ export default class ProductsApi {
 	}
 
 	static updateProduct(product) {
+		console.log('Product Id: ', product.id);
 		return axios.patch(this.productsEndpoint + product.id, product).then(res => {
 			return res.data;
 		}).catch(error => {
 
 			console.log('[Error whwn calling endpoint "updateProduct"]: ', error)
+		});
+	}
+
+	static getAllVisits() {
+		return axios.get(this.visitsEndpoint).then(res => {
+			return res.data;
+		}).catch(error => {
+
+			console.log('[Error when getting "All Visits"]: ', error)
+		});
+	}
+
+	static addVisit(visit) {
+		visit.id = ids + Math.floor(Math.random(100) * 9000); 
+		return axios.post(this.visitsEndpoint, visit).then(res => {
+			return res.data;
+		}).catch(error => {
+
+			console.log('[Error when updating endpoint "visitsEndpoint"]: ', error)
+		});
+	}
+
+	static updateVisits(visits) {
+		console.log('Visits Id: ', visits.id);
+		return axios.patch(this.visitsEndpoint + visits.id, visits).then(res => {
+			return res.data;
+		}).catch(error => {
+
+			console.log('[Error when updating endpoint "visitsEndpoint"]: ', error)
 		});
 	}
 

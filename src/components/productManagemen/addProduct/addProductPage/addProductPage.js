@@ -1,6 +1,7 @@
 
 import React from 'react';
 import * as productActions from '../../../../redux/actions/productActions';
+import * as visitsActions from '../../../../redux/actions/visitsActions';
 import { withRouter } from 'react-router-dom';
 import FormikAddForm from '../addForm/addForm';
 import { bindActionCreators } from 'redux';
@@ -19,6 +20,8 @@ class AddProductPage extends React.Component {
 		super(props);
 
 		this.saveProduct = this.saveProduct.bind(this);
+
+		this.updateVisits = this.updateVisits.bind(this);
 	}
 
 	componentDidMount() {
@@ -39,7 +42,53 @@ class AddProductPage extends React.Component {
 		})
 		.catch(error => {
 			alert(error);
-		})
+		});
+
+		this.props.vistActions.getVisits();
+	}
+
+	updateVisits() {
+		if (this.productId) {
+
+			const productId = parseInt(this.productId, 10);
+
+			const visits = [...this.props.visitData];
+
+			const visit = visits.find((i) => i.productId === productId);
+
+			if(!visit) {
+				const newVisit = {
+					visits: 1,
+					productId: productId,
+				};
+				this.props.vistActions.addVisit(newVisit)
+				.then((res) => {
+		
+					// TODO: Add toastr
+
+					console.log('Visit saved!: ', res);
+		
+				})
+				.catch(error => {
+					alert(error);
+				});
+			} else {
+
+				const visitsUpdate = visit.visits + 1
+
+				this.props.vistActions.updateVisits({id: visit.id, visits: visitsUpdate})
+				.then((res) => {
+		
+					// TODO: Add toastr
+
+					console.log('Visit saved!: ', res);
+		
+				})
+				.catch(error => {
+					alert(error);
+				});
+			}
+		}
 	}
 
 	saveProduct(product) {
@@ -82,6 +131,7 @@ class AddProductPage extends React.Component {
 				<h1>Add Product</h1>
 				<FormikAddForm 
 				onSave={this.saveProduct}
+				updateVisits={this.updateVisits}
 				description={this.props.product.description}
 				productName={this.props.product.productName}
 				manufacturer={this.props.product.manufacturer}
@@ -89,6 +139,7 @@ class AddProductPage extends React.Component {
 				price={this.props.product.price}
 				id={this.props.product.id}
 				updating={false}
+
 				></FormikAddForm>
 			</>
 		)
@@ -97,13 +148,15 @@ class AddProductPage extends React.Component {
 
 function mapStateToProps(state, ownProps) {
 	return {
-		product: state.data.productToUpdate
+		product: state.data.productToUpdate,
+		visitData: state.visitData.visits
 	}
 }
 
 function mapDispatchToProps(dispatch) {
 	return {
-		actions: bindActionCreators(productActions, dispatch)
+		actions: bindActionCreators(productActions, dispatch),
+		vistActions: bindActionCreators(visitsActions, dispatch),
 	}
 }
 

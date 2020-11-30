@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Button, Spinner } from 'react-bootstrap';
 import * as productActions from '../../../redux/actions/productActions';
+import * as visitsActions from '../../../redux/actions/visitsActions';
 import { ProductList } from './viewProductList/viewProductList';
 import ProductsApi from '../../../api-collection/productApi';
 // import ProductsApi from '../../api-collection/productApi';
@@ -23,7 +24,17 @@ class AllProductsPage extends React.Component {
 	}
 
 	componentDidMount() {
-		this.props.actions.loadProducts();
+		this.props.actions.loadProducts()
+		.then((res) => {
+
+			console.log('Loading Products..');
+	
+			// TODO: Add toastr
+
+		})
+		.catch(error => {
+			alert(error);
+		});
 	}
 
 	onDelete() {
@@ -106,14 +117,14 @@ class AllProductsPage extends React.Component {
 
 function mapStateToProps(state, ownProps) {
 	return {
-		data: state.data
+		data: state.data,
 	}
 }
 
 function mapDispatchToProps(dispatch) {
 	return {
-		actions: bindActionCreators(productActions, dispatch)
-	}
+		actions: bindActionCreators(productActions, dispatch),
+	};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(AllProductsPage);

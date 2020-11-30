@@ -44,7 +44,6 @@ export function clearProductsToDeleteArray() {
 	};
 }
 
-
 export function addProduct(product) {
 	return function (dispatch) {
 		return ProductsApi.saveProduct(product).then((result) => {

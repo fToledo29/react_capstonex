@@ -14,7 +14,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import AllProductsPage from './components/productManagemen/all-products-page/all-products-page';
 import Register from './components/authentication/registration/register/register';
 import AddProductPage from './components/productManagemen/addProduct/addProductPage/addProductPage';
-import ChartsPage from './components/productManagemen/chart/chart';
+import ChartsPage from './components/productManagemen/viewChart/chart';
 library.add(fas);
 
 function App() {

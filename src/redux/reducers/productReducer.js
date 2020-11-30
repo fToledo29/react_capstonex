@@ -42,20 +42,20 @@ export default function productReducer(state = initialState, action) {
 			return {
 				products: [...state.products],
 				productToUpdate: state.product,
-				productsToDelete: [...state.productsToDelete, action.product], 
+				productsToDelete: [...state.productsToDelete, action.product],
 			};
 		case actionTypes.CLEAR_PRODUCTS_TO_DELETE:
 			return {
 				products: [...state.products],
 				productToUpdate: state.product,
-				productsToDelete: [], 
+				productsToDelete: [],
 			};
 		case actionTypes.DELETE_PRODUCT:
 			return {
 				products: [...action.products],
 				productToUpdate: state.product,
-				productsToDelete: [...state.productsToDelete], 
-			};	
+				productsToDelete: [...state.productsToDelete],
+			};
 		default:
 			return state;
 	}

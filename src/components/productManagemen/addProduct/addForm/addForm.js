@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { withFormik, Form, Field } from 'formik';
 import { LoremIpsum } from 'lorem-ipsum';
 import './addForm.css';
@@ -11,6 +11,14 @@ import {
 export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 
 	const updating = values.updating;
+
+	const updateVisits = values.updateVisits;
+	
+	useEffect(() => {
+		if(values.id) {
+			updateVisits();
+		}
+	}, [updateVisits, values.id]);
 
 	return (
 		<div>
@@ -123,13 +131,15 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 const FormikAddForm = withFormik({
 	enableReinitialize: true,
 	mapPropsToValues({
+		updateVisits,
 		description,
 		productName,
 		manufacturer,
 		quantity,
 		price,
 		id,
-		updating}){
+		updating,
+	}){
 
 			const lorem = new LoremIpsum({
 				sentencesPerParagraph: {
@@ -140,6 +150,7 @@ const FormikAddForm = withFormik({
 
 
 		return {
+			updateVisits: updateVisits,
 			description:  lorem.generateSentences(1), // description || '',
 			productName: lorem.generateWords(3), // productName || '',
 			manufacturer: lorem.generateWords(3), // manufacturer || '',

@@ -16,6 +16,7 @@ export const Menu = () => {
 					</NavLink>
 					<NavLink className="nav-link" activeClassName="active" to="/about">About</NavLink>
 					<NavLink className="nav-link" activeClassName="active" to="/products">Products</NavLink>
+					<NavLink className="nav-link" activeClassName="active" to="/chart">Chart</NavLink>
 				</Nav>
 				<Form className="nav-buttons" inline>
 					
