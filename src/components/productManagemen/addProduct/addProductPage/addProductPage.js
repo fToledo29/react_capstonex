@@ -1,11 +1,11 @@
 
 import React from 'react';
-import * as productActions from '../../../../redux/actions/productActions';
-import * as visitsActions from '../../../../redux/actions/visitsActions';
 import { withRouter } from 'react-router-dom';
 import FormikAddForm from '../addForm/addForm';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import * as productActions from '../../../../redux/actions/productActions';
+import * as visitsActions from '../../../../redux/actions/visitsActions';
 // import toastr from 'toastr';
 
 
@@ -60,6 +60,7 @@ class AddProductPage extends React.Component {
 				const newVisit = {
 					visits: 1,
 					productId: productId,
+					productName: this.props.product.productName,
 				};
 				this.props.vistActions.addVisit(newVisit)
 				.then((res) => {

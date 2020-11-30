@@ -5,10 +5,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Button, Spinner } from 'react-bootstrap';
 import * as productActions from '../../../redux/actions/productActions';
-import * as visitsActions from '../../../redux/actions/visitsActions';
 import { ProductList } from './viewProductList/viewProductList';
 import ProductsApi from '../../../api-collection/productApi';
-// import ProductsApi from '../../api-collection/productApi';
 
 class AllProductsPage extends React.Component {
 
