@@ -7,6 +7,7 @@ import { Button, Spinner } from 'react-bootstrap';
 import * as productActions from '../../../redux/actions/productActions';
 import { ProductList } from './viewProductList/viewProductList';
 import ProductsApi from '../../../api-collection/productApi';
+import SearchFilter from '../searchFilter/searchFilter';
 
 class AllProductsPage extends React.Component {
 
@@ -98,6 +99,8 @@ class AllProductsPage extends React.Component {
 					<Button className="product-list-button" onClick={() => this.onDelete()} variant="info">
 						Delete Product
 					</Button>
+
+					<SearchFilter />
 					
 					<ProductList data={this.props.data}>
 					</ProductList>

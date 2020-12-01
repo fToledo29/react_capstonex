@@ -9,6 +9,10 @@ export function loadVisitsSuccess(visits) {
 	return { type: actionTypes.LOAD_VISITS, visits };
 }
 
+export function filterProducts(productName) {
+	return { type: actionTypes.FILTER_PRODUCT, productName };
+}
+
 export function getVisits() {
 	return function (dispatch) {
 		return ProductsApi.getAllVisits().then((result) => {

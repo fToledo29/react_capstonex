@@ -25,7 +25,7 @@ export const ProductList = (props) => {
 					</tr>
 				</thead>
 				<tbody>
-				{productData.products ? productData.products.map((el, index) => {
+				{productData.productsCopy ? productData.productsCopy.map((el, index) => {
 					return <Product
 					key={index}
 					product={el}
