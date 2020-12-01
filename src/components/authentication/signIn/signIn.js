@@ -1,23 +1,36 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useRef } from 'react';
-import { Button, Card, FormControl, FormLabel, NavLink } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import UserApi from '../../../api-collection/userApi';
+import { Link, useHistory } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { Button,
+	Card,
+	FormControl,
+	FormLabel } from 'react-bootstrap';
+import *  as userActions from '../../../redux/actions/userActions';
 import './signIn.css';
 
-export const SignIn = () => {
+const SignIn = (props) => {
 
 	let userNameInput = useRef(null);
 
 	let passInput = useRef(null);
 
-	const login = () => {
+	let history = useHistory();
 
-		UserApi.login(userNameInput.value, passInput.value).then((data) => {
+	const login = async () => {
 
+		await props.actions.loginUser(userNameInput.value, passInput.value)
+		.then((data) => {
+			console.log('Data from login request: ', data.user.length > 0);
+			if(data.user.length > 0) {
+				history.push('/products');
+			} else {
+				alert(`Username and/or password doesn't match`);
+			}
 
-
-			console.log('Data from login request: ', data);
+		}).catch(error => {
+			console.log('[Error trying to login]: ', error);
 		});
 	}
 
@@ -34,10 +47,16 @@ export const SignIn = () => {
 				</Card.Header>
 
 				<Card.Body>
+
 					<FormLabel  >Username</FormLabel>
 					<FormControl ref={value => userNameInput = value} type="text"/>
 					<FormLabel>Password</FormLabel>
-					<FormControl ref={value => passInput = value} type="password"/>
+					<FormControl 
+					onKeyDown={(e) => e.key === 'Enter' ? login() : null}
+					onSubmit={() => login()} 
+					ref={value => passInput = value} 
+					type="password"/>
+
 				</Card.Body>
 
 				<Card.Footer className="sign-in-buttons">
@@ -62,3 +81,17 @@ export const SignIn = () => {
 		</div>
 	)
 }
+
+function mapStateToProps(state, ownProps) {
+	return {
+		userData: state.userData,
+	};
+}
+
+function mapDispatchToProps(dispatch) {
+	return {
+		actions: bindActionCreators(userActions, dispatch),
+	};
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

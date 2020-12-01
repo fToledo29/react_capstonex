@@ -6,10 +6,7 @@ export function addProductSuccess(product) {
 }
 
 export function setProductToUpdate(product) {
-	return {
-		type: actionTypes.PRODUCT_TO_UPDATE,
-		product
-	};
+	return { type: actionTypes.PRODUCT_TO_UPDATE, product };
 }
 
 export function clearProductsToDelete() {

@@ -23,11 +23,12 @@ class AllProductsPage extends React.Component {
 	}
 
 	componentDidMount() {
+
 		this.props.actions.loadProducts()
 		.then((res) => {
 
 			console.log('Loading Products..');
-	
+
 			// TODO: Add toastr
 
 		})
@@ -89,14 +90,15 @@ class AllProductsPage extends React.Component {
 				<div className="product-list">
 					
 					<Button className="product-list-button add" variant="info">
-						<Link 
-						to={{ pathname: '/addProduct' }}
-						> 
+						<Link to={{ pathname: '/addProduct' }}> 
 							Add Products
 						</Link>
 					</Button>
 
-					<Button className="product-list-button" onClick={() => this.onDelete()} variant="info">
+					<Button
+					className="product-list-button"
+					onClick={() => this.onDelete()} 
+					variant="info">
 						Delete Product
 					</Button>
 
@@ -119,6 +121,7 @@ class AllProductsPage extends React.Component {
 function mapStateToProps(state, ownProps) {
 	return {
 		data: state.data,
+		userData: state.userData,
 	}
 }
 

@@ -7,11 +7,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import configureStore from './redux/store/configure-store';
 import { loadProducts } from './redux/actions/productActions';
 import { Provider } from 'react-redux';
-import { getUser } from './redux/actions/userActions';
+import { keepSessionOn } from './redux/actions/userActions';
+import * as actionTypes from './redux/actions/actionTypes';
 
 const store = configureStore();
 store.dispatch(loadProducts());
-store.dispatch(getUser('', ''));
+const session = !!sessionStorage.getItem(actionTypes.LOGGED_IN_USER);
+store.dispatch(keepSessionOn(session));
 
 ReactDOM.render(
 	<React.StrictMode>

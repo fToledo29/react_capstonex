@@ -15,7 +15,10 @@ export const LOAD_PRODUCTS_SUCCESS = 'LOAD_PRODUCTS_SUCCESS';
  */
 export const GET_USER = 'GET_USER';
 export const SAVE_USER = 'SAVE_USER';
+export const LOGOUT_USER = 'LOGOUT_USER';
+export const SESSION_ON = 'SESSION_ON';
 export const LOGGED_IN_USER = 'LOGGED_IN_USER';
+export const LOGGED_IN_USER_DATA = 'LOGGED_IN_USER_DATA';
 
 /**
  * Visit Actions

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Menu } from './components/menu/menu';
+import Menu from './components/menu/menu';
 import { 
 	Route,
 	BrowserRouter as Router
@@ -8,7 +8,7 @@ import {
 import Switch from 'react-bootstrap/esm/Switch';
 import { About } from './components/about/about';
 import { Home } from './components/home/home';
-import { SignIn } from './components/authentication/signIn/signIn';
+import SignIn from './components/authentication/signIn/signIn';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import AllProductsPage from './components/productManagemen/all-products-page/all-products-page';
@@ -31,8 +31,6 @@ function App() {
 				<Route path="/addProduct" component={AddProductPage} />
 				<Route path="/updateProduct/:id" component={AddProductPage} />
 				<Route path="/chart" component={ChartsPage} />
-				{/* 
-				<Route path="/product/:productName" component={ProductDetail} /> */}
 			</Switch>
 		</Router>
 	</div>

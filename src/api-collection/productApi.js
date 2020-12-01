@@ -1,5 +1,4 @@
 import axios from 'axios';
-import uuidv4 from 'uuidv4';
 
 let ids = 0;
 
@@ -10,7 +9,6 @@ export default class ProductsApi {
 
 	static saveProduct(product) {
 
-		//  product.id = uuidv4(); 
 		product.id = ids + Math.floor(Math.random(100) * 9000); 
 
 		return axios.post(this.productsEndpoint, product).then(res => {
