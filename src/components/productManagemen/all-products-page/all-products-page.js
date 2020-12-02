@@ -83,24 +83,28 @@ class AllProductsPage extends React.Component {
 
 	render() {
 
+		const loggedInButtons = (<>
+			<Button className="product-list-button add" variant="info">
+				<Link to={{ pathname: '/addProduct' }}> 
+					Add Products
+				</Link>
+			</Button>
+
+			<Button
+			className="product-list-button"
+			onClick={() => this.onDelete()} 
+			variant="info">
+				Delete Product
+			</Button>
+		</>);
+
 		return (
 			<div>
 				<h1 className="all-products-title">Product List</h1>
 
 				<div className="product-list">
 					
-					<Button className="product-list-button add" variant="info">
-						<Link to={{ pathname: '/addProduct' }}> 
-							Add Products
-						</Link>
-					</Button>
-
-					<Button
-					className="product-list-button"
-					onClick={() => this.onDelete()} 
-					variant="info">
-						Delete Product
-					</Button>
+					{this.props.userData.loggedIn ? loggedInButtons: null }
 
 					<SearchFilter />
 					

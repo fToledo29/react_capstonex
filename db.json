@@ -1,24 +1,15 @@
 {
   "products": [
     {
-      "description": "Irure magna id nisi laborum tempor ad qui in.",
-      "productName": "ad occaecat excepteur",
-      "manufacturer": "id sit nostrud",
-      "quantity": 303,
-      "price": 353,
-      "id": 6393,
-      "updating": false,
-      "visits": 986
-    },
-    {
-      "description": "Aliquip nostrud occaecat enim velit aliquip dolore est occaecat consectetur veniam reprehenderit non aliquip.",
-      "productName": "occaecat elit consequat",
-      "manufacturer": "aliquip ex dolore",
-      "quantity": 158,
-      "price": 826,
+      "description": "Ex sit aliqua aliqua deserunt magna enim eu eu do est.",
+      "productName": "officia et consectetur",
+      "manufacturer": "exercitation laborum velit",
+      "quantity": 224,
+      "price": 852,
       "id": 6783,
       "updating": false,
-      "visits": 1
+      "visits": 1,
+      "viewMode": true
     },
     {
       "description": "Est ut et duis aliqua sunt do enim labore enim.",
@@ -201,6 +192,15 @@
       "price": 160,
       "id": 91,
       "updating": false
+    },
+    {
+      "description": "Voluptate aute ullamco incididunt et ad veniam duis sit.",
+      "productName": "amet mollit est",
+      "manufacturer": "aliquip adipisicing laboris",
+      "quantity": 413,
+      "price": 72,
+      "id": 7449,
+      "viewMode": false
     }
   ],
   "users": [
@@ -245,13 +245,7 @@
   ],
   "visits": [
     {
-      "visits": 11,
-      "productId": 6393,
-      "productName": "ad occaecat excepteur",
-      "id": 2555
-    },
-    {
-      "visits": 6,
+      "visits": 98,
       "productId": 6783,
       "productName": "occaecat elit consequat",
       "id": 2254
@@ -318,9 +312,32 @@
     },
     {
       "visits": 1,
-      "productId": 6393,
-      "productName": "ad occaecat excepteur",
-      "id": 7738
+      "productId": 6783,
+      "productName": "occaecat elit consequat",
+      "id": 7176
+    },
+    {
+      "visits": 1,
+      "productId": 6783,
+      "id": 1381
+    },
+    {
+      "visits": 1,
+      "productId": 6783,
+      "productName": "occaecat minim consequat",
+      "id": 8252
+    },
+    {
+      "visits": 1,
+      "productId": 6783,
+      "productName": "labore laborum nisi",
+      "id": 2349
+    },
+    {
+      "visits": 1,
+      "productId": 6783,
+      "productName": "est sint nulla",
+      "id": 4140
     }
   ]
 }

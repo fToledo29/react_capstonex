@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import FormikAddForm from '../addForm/addForm';
+import FormikAddForm from '../viewForm/viewForm';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as productActions from '../../../../redux/actions/productActions';
@@ -9,7 +9,7 @@ import * as visitsActions from '../../../../redux/actions/visitsActions';
 // import toastr from 'toastr';
 
 
-class AddProductPage extends React.Component {
+class ViewProductPage extends React.Component {
 
 	product = {};
 
@@ -18,6 +18,10 @@ class AddProductPage extends React.Component {
 	constructor(props) {
 
 		super(props);
+
+		this.state = {
+			viewMode: false
+		};
 
 		this.saveProduct = this.saveProduct.bind(this);
 
@@ -30,7 +34,11 @@ class AddProductPage extends React.Component {
 
 		if (this.productId) {
 
+			this.setState({viewMode: true});
+
 			this.getProduct(this.productId);
+		} else {
+			this.setState({viewMode: false});
 		}
 	}
 
@@ -139,7 +147,7 @@ class AddProductPage extends React.Component {
 				quantity={this.props.product.quantity}
 				price={this.props.product.price}
 				id={this.props.product.id}
-				viewMode={false}
+				viewMode={this.state.viewMode}
 
 				></FormikAddForm>
 			</>
@@ -161,4 +169,4 @@ function mapDispatchToProps(dispatch) {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(AddProductPage));
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(ViewProductPage));

@@ -58,12 +58,14 @@ class Product extends React.Component {
 				</td>
 
 				<td>
-					<Link
-					onMouseEnter={() => this.handleClick()}
-					onMouseLeave={() => this.handleClickMouseLeave()}
-					to={{ pathname: path }}> 
-						{this.props.product.productName} 
-					</Link>
+					{this.props.userData.loggedIn ? 
+						<Link
+						onMouseEnter={() => this.handleClick()}
+						onMouseLeave={() => this.handleClickMouseLeave()}
+						to={{ pathname: path }}> 
+							{this.props.product.productName} 
+						</Link> 
+					:  this.props.product.productName }
 				</td>
 
 				<td>
@@ -89,7 +91,8 @@ class Product extends React.Component {
 
 function mapStateToProps(state, ownProps) {
 	return {
-		data: state.data
+		data: state.data,
+		userData: state.userData,
 	}
 }
 

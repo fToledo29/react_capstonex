@@ -10,10 +10,8 @@ import {
 
 export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 
-	const updating = values.updating;
-
 	const updateVisits = values.updateVisits;
-	
+
 	useEffect(() => {
 		if(values.id) {
 			updateVisits();
@@ -21,94 +19,71 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 	}, [updateVisits, values.id]);
 
 	return (
-		<div>
+		<div>					
+
 			<Form className="product-form">
-				<Card className="text-center sign-in-card" bg="Info">
+				<Card className="text-center product-details-card" bg="Info">
 
 					<Card.Body>
 
 						<div className="product-form-container">
 							<label className="product-form-title">Product Name:</label>
 							
-							{updating ? <label>{values.productName}</label> : (() => {
-								return <div>
-									<Field
-									disabled={updating}
-									className="form-field form-control"
-									type="text"
-									value={values.productName}
-									name="productName"
-									placeholder="Product Name"/>
-									{touched.productName && errors.productName && <span style={{color: "red"}}>{errors.productName}</span> }
-									</div>
-							})() }
+							<Field
+							className="form-field form-control"
+							type="text"
+							value={values.productName}
+							name="productName"
+							placeholder="Product Name"/>
+							{touched.productName && errors.productName && <span style={{color: "red"}}>{errors.productName}</span> }
 						</div>
 
 						<div className="product-form-container">
 							<label className="product-form-title">Manufacturer:</label>
+
+							<Field
+							className="form-field form-control"
+							type="text"
+							value={values.manufacturer}
+							name="manufacturer"
+							placeholder="Manufacturer"/>
+							{touched.manufacturer && errors.manufacturer && <span style={{color: "red"}}>{errors.manufacturer}</span> }
 							
-							{updating ? <label>{values.manufacturer}</label> : (() => {
-								return <div>
-									<Field
-									disabled={updating}
-									className="form-field form-control"
-									type="text"
-									value={values.manufacturer}
-									name="manufacturer"
-									placeholder="Manufacturer"/>
-									{touched.manufacturer && errors.manufacturer && <span style={{color: "red"}}>{errors.manufacturer}</span> }
-									</div>
-							})() }
 						</div>
 
 						<div className="product-form-container">
 							<label className="product-form-title">Quantity:</label>
 
-							{updating ? <label>{values.quantity}</label> : (() => {
-								return <div>
-										<Field 
-										disabled={updating}
-										className="form-field form-control"
-										type="number"
-										value={values.quantity}
-										name="quantity"
-										placeholder="Quantity"/>
-										{touched.quantity && errors.quantity && <span style={{color: "red"}}>{errors.quantity}</span> }
-									</div>
-							})() }
+							<Field 
+							className="form-field form-control"
+							type="number"
+							value={values.quantity}
+							name="quantity"
+							placeholder="Quantity"/>
+							{touched.quantity && errors.quantity && <span style={{color: "red"}}>{errors.quantity}</span> }
 						</div>
 
 						<div className="product-form-container">
 							<label className="product-form-title">Price:</label>
 
-							{updating ? <label>{values.price}</label> : (() => {
-								return <div>
-										<Field
-										disabled={updating}
-										className="form-field form-control"
-										type="number"
-										value={values.price}
-										name="price" 
-										placeholder="Price"/>
-										{touched.price && errors.price && <span style={{color: "red"}}>{errors.price}</span> }
-									</div>
-							})() }
+							<Field
+							className="form-field form-control"
+							type="number"
+							value={values.price}
+							name="price" 
+							placeholder="Price"/>
+							{touched.price && errors.price && <span style={{color: "red"}}>{errors.price}</span> }
 						</div>
 
 						<div className="product-form-container">
 							<label className="product-form-title">Description:</label>
 
-							{updating ? <label className="product-form-desc">{values.description}</label> : (() => {
-								return <div>
-										<Field
-										disabled={updating}
-										className="form-field form-control"
-										as="textarea"
-										value={values.description}
-										name="description" 
-										placeholder="Description"/>
-									</div>
-							})() }
+							<Field
+							className="form-field form-control"
+							as="textarea"
+							value={values.description}
+							name="description" 
+							placeholder="Description"/>
 						</div>
 
 					</Card.Body>
@@ -118,7 +93,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 						<Button 
 						className="add-button"
 						type="submit"
-						disabled={isSubmitting || updating}>Submit</Button>
+						disabled={isSubmitting}>Submit</Button>
 					
 					</Card.Footer>
 
@@ -138,7 +113,7 @@ const FormikAddForm = withFormik({
 		quantity,
 		price,
 		id,
-		updating,
+		viewMode,
 	}){
 
 			const lorem = new LoremIpsum({
@@ -157,7 +132,7 @@ const FormikAddForm = withFormik({
 			quantity: Math.floor(Math.random(100) * 900), // quantity || 0,
 			price: Math.floor(Math.random(100) * 900), // price || 0,
 			id: id,
-			updating: updating,
+			viewMode: viewMode,
 		};
 	},
 	validationSchema: Yup.object().shape({
