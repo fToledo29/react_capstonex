@@ -1,14 +1,16 @@
 {
   "products": [
     {
-      "description": "Est ut et duis aliqua sunt do enim labore enim.",
-      "productName": "sunt velit minim",
-      "manufacturer": "officia officia do",
-      "quantity": 673,
-      "price": 182,
+      "description": "Et duis ut cupidatat culpa mollit aliquip id deserunt exercitation proident commodo.",
+      "productName": "anim pariatur officia",
+      "manufacturer": "amet officia consectetur",
+      "quantity": 588,
+      "price": 100,
       "id": 5985,
       "updating": false,
-      "visits": 1
+      "visits": 1,
+      "viewMode": false,
+      "loggedIn": true
     },
     {
       "description": "Consectetur sit cillum adipisicing proident aliquip.",
@@ -19,15 +21,6 @@
       "id": 6442,
       "updating": false,
       "visits": 4
-    },
-    {
-      "description": "Dolor minim anim minim exercitation cillum aute et nisi Lorem consequat quis adipisicing commodo.",
-      "productName": "commodo qui nulla",
-      "manufacturer": "aliquip commodo est",
-      "quantity": 23,
-      "price": 615,
-      "id": 5956,
-      "updating": false
     },
     {
       "description": "Est esse cillum voluptate amet eiusmod in cupidatat dolor mollit dolor commodo sunt.",
@@ -234,7 +227,7 @@
   ],
   "visits": [
     {
-      "visits": 12,
+      "visits": 89,
       "productId": 5985,
       "productName": "sunt velit minim",
       "id": 7906
@@ -246,7 +239,7 @@
       "id": 5628
     },
     {
-      "visits": 9,
+      "visits": 10,
       "productId": 6442,
       "productName": "dolore qui ex",
       "id": 6887
@@ -288,10 +281,28 @@
       "id": 3727
     },
     {
-      "visits": 5,
-      "productId": 5956,
-      "productName": "commodo qui nulla",
-      "id": 1219
+      "visits": 1,
+      "productId": 5985,
+      "productName": "sunt velit minim",
+      "id": 554
+    },
+    {
+      "visits": 1,
+      "productId": 5985,
+      "productName": "sunt velit minim",
+      "id": 999
+    },
+    {
+      "visits": 2,
+      "productId": 6443,
+      "productName": "cillum duis mollit",
+      "id": 4698
+    },
+    {
+      "visits": 14,
+      "productId": 7449,
+      "productName": "amet mollit est",
+      "id": 870
     }
   ]
 }

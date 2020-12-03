@@ -66,8 +66,6 @@ class AddProductPage extends React.Component {
 				.then((res) => {
 		
 					// TODO: Add toastr
-
-					console.log('Visit saved!: ', res);
 		
 				})
 				.catch(error => {
@@ -81,8 +79,6 @@ class AddProductPage extends React.Component {
 				.then((res) => {
 		
 					// TODO: Add toastr
-
-					console.log('Visit saved!: ', res);
 		
 				})
 				.catch(error => {

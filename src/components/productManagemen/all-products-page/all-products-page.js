@@ -86,6 +86,10 @@ class AllProductsPage extends React.Component {
 
 	}
 
+	setViewModeProduct() {
+		this.props.actions.viewModeProduct(false);
+	}
+
 	render() {
 
 		const loggedInButtons = (<>
@@ -95,7 +99,7 @@ class AllProductsPage extends React.Component {
 				disabled={!this.props.data.productsToDelete.length === 1}
 				className="product-list-button update-product"
 				variant="info">
-					<Link to={{ pathname: `/viwProduct/${this.props.data.productsToDelete[0].id}` }}> 
+					<Link onClick={() => this.setViewModeProduct()} to={{ pathname: `/viwProduct/${this.props.data.productsToDelete[0].id}` }}> 
 						Update Product 
 					</Link>
 				</Button> 

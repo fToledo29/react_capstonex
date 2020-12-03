@@ -48,6 +48,9 @@ class Product extends React.Component {
 		}
 	}
 
+	setViewModeProduct() {
+		this.props.actions.viewModeProduct(true);
+	}
 
 	render() {
 
@@ -74,6 +77,7 @@ class Product extends React.Component {
 
 				<td>
 					<Link
+					onClick={() => this.setViewModeProduct()}
 					onMouseEnter={() => this.handleClick()}
 					onMouseLeave={() => this.handleClickMouseLeave()}
 					to={{ pathname: path }}> 

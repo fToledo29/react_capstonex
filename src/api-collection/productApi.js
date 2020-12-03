@@ -29,7 +29,6 @@ export default class ProductsApi {
 	}
 
 	static updateProduct(product) {
-		console.log('Product Id: ', product.id);
 		return axios.patch(this.productsEndpoint + product.id, product).then(res => {
 			return res.data;
 		}).catch(error => {
@@ -58,7 +57,6 @@ export default class ProductsApi {
 	}
 
 	static updateVisits(visits) {
-		console.log('Visits Id: ', visits.id);
 		return axios.patch(this.visitsEndpoint + visits.id, visits).then(res => {
 			return res.data;
 		}).catch(error => {

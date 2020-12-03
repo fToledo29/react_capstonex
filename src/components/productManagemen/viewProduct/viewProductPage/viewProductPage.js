@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as productActions from '../../../../redux/actions/productActions';
 import * as visitsActions from '../../../../redux/actions/visitsActions';
-// import toastr from 'toastr';
+import './viewProductPage.css';
 
 
 class ViewProductPage extends React.Component {
@@ -26,6 +26,8 @@ class ViewProductPage extends React.Component {
 		this.saveProduct = this.saveProduct.bind(this);
 
 		this.updateVisits = this.updateVisits.bind(this);
+
+		this.onChangeViewMode = this.onChangeViewMode.bind(this);
 	}
 
 	componentDidMount() {
@@ -34,12 +36,19 @@ class ViewProductPage extends React.Component {
 
 		if (this.productId) {
 
-			this.setState({viewMode: true});
+			const productViewMode = this.props.productViewMode;
+
+			this.setState({viewMode: productViewMode});
 
 			this.getProduct(this.productId);
 		} else {
 			this.setState({viewMode: false});
 		}
+	}
+
+	onChangeViewMode(viewMode) {
+
+		this.setState({viewMode: viewMode});
 	}
 
 	getProduct(productId) {
@@ -74,8 +83,6 @@ class ViewProductPage extends React.Component {
 				.then((res) => {
 		
 					// TODO: Add toastr
-
-					console.log('Visit saved!: ', res);
 		
 				})
 				.catch(error => {
@@ -90,7 +97,6 @@ class ViewProductPage extends React.Component {
 		
 					// TODO: Add toastr
 
-					console.log('Visit saved!: ', res);
 		
 				})
 				.catch(error => {
@@ -137,7 +143,9 @@ class ViewProductPage extends React.Component {
 	render() {
 		return (
 			<>
-				<h1>Add Product</h1>
+				<div className="view-product-title">
+					<h1>{ this.state.viewMode ? 'View Product' : 'Update Product'}</h1>
+				</div>
 				<FormikAddForm 
 				onSave={this.saveProduct}
 				updateVisits={this.updateVisits}
@@ -148,6 +156,7 @@ class ViewProductPage extends React.Component {
 				price={this.props.product.price}
 				id={this.props.product.id}
 				viewMode={this.state.viewMode}
+				changeViewMode={this.onChangeViewMode}
 				loggedIn={this.props.userData.loggedIn}
 
 				></FormikAddForm>
@@ -158,6 +167,7 @@ class ViewProductPage extends React.Component {
 
 function mapStateToProps(state, ownProps) {
 	return {
+		productViewMode: state.data.productViewMode,
 		product: state.data.productToUpdate,
 		visitData: state.visitData.visits,
 		userData: state.userData,
