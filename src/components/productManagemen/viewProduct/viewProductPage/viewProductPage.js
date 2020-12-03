@@ -148,6 +148,7 @@ class ViewProductPage extends React.Component {
 				price={this.props.product.price}
 				id={this.props.product.id}
 				viewMode={this.state.viewMode}
+				loggedIn={this.props.userData.loggedIn}
 
 				></FormikAddForm>
 			</>
@@ -158,7 +159,8 @@ class ViewProductPage extends React.Component {
 function mapStateToProps(state, ownProps) {
 	return {
 		product: state.data.productToUpdate,
-		visitData: state.visitData.visits
+		visitData: state.visitData.visits,
+		userData: state.userData,
 	}
 }
 

@@ -1,20 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import { withFormik, Form, Field } from 'formik';
+import { Button, Card, } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 import { LoremIpsum } from 'lorem-ipsum';
-import './viewForm.css';
 import * as Yup from 'yup';
-import { 
-	Button,
-	Card,
-} from 'react-bootstrap';
+import './viewForm.css';
+import RequestLoginDialog from '../../../authentication/requestLogin/requestLoginDialog';
 
 export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 
 	const [viewMode, setShouldEdit] = useState(true);
 
+	const [show, setShow] = useState(false);
+
 	const updateVisits = values.updateVisits;
 
-	const onEdit = () => setShouldEdit(!viewMode);
+	const handleClose = () => setShow(false);
+
+	const history = useHistory();
+
+	const goToLogin = () => history.push('/login');
+
+	const onEdit = () => {
+
+		if(!values.loggedIn) {
+
+			setShow(true);
+
+		} else {
+
+			setShouldEdit(!viewMode);
+
+		}
+
+	};
 	
 	useEffect(() => {
 		if(values.id) {
@@ -24,6 +43,11 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 
 	return (
 		<div>					
+			
+			<RequestLoginDialog 
+			show={show}
+			handleClose={handleClose}
+			goToLogin={goToLogin} />
 
 			<Form className="product-form">
 				<div className="edit-button-container">
@@ -153,6 +177,7 @@ const FormikAddForm = withFormik({
 		price,
 		id,
 		viewMode,
+		loggedIn,
 	}){
 
 			const lorem = new LoremIpsum({
@@ -172,6 +197,7 @@ const FormikAddForm = withFormik({
 			price: Math.floor(Math.random(100) * 900), // price || 0,
 			id: id,
 			viewMode: viewMode,
+			loggedIn: loggedIn,
 		};
 	},
 	validationSchema: Yup.object().shape({

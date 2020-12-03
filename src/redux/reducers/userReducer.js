@@ -27,7 +27,7 @@ export default function userReducer(state = initialState, action) {
 			const userData = sessionStorage.getItem(actionTypes.LOGGED_IN_USER_DATA)
 			return {
 				user: action.sessionOn && !!userData ? JSON.parse(userData) : {},
-				loggedIn: action.sessionOn,
+				loggedIn: action.sessionOn && !!userData,
 			};
 		default:
 			return state;

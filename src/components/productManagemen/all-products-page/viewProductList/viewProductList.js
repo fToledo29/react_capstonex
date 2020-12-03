@@ -1,5 +1,8 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import *  as userActions from '../../../../redux/actions/userActions';
 import Product from './product/product';
 import './viewProductList.css';
 
@@ -11,11 +14,10 @@ export const ProductList = (props) => {
 
 	return (
 		<div className="product-list">
-			{/* <h1>Product List</h1> */}
 			<Table striped bordered hover className="products-table">
 				<thead>
 					<tr>
-						<th></th>
+						{props.userData.loggedIn ? <th></th> : null}
 						<th>Id</th>
 						<th>Product Name</th>
 						<th>Description</th>
@@ -37,3 +39,18 @@ export const ProductList = (props) => {
 		</div>
 	)
 }
+
+function mapStateToProps(state, ownProps) {
+	return {
+		userData: state.userData,
+	};
+}
+
+function mapDispatchToProps(dispatch) {
+	return {
+		userActions: bindActionCreators(userActions, dispatch)
+	}
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductList);

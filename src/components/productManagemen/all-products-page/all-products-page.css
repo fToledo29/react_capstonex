@@ -21,6 +21,10 @@
 	float: right;
 }
 
+.product-list-button.update-product {
+	float: left;
+}
+
 .all-products-title {
 	margin-top: 1.5rem;
 	text-align: center;
@@ -53,3 +57,4 @@ button.product-list-button.add {
 	border-bottom-width: .7rem;
 	border-left-width: .7rem;
   }
+

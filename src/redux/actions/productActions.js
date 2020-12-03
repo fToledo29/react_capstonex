@@ -17,6 +17,10 @@ export function setProductToDelete(product) {
 	return { type: actionTypes.PRODUCT_TO_DELETE, product };
 }
 
+export function removeFromListToDelete(productsToDelete) {
+	return { type: actionTypes.REMOVE_PRODUCT_FROM_LIST_TO_DELETE, productsToDelete };
+}
+
 export function afterDeleteProduct(products) {
 	return { type: actionTypes.DELETE_PRODUCT, products };
 }
@@ -32,6 +36,12 @@ export function loadProductsSuccess(products) {
 export function addProductToDelete(productId) {
 	return function (dispatch) {
 		return dispatch(setProductToDelete(productId));
+	};
+}
+
+export function removeProductFromListToDelete(productId) {
+	return function (dispatch) {
+		return dispatch(removeFromListToDelete(productId));
 	};
 }
 

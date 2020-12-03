@@ -30,7 +30,7 @@ function App() {
 				<Route path="/register" component={Register} />
 				<Route path="/products" component={AllProductsPage} />
 				<Route path="/addProduct" component={AddProductPage} />
-				<Route path="/updateProduct/:id" component={ViwProductPage} />
+				<Route path="/viwProduct/:id" component={ViwProductPage} />
 				<Route path="/chart" component={ChartsPage} />
 			</Switch>
 		</Router>

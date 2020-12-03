@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Button, Spinner } from 'react-bootstrap';
 import * as productActions from '../../../redux/actions/productActions';
-import { ProductList } from './viewProductList/viewProductList';
+import ProductList from './viewProductList/viewProductList';
 import ProductsApi from '../../../api-collection/productApi';
 import SearchFilter from '../searchFilter/searchFilter';
 
@@ -38,6 +38,11 @@ class AllProductsPage extends React.Component {
 	}
 
 	onDelete() {
+
+		if (this.props.data.productsToDelete.length <= 0) {
+			return;
+		}
+
 		let itemsArray = [...this.props.data.productsToDelete];		
 
 		const deleteItems = async () => {
@@ -84,13 +89,28 @@ class AllProductsPage extends React.Component {
 	render() {
 
 		const loggedInButtons = (<>
-			<Button className="product-list-button add" variant="info">
+
+			{this.props.data.productsToDelete.length === 1 ? 
+				<Button
+				disabled={!this.props.data.productsToDelete.length === 1}
+				className="product-list-button update-product"
+				variant="info">
+					<Link to={{ pathname: `/viwProduct/${this.props.data.productsToDelete[0].id}` }}> 
+						Update Product 
+					</Link>
+				</Button> 
+			: null}
+			
+			<Button 
+			className="product-list-button add"
+			variant="info">
 				<Link to={{ pathname: '/addProduct' }}> 
 					Add Products
 				</Link>
 			</Button>
 
 			<Button
+			disabled={this.props.data.productsToDelete.length <= 0}
 			className="product-list-button"
 			onClick={() => this.onDelete()} 
 			variant="info">

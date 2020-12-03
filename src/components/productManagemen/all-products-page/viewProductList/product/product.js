@@ -36,36 +36,49 @@ class Product extends React.Component {
 	onSelectItem(e) {
 		if (e.target.checked) {
 			this.props.actions.addProductToDelete(e.target);
+		} else {
+
+			const list = [...this.props.data.productsToDelete]
+
+			const index = list.findIndex(x => x.id === e.target.id);
+
+			list.splice(index, 1);
+
+			this.props.actions.removeProductFromListToDelete(list);
 		}
 	}
 
 
 	render() {
 
-		const path = `/updateProduct/${this.props.product.id}`;
+		const path = `/viwProduct/${this.props.product.id}`;
 
 		setProductToUpdate(this.props.product);
 
 		return (
 			<tr>
-				<td>
-					<Form.Group controlId="formBasicCheckbox">
-						<Form.Check id={this.props.product.id} value={this.props.product.id} onChange={e => this.onSelectItem(e)} type="checkbox"/>
-					</Form.Group>
-				</td>
+				{this.props.userData.loggedIn ? 
+					<td>
+						<Form.Group controlId="formBasicCheckbox">
+							<Form.Check
+							id={this.props.product.id}
+							value={this.props.product.id}
+							onChange={e => this.onSelectItem(e)}
+							type="checkbox"/>
+						</Form.Group>
+					</td>
+				:  null}
 				<td>
 					{this.props.product.id}
 				</td>
 
 				<td>
-					{this.props.userData.loggedIn ? 
-						<Link
-						onMouseEnter={() => this.handleClick()}
-						onMouseLeave={() => this.handleClickMouseLeave()}
-						to={{ pathname: path }}> 
-							{this.props.product.productName} 
-						</Link> 
-					:  this.props.product.productName }
+					<Link
+					onMouseEnter={() => this.handleClick()}
+					onMouseLeave={() => this.handleClickMouseLeave()}
+					to={{ pathname: path }}> 
+						{this.props.product.productName} 
+					</Link>
 				</td>
 
 				<td>

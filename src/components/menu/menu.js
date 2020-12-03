@@ -30,7 +30,7 @@ const Menu = (props) => {
 					</NavLink>
 					<NavLink className="nav-link" activeClassName="active" to="/about">About</NavLink>
 					<NavLink className="nav-link" activeClassName="active" to="/products">Products</NavLink>
-					<NavLink className="nav-link" activeClassName="active" to="/chart">Chart</NavLink>
+					<NavLink className="nav-link" activeClassName="active" to="/chart">Top Viewed Products</NavLink>
 				</Nav>
 				
 				{props.userData.loggedIn && 
