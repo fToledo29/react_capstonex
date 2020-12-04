@@ -71,11 +71,11 @@ class Product extends React.Component {
 						</Form.Group>
 					</td>
 				:  null}
-				<td>
+				{this.props.fieldsData.fields.id ? <td>
 					{this.props.product.id}
-				</td>
+				</td> : null}
 
-				<td>
+				{this.props.fieldsData.fields.productName ? <td>
 					<Link
 					onClick={() => this.setViewModeProduct()}
 					onMouseEnter={() => this.handleClick()}
@@ -83,23 +83,23 @@ class Product extends React.Component {
 					to={{ pathname: path }}> 
 						{this.props.product.productName} 
 					</Link>
-				</td>
+				</td> : null}
 
-				<td>
+				{this.props.fieldsData.fields.description ? <td>
 					{this.props.product.description}
-				</td>
+				</td> : null}
 
-				<td>
+				{this.props.fieldsData.fields.manufacturer ? <td>
 					{this.props.product.manufacturer}
-				</td>
+				</td> : null}
 
-				<td>
+				{this.props.fieldsData.fields.quantity ? <td>
 					{this.props.product.quantity}
-				</td>
+				</td> : null}
 
-				<td>
+				{this.props.fieldsData.fields.price ? <td>
 					${this.props.product.price}
-				</td>
+				</td> : null}
 			</tr>
 		)
 	}
@@ -110,6 +110,7 @@ function mapStateToProps(state, ownProps) {
 	return {
 		data: state.data,
 		userData: state.userData,
+		fieldsData: state.fieldsData,
 	}
 }
 

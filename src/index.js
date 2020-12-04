@@ -9,11 +9,13 @@ import { loadProducts } from './redux/actions/productActions';
 import { Provider } from 'react-redux';
 import { keepSessionOn } from './redux/actions/userActions';
 import * as actionTypes from './redux/actions/actionTypes';
+import { loadFields } from './redux/actions/fieldsActions';
 
 const store = configureStore();
 store.dispatch(loadProducts());
 const session = !!sessionStorage.getItem(actionTypes.LOGGED_IN_USER);
 store.dispatch(keepSessionOn(session));
+store.dispatch(loadFields());
 
 ReactDOM.render(
 	<React.StrictMode>

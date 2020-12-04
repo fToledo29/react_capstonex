@@ -18,12 +18,12 @@ export const ProductList = (props) => {
 				<thead>
 					<tr>
 						{props.userData.loggedIn ? <th></th> : null}
-						<th>Id</th>
-						<th>Product Name</th>
-						<th>Description</th>
-						<th>Manufacturer</th>
-						<th>Quantity</th>
-						<th>Price</th>
+						{props.fieldsData.fields.id ? <th>Id</th> : null}
+						{props.fieldsData.fields.productName ? <th>Product Name</th> : null}
+						{props.fieldsData.fields.description ? <th>Description</th> : null}
+						{props.fieldsData.fields.manufacturer ? <th>Manufacturer</th> : null}
+						{props.fieldsData.fields.quantity ? <th>Quantity</th> : null}
+						{props.fieldsData.fields.price ? <th>Price</th> : null}
 					</tr>
 				</thead>
 				<tbody>
@@ -43,6 +43,7 @@ export const ProductList = (props) => {
 function mapStateToProps(state, ownProps) {
 	return {
 		userData: state.userData,
+		fieldsData: state.fieldsData,
 	};
 }
 

@@ -28,3 +28,8 @@ export const LOGGED_IN_USER_DATA = 'LOGGED_IN_USER_DATA';
 export const UPDATE_VISITS = 'UPDATE_VISITS';
 export const DELETE_VISIT = 'DELETE_VISIT';
 export const LOAD_VISITS = 'LOAD_VISITS';
+
+/**
+ * Fields Actions
+ */
+export const LOAD_FIELDS = 'LOAD_FIELDS';

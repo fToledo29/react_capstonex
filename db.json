@@ -1,15 +1,6 @@
 {
   "products": [
     {
-      "description": "Fugiat officia ea veniam eu laboris dolor sunt sit velit id ex veniam aliquip.",
-      "productName": "id anim ullamco",
-      "manufacturer": "duis ipsum excepteur",
-      "quantity": 4,
-      "price": 160,
-      "id": 91,
-      "updating": false
-    },
-    {
       "description": "Aliquip amet ea mollit et sint ut nulla excepteur labore tempor et incididunt do sit.",
       "productName": "labore magna occaecat",
       "manufacturer": "qui qui minim",
@@ -152,6 +143,24 @@
       "price": 534,
       "id": 620,
       "viewMode": false
+    },
+    {
+      "description": "Dolor mollit aliqua exercitation officia proident velit.",
+      "productName": "excepteur elit fugiat",
+      "manufacturer": "et aliquip incididunt",
+      "quantity": 521,
+      "price": 159,
+      "id": 3520,
+      "viewMode": false
+    },
+    {
+      "description": "Ut Lorem nostrud aute mollit nulla cupidatat pariatur cillum.",
+      "productName": "aliquip incididunt velit",
+      "manufacturer": "ad id est",
+      "quantity": 609,
+      "price": 360,
+      "id": 7529,
+      "viewMode": false
     }
   ],
   "users": [
@@ -196,7 +205,7 @@
   ],
   "visits": [
     {
-      "visits": 2,
+      "visits": 3,
       "productId": 316,
       "productName": "labore magna occaecat",
       "id": 3371
@@ -218,12 +227,6 @@
       "productId": 3829,
       "productName": "est tempor ullamco",
       "id": 5421
-    },
-    {
-      "visits": 1,
-      "productId": 91,
-      "productName": "id anim ullamco",
-      "id": 373
     },
     {
       "visits": 2,
