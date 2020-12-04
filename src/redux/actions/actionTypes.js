@@ -26,4 +26,5 @@ export const LOGGED_IN_USER_DATA = 'LOGGED_IN_USER_DATA';
  * Visit Actions
  */
 export const UPDATE_VISITS = 'UPDATE_VISITS';
+export const DELETE_VISIT = 'DELETE_VISIT';
 export const LOAD_VISITS = 'LOAD_VISITS';

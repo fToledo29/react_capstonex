@@ -65,6 +65,15 @@ export default class ProductsApi {
 		});
 	}
 
+	static deleteVisits(visitId) {
+		return axios.patch(this.visitsEndpoint + visitId).then(res => {
+			return res.data;
+		}).catch(error => {
+
+			console.log('[Error when updating endpoint "visitsEndpoint"]: ', error)
+		});
+	}
+
 	static getAllProducts() {
 		return axios.get(this.productsEndpoint).then(res => {
 			return res.data;

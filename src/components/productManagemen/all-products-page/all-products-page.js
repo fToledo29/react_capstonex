@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Button, Spinner } from 'react-bootstrap';
 import * as productActions from '../../../redux/actions/productActions';
+import * as visitsActions from '../../../redux/actions/visitsActions';
 import ProductList from './viewProductList/viewProductList';
 import ProductsApi from '../../../api-collection/productApi';
 import SearchFilter from '../searchFilter/searchFilter';
@@ -37,6 +38,26 @@ class AllProductsPage extends React.Component {
 		});
 	}
 
+	loadVisits(productId) {
+		this.props.visitsActions.getVisits().then(() => {
+
+			const visitsList = [...this.props.visitData.visits];
+
+			const visitToDelete = visitsList.find((visit) => productId === visit.productId.toString());
+
+			if (visitToDelete) {
+
+				this.props.visitsActions.deleteVisits(visitToDelete.id);
+			}
+
+			this.props.actions.loadProducts();
+
+		}).catch(error => {
+
+			console.log('[Error retrieving visits]: ', error)
+		});
+	}
+
 	onDelete() {
 
 		if (this.props.data.productsToDelete.length <= 0) {
@@ -53,13 +74,15 @@ class AllProductsPage extends React.Component {
 
 			setTimeout(() => {
 
-				ProductsApi.deleteProduct(itemToDelete.id).then(x => {
+				const productId = itemToDelete.id;
+
+				ProductsApi.deleteProduct(productId).then(x => {
 
 					this.setState({spinnerOn: false});
 
 					itemToDelete.checked = false;
-	
-					this.props.actions.loadProducts();
+					
+					this.loadVisits(productId);
 	
 					if (itemsArray.length > 0) {
 						deleteItems();
@@ -72,7 +95,7 @@ class AllProductsPage extends React.Component {
 					console.log('[Error when calling delete Action]: ', error)
 				});
 
-			}, 1000);
+			}, 500);
 
 	
 		}
@@ -150,12 +173,14 @@ function mapStateToProps(state, ownProps) {
 	return {
 		data: state.data,
 		userData: state.userData,
+		visitData: state.visitData,
 	}
 }
 
 function mapDispatchToProps(dispatch) {
 	return {
 		actions: bindActionCreators(productActions, dispatch),
+		visitsActions: bindActionCreators(visitsActions, dispatch),
 	};
 }
 
