@@ -99,7 +99,17 @@ class ChartsPage extends Component {
 	}
 
 	componentDidMount() {
-		this.setProperties();
+
+		this.props.vistActions.getVisits().then(() => {
+
+			this.setProperties();
+
+		}).catch(error => {
+
+			console.log('[Error retrieving visits]: ', error)
+		});
+
+
 	}
 	  
 

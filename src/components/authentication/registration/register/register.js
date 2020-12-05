@@ -14,6 +14,7 @@ class Register extends React.Component  {
 		super(props);
 
 		this.state = {
+			userName: '',
 			email: '',
 			firstName: '',
 			lastName: '',
@@ -41,7 +42,14 @@ class Register extends React.Component  {
 
 	handleValueChange(e, field) {
 		
-		this.setState({[field]: e.target.value});
+		const value = e.target.value;
+
+		this.setState({[field]: value});
+
+		if (field === 'email') {
+			this.setState({userName: value.substr(0, value.indexOf('@'))});
+		}
+
 	}
 
 	onHandleSubmit() {

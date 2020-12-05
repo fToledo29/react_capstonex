@@ -17,11 +17,17 @@
 }
 
 .product-list-button {
-	margin: 1.5rem;
+	margin: 0.5rem;
 	float: right;
 }
 
-.product-list-button.update-product {
+.product-list-buttons {
+	width: 100%;
+	height: 3rem;
+	padding: 0 1.5rem;
+}
+
+.product-list-button.product-left {
 	float: left;
 }
 
@@ -58,3 +64,49 @@ button.product-list-button.add {
 	border-left-width: .7rem;
   }
 
+  .field-customizer-container .card {
+	width: 100%;
+	height: 2.5rem;
+  }
+
+  .field-customizer-container .card .card-body {
+	padding: 0;
+  }
+
+  .field-customizer-container {
+	padding: 0 1.5rem;
+	margin-bottom: .3rem;
+}
+
+.field-customizer-container._in {
+	animation: fadeIn ease-in-out .5s;
+	-webkit-animation: fadeIn ease-in-out .5s;
+}
+
+.field-customizer-container._out {
+	animation: fadeOut ease-in-out .5s;
+	-webkit-animation: fadeOut ease-in-out .5s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		height: 0rem;
+	}
+	100% {
+		opacity: 1;
+		height: 3rem;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		height: 3rem;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+		height: 0rem;
+	}
+}

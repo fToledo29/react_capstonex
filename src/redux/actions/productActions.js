@@ -33,9 +33,19 @@ export function loadProductsSuccess(products) {
 	return { type: actionTypes.LOAD_PRODUCTS_SUCCESS, products };
 }
 
+export function setViewModeProduct(viewMode) {
+	return { type: actionTypes.VIEW_PRODUCT, viewMode };
+}
+
 export function addProductToDelete(productId) {
 	return function (dispatch) {
 		return dispatch(setProductToDelete(productId));
+	};
+}
+
+export function viewModeProduct(viewMode) {
+	return function (dispatch) {
+		return dispatch(setViewModeProduct(viewMode));
 	};
 }
 

@@ -9,8 +9,6 @@ import RequestLoginDialog from '../../../authentication/requestLogin/requestLogi
 
 export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 
-	const [viewMode, setShouldEdit] = useState(true);
-
 	const [show, setShow] = useState(false);
 
 	const updateVisits = values.updateVisits;
@@ -29,7 +27,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 
 		} else {
 
-			setShouldEdit(!viewMode);
+			values.changeViewMode(!values.viewMode)
 
 		}
 
@@ -51,13 +49,13 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 
 			<Form className="product-form">
 				<div className="edit-button-container">
-					{values.viewMode ? <Button 
+					<Button 
 					className="edit-button"
 					onClick={() => onEdit()}
 					variant="info">
 					{/* // disabled={isSubmitting || updating} */}
-						{viewMode ? 'Edit' : 'Cancel'}
-					</Button> : null }
+						{values.viewMode ? 'Edit' : 'Cancel'}
+					</Button>
 
 				</div>
 
@@ -68,10 +66,10 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 						<div className="product-form-container">
 							<label className="product-form-title">Product Name:</label>
 							
-							{viewMode ? <label>{values.productName}</label> : (() => {
+							{values.viewMode ? <label>{values.productName}</label> : (() => {
 								return <div>
 									<Field
-									disabled={viewMode}
+									disabled={!values.loggedIn}
 									className="form-field form-control"
 									type="text"
 									value={values.productName}
@@ -85,10 +83,10 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 						<div className="product-form-container">
 							<label className="product-form-title">Manufacturer:</label>
 							
-							{viewMode ? <label>{values.manufacturer}</label> : (() => {
+							{values.viewMode ? <label>{values.manufacturer}</label> : (() => {
 								return <div>
 									<Field
-									disabled={viewMode}
+									disabled={!values.loggedIn}
 									className="form-field form-control"
 									type="text"
 									value={values.manufacturer}
@@ -102,10 +100,10 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 						<div className="product-form-container">
 							<label className="product-form-title">Quantity:</label>
 
-							{viewMode ? <label>{values.quantity}</label> : (() => {
+							{values.viewMode ? <label>{values.quantity}</label> : (() => {
 								return <div>
 										<Field 
-										disabled={viewMode}
+										disabled={!values.loggedIn}
 										className="form-field form-control"
 										type="number"
 										value={values.quantity}
@@ -119,10 +117,10 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 						<div className="product-form-container">
 							<label className="product-form-title">Price:</label>
 
-							{viewMode ? <label>{values.price}</label> : (() => {
+							{values.viewMode ? <label>{values.price}</label> : (() => {
 								return <div>
 										<Field
-										disabled={viewMode}
+										disabled={!values.loggedIn}
 										className="form-field form-control"
 										type="number"
 										value={values.price}
@@ -136,10 +134,10 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 						<div className="product-form-container">
 							<label className="product-form-title">Description:</label>
 
-							{viewMode ? <label className="product-form-desc">{values.description}</label> : (() => {
+							{values.viewMode ? <label className="product-form-desc">{values.description}</label> : (() => {
 								return <div>
 										<Field
-										disabled={viewMode}
+										disabled={!values.loggedIn}
 										className="form-field form-control"
 										as="textarea"
 										value={values.description}
@@ -156,7 +154,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 						<Button 
 						className="add-button"
 						type="submit"
-						disabled={isSubmitting || viewMode}>Submit</Button>
+						disabled={isSubmitting || values.viewMode}>Submit</Button>
 					
 					</Card.Footer>
 
@@ -177,6 +175,7 @@ const FormikAddForm = withFormik({
 		price,
 		id,
 		viewMode,
+		changeViewMode,
 		loggedIn,
 	}){
 
@@ -197,6 +196,7 @@ const FormikAddForm = withFormik({
 			price: Math.floor(Math.random(100) * 900), // price || 0,
 			id: id,
 			viewMode: viewMode,
+			changeViewMode: changeViewMode,
 			loggedIn: loggedIn,
 		};
 	},

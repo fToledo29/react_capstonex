@@ -18,22 +18,17 @@ export const ProductList = (props) => {
 				<thead>
 					<tr>
 						{props.userData.loggedIn ? <th></th> : null}
-						<th>Id</th>
-						<th>Product Name</th>
-						<th>Description</th>
-						<th>Manufacturer</th>
-						<th>Quantity</th>
-						<th>Price</th>
+
+						{props.fieldsData.fields ? props.fieldsData.fields.map((field, index) => {
+							return field.enabled ? <th key={index}>{field.fieldName}</th> : null;
+						}) :  null}
 					</tr>
 				</thead>
 				<tbody>
-				{productData.productsCopy ? productData.productsCopy.map((el, index) => {
-					return <Product
-					key={index}
-					product={el}
-					></Product>
+					{productData.productsCopy ? productData.productsCopy.map((el, index) => {
+						return <Product key={index} product={el}></Product>
 
-				}) : null}
+					}) : null}
 				</tbody>
 			</Table>
 		</div>
@@ -43,6 +38,7 @@ export const ProductList = (props) => {
 function mapStateToProps(state, ownProps) {
 	return {
 		userData: state.userData,
+		fieldsData: state.fieldsData,
 	};
 }
 

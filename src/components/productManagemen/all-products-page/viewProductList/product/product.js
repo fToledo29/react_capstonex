@@ -48,6 +48,9 @@ class Product extends React.Component {
 		}
 	}
 
+	setViewModeProduct() {
+		this.props.actions.viewModeProduct(true);
+	}
 
 	render() {
 
@@ -68,34 +71,27 @@ class Product extends React.Component {
 						</Form.Group>
 					</td>
 				:  null}
-				<td>
-					{this.props.product.id}
-				</td>
 
-				<td>
-					<Link
-					onMouseEnter={() => this.handleClick()}
-					onMouseLeave={() => this.handleClickMouseLeave()}
-					to={{ pathname: path }}> 
-						{this.props.product.productName} 
-					</Link>
-				</td>
+				{this.props.fieldsData.fields ? this.props.fieldsData.fields.map((field, index) => {
 
-				<td>
-					{this.props.product.description}
-				</td>
+					return field.id === 'productName' ?
 
-				<td>
-					{this.props.product.manufacturer}
-				</td>
+						field.enabled ? <td key={index}>
+							<Link
+							onClick={() => this.setViewModeProduct()}
+							onMouseEnter={() => this.handleClick()}
+							onMouseLeave={() => this.handleClickMouseLeave()}
+							to={{ pathname: path }}> 
+								{this.props.product.productName} 
+							</Link> 
+						</td> : null
 
-				<td>
-					{this.props.product.quantity}
-				</td>
+					: field.enabled ? 
+						<td key={index}> 
+							{(field.id === 'price' ? '$' : '') + this.props.product[field.id].toString()}
+						</td> : null;
+				}) :  null}
 
-				<td>
-					${this.props.product.price}
-				</td>
 			</tr>
 		)
 	}
@@ -106,6 +102,7 @@ function mapStateToProps(state, ownProps) {
 	return {
 		data: state.data,
 		userData: state.userData,
+		fieldsData: state.fieldsData,
 	}
 }
 

@@ -9,6 +9,7 @@ export const REMOVE_PRODUCT_FROM_LIST_TO_DELETE =  'REMOVE_PRODUCT_FROM_LIST_TO_
 export const CLEAR_PRODUCTS_TO_DELETE =  'CLEAR_PRODUCTS_TO_DELETE';
 export const DELETE_PRODUCT =  'DELETE_PRODUCT';
 export const FILTER_PRODUCT = 'FILTER_PRODUCT';
+export const VIEW_PRODUCT = 'VIEW_PRODUCT';
 export const LOAD_PRODUCTS_SUCCESS = 'LOAD_PRODUCTS_SUCCESS';
 
 /**
@@ -25,4 +26,11 @@ export const LOGGED_IN_USER_DATA = 'LOGGED_IN_USER_DATA';
  * Visit Actions
  */
 export const UPDATE_VISITS = 'UPDATE_VISITS';
+export const DELETE_VISIT = 'DELETE_VISIT';
 export const LOAD_VISITS = 'LOAD_VISITS';
+
+/**
+ * Fields Actions
+ */
+export const LOAD_FIELDS = 'LOAD_FIELDS';
+export const FIELD_CHANGE = 'FIELD_CHANGE';
