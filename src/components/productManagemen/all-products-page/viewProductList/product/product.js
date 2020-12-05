@@ -71,35 +71,27 @@ class Product extends React.Component {
 						</Form.Group>
 					</td>
 				:  null}
-				{this.props.fieldsData.fields.id ? <td>
-					{this.props.product.id}
-				</td> : null}
 
-				{this.props.fieldsData.fields.productName ? <td>
-					<Link
-					onClick={() => this.setViewModeProduct()}
-					onMouseEnter={() => this.handleClick()}
-					onMouseLeave={() => this.handleClickMouseLeave()}
-					to={{ pathname: path }}> 
-						{this.props.product.productName} 
-					</Link>
-				</td> : null}
+				{this.props.fieldsData.fields ? this.props.fieldsData.fields.map((field, index) => {
 
-				{this.props.fieldsData.fields.description ? <td>
-					{this.props.product.description}
-				</td> : null}
+					return field.id === 'productName' ?
 
-				{this.props.fieldsData.fields.manufacturer ? <td>
-					{this.props.product.manufacturer}
-				</td> : null}
+						field.enabled ? <td key={index}>
+							<Link
+							onClick={() => this.setViewModeProduct()}
+							onMouseEnter={() => this.handleClick()}
+							onMouseLeave={() => this.handleClickMouseLeave()}
+							to={{ pathname: path }}> 
+								{this.props.product.productName} 
+							</Link> 
+						</td> : null
 
-				{this.props.fieldsData.fields.quantity ? <td>
-					{this.props.product.quantity}
-				</td> : null}
+					: field.enabled ? 
+						<td key={index}> 
+							{(field.id === 'price' ? '$' : '') + this.props.product[field.id].toString()}
+						</td> : null;
+				}) :  null}
 
-				{this.props.fieldsData.fields.price ? <td>
-					${this.props.product.price}
-				</td> : null}
 			</tr>
 		)
 	}

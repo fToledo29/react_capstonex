@@ -40,7 +40,7 @@ export function keepSessionOn(keepSession) {
 export function loginUser(userName, pass) {
 
 	return function(dispatch) {
-		return UserApi.login(userName, pass).then(user => {
+		return UserApi.login(userName.toLowerCase(), pass).then(user => {
 
 			const loggedin = !!user[0];
 

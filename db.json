@@ -1,33 +1,6 @@
 {
   "products": [
     {
-      "description": "Aliquip amet ea mollit et sint ut nulla excepteur labore tempor et incididunt do sit.",
-      "productName": "labore magna occaecat",
-      "manufacturer": "qui qui minim",
-      "quantity": 395,
-      "price": 706,
-      "id": 316,
-      "viewMode": false
-    },
-    {
-      "description": "Quis sit laboris id et.",
-      "productName": "cillum ea pariatur",
-      "manufacturer": "proident consequat fugiat",
-      "quantity": 893,
-      "price": 337,
-      "id": 4704,
-      "viewMode": false
-    },
-    {
-      "description": "Aliquip non occaecat velit est consectetur elit aliquip commodo sit commodo deserunt deserunt reprehenderit laborum.",
-      "productName": "sint velit officia",
-      "manufacturer": "amet dolor ea",
-      "quantity": 672,
-      "price": 426,
-      "id": 4388,
-      "viewMode": false
-    },
-    {
       "description": "Minim nisi fugiat voluptate commodo consequat dolor.",
       "productName": "est tempor ullamco",
       "manufacturer": "nulla sunt sit",
@@ -201,27 +174,26 @@
       "mobileNumber": "",
       "password": "PASSWORD1",
       "id": "86871363-e574-4154-832c-a937376fa976"
+    },
+    {
+      "email": "jmorayt@mail.com",
+      "firstName": "Jorge",
+      "lastName": "Morayta",
+      "mobileNumber": "5452135455",
+      "password": "test123",
+      "id": "2918df18-ac0a-4812-aca3-dc716d6fa947"
+    },
+    {
+      "userName": "jmorayt",
+      "email": "jmorayt@gmail.com",
+      "firstName": "Jorge",
+      "lastName": "Morayta",
+      "mobileNumber": "5465465465",
+      "password": "test123",
+      "id": "66a1e7da-edbd-439a-800b-a3588a594861"
     }
   ],
   "visits": [
-    {
-      "visits": 3,
-      "productId": 316,
-      "productName": "labore magna occaecat",
-      "id": 3371
-    },
-    {
-      "visits": 3,
-      "productId": 4704,
-      "productName": "cillum ea pariatur",
-      "id": 7802
-    },
-    {
-      "visits": 1,
-      "productId": 4704,
-      "productName": "cillum ea pariatur",
-      "id": 3536
-    },
     {
       "visits": 4,
       "productId": 3829,
@@ -265,13 +237,7 @@
       "id": 498
     },
     {
-      "visits": 1,
-      "productId": 4388,
-      "productName": "sint velit officia",
-      "id": 3922
-    },
-    {
-      "visits": 1,
+      "visits": 2,
       "productId": 4290,
       "productName": "minim magna elit",
       "id": 1596

@@ -1,0 +1,13 @@
+.editor-fields {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	padding: 0 1.5rem;
+	height: 3rem;
+	align-items: center;
+}
+
+.editor-field, .filed-container {
+	margin: 1rem;
+}

@@ -33,3 +33,4 @@ export const LOAD_VISITS = 'LOAD_VISITS';
  * Fields Actions
  */
 export const LOAD_FIELDS = 'LOAD_FIELDS';
+export const FIELD_CHANGE = 'FIELD_CHANGE';

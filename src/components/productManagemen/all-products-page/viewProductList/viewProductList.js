@@ -18,22 +18,17 @@ export const ProductList = (props) => {
 				<thead>
 					<tr>
 						{props.userData.loggedIn ? <th></th> : null}
-						{props.fieldsData.fields.id ? <th>Id</th> : null}
-						{props.fieldsData.fields.productName ? <th>Product Name</th> : null}
-						{props.fieldsData.fields.description ? <th>Description</th> : null}
-						{props.fieldsData.fields.manufacturer ? <th>Manufacturer</th> : null}
-						{props.fieldsData.fields.quantity ? <th>Quantity</th> : null}
-						{props.fieldsData.fields.price ? <th>Price</th> : null}
+
+						{props.fieldsData.fields ? props.fieldsData.fields.map((field, index) => {
+							return field.enabled ? <th key={index}>{field.fieldName}</th> : null;
+						}) :  null}
 					</tr>
 				</thead>
 				<tbody>
-				{productData.productsCopy ? productData.productsCopy.map((el, index) => {
-					return <Product
-					key={index}
-					product={el}
-					></Product>
+					{productData.productsCopy ? productData.productsCopy.map((el, index) => {
+						return <Product key={index} product={el}></Product>
 
-				}) : null}
+					}) : null}
 				</tbody>
 			</Table>
 		</div>

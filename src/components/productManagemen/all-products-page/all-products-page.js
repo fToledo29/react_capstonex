@@ -3,12 +3,13 @@ import './all-products-page.css';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Button, Spinner } from 'react-bootstrap';
+import { Button, Card, FormLabel, Spinner } from 'react-bootstrap';
 import * as productActions from '../../../redux/actions/productActions';
 import * as visitsActions from '../../../redux/actions/visitsActions';
 import ProductList from './viewProductList/viewProductList';
 import ProductsApi from '../../../api-collection/productApi';
 import SearchFilter from '../searchFilter/searchFilter';
+import FieldsCustomizer from '../fieldsCustomizer/fieldsCustomizer';
 
 class AllProductsPage extends React.Component {
 
@@ -17,8 +18,16 @@ class AllProductsPage extends React.Component {
 
 		this.onDelete = this.onDelete.bind(this);
 
+		this.handleClose = this.handleCloseEditColumns.bind(this)
+
+		this.handleCloseEditColumns = this.handleCloseEditColumns.bind(this);
+
+		this.onEditColumns = this.onEditColumns.bind(this);
+
 		this.state = {
-			spinnerOn: false
+			spinnerOn: false,
+			show: false,
+			fadeOut: false,
 		}
 
 	}
@@ -109,6 +118,26 @@ class AllProductsPage extends React.Component {
 
 	}
 
+	onEditColumns() {
+		
+		this.setState({fadeOut: false});
+
+		this.setState({show: true});
+	}
+
+	handleCloseEditColumns() {
+
+		this.setState({spinnerOn: true});
+
+		this.setState({fadeOut: true});
+
+		setTimeout(() => {
+			this.setState({show: false});
+			this.setState({spinnerOn: false});
+		}, 500)
+
+	}
+
 	setViewModeProduct() {
 		this.props.actions.viewModeProduct(false);
 	}
@@ -120,7 +149,7 @@ class AllProductsPage extends React.Component {
 			{this.props.data.productsToDelete.length === 1 ? 
 				<Button
 				disabled={!this.props.data.productsToDelete.length === 1}
-				className="product-list-button update-product"
+				className="product-list-button product-left"
 				variant="info">
 					<Link onClick={() => this.setViewModeProduct()} to={{ pathname: `/viwProduct/${this.props.data.productsToDelete[0].id}` }}> 
 						Update Product 
@@ -128,6 +157,20 @@ class AllProductsPage extends React.Component {
 				</Button> 
 			: null}
 			
+			{!this.state.show ? <Button 
+			className="product-list-button product-left"
+			variant="info"
+			onClick={() => this.onEditColumns()}>
+					Edit Columns
+			</Button> : null}
+
+			{this.state.show ? <Button 
+			className="product-list-button product-left"
+			variant="info"
+			onClick={() => this.handleCloseEditColumns()}>
+					Save Columns
+			</Button> : null}
+
 			<Button 
 			className="product-list-button add"
 			variant="info">
@@ -151,7 +194,23 @@ class AllProductsPage extends React.Component {
 
 				<div className="product-list">
 					
-					{this.props.userData.loggedIn ? loggedInButtons: null }
+					<div className="product-list-buttons">
+						{this.props.userData.loggedIn ? loggedInButtons: null }
+					</div>
+
+
+					{this.props.userData.loggedIn && this.state.show ? 
+					<div className={
+						this.state.fadeOut ? 
+						'field-customizer-container _out' : 
+						'field-customizer-container _in'}> 
+						<Card body>
+						
+							<FieldsCustomizer/>
+
+						</Card> 
+					</div> : null}
+
 
 					<SearchFilter />
 					
@@ -174,6 +233,7 @@ function mapStateToProps(state, ownProps) {
 		data: state.data,
 		userData: state.userData,
 		visitData: state.visitData,
+		fieldsData: state.fieldsData,
 	}
 }
 
