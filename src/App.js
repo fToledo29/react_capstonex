@@ -16,6 +16,7 @@ import Register from './components/authentication/registration/register/register
 import AddProductPage from './components/productManagemen/addProduct/addProductPage/addProductPage';
 import ViwProductPage from './components/productManagemen/viewProduct/viewProductPage/viewProductPage';
 import ChartsPage from './components/productManagemen/viewChart/chart';
+import UserDetails from './components/authentication/registration/userDetails/userDetails';
 library.add(fas);
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
 				<Route path="/addProduct" component={AddProductPage} />
 				<Route path="/viwProduct/:id" component={ViwProductPage} />
 				<Route path="/chart" component={ChartsPage} />
+				<Route path="/userDetails" component={UserDetails} />
 			</Switch>
 		</Router>
 	</div>

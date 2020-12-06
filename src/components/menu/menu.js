@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Dropdown, Form, Nav, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import *  as userActions from '../../redux/actions/userActions';
@@ -9,9 +9,12 @@ import './menu.css';
 
 const Menu = (props) => {
 
+	const history = useHistory();
+
 	const logout = () => {
 		props.actions.logoutUser()
 		.then((data) => {
+			history.push('/products');
 			console.log('User logged out: ', data);
 		}).catch(error => {
 			console.log('[Error trying to login]: ', error);
@@ -22,7 +25,6 @@ const Menu = (props) => {
 	return (
 		<div>
 			<Navbar bg="dark" variant="dark">
-				{/* // TODO: Add a Home logo here*/}
 				<Nav className="mr-auto">
 					<NavLink className="nav-link" exact activeClassName="active" to="/">
 						<FontAwesomeIcon size="1x" className="icons" icon="home" />
@@ -42,7 +44,7 @@ const Menu = (props) => {
 						</Dropdown.Toggle>
 
 						<Dropdown.Menu>
-							<Dropdown.Item href="#/profile">Profile</Dropdown.Item>
+							<Dropdown.Item onClick={() => history.push('/userDetails')}>Profile</Dropdown.Item>
 							<Dropdown.Item onClick={() => logout()}>Logout</Dropdown.Item>
 						</Dropdown.Menu>
 					</Dropdown>

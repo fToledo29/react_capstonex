@@ -1,75 +1,12 @@
 {
   "products": [
     {
-      "description": "Minim nisi fugiat voluptate commodo consequat dolor.",
-      "productName": "est tempor ullamco",
-      "manufacturer": "nulla sunt sit",
-      "quantity": 555,
-      "price": 267,
-      "id": 3829,
-      "viewMode": false
-    },
-    {
-      "description": "Commodo incididunt proident commodo sunt voluptate ad enim mollit excepteur ut velit eiusmod.",
-      "productName": "minim magna elit",
-      "manufacturer": "nostrud qui dolore",
-      "quantity": 49,
-      "price": 608,
-      "id": 4290,
-      "viewMode": false
-    },
-    {
-      "description": "Velit ipsum consequat anim cupidatat elit aliquip sunt ea velit consequat quis proident commodo.",
-      "productName": "excepteur aliquip dolor",
-      "manufacturer": "duis elit ad",
-      "quantity": 108,
-      "price": 179,
-      "id": 2063,
-      "viewMode": false
-    },
-    {
-      "description": "Minim duis excepteur occaecat consequat occaecat voluptate amet id aute cillum nisi veniam.",
-      "productName": "sint ad voluptate",
-      "manufacturer": "sit proident minim",
-      "quantity": 633,
-      "price": 586,
-      "id": 1746,
-      "viewMode": false
-    },
-    {
       "description": "Eiusmod velit pariatur culpa cupidatat eu minim non nulla proident incididunt velit dolore.",
       "productName": "commodo ut enim",
       "manufacturer": "excepteur aute occaecat",
       "quantity": 421,
       "price": 519,
       "id": 643,
-      "viewMode": false
-    },
-    {
-      "description": "Non incididunt ullamco sit sint consectetur aliqua.",
-      "productName": "minim ad aute",
-      "manufacturer": "ullamco excepteur ad",
-      "quantity": 677,
-      "price": 526,
-      "id": 8569,
-      "viewMode": false
-    },
-    {
-      "description": "Elit dolore cupidatat elit nisi reprehenderit pariatur sit occaecat mollit cupidatat aliqua.",
-      "productName": "ex dolore consectetur",
-      "manufacturer": "proident nostrud dolor",
-      "quantity": 857,
-      "price": 802,
-      "id": 6516,
-      "viewMode": false
-    },
-    {
-      "description": "Sit labore dolor pariatur enim.",
-      "productName": "consequat nostrud sit",
-      "manufacturer": "enim ex nisi",
-      "quantity": 453,
-      "price": 322,
-      "id": 3175,
       "viewMode": false
     },
     {
@@ -100,39 +37,84 @@
       "viewMode": false
     },
     {
-      "description": "Laboris anim exercitation aliquip mollit aliquip amet ad mollit reprehenderit eu laborum eiusmod ad irure.",
-      "productName": "laboris occaecat veniam",
-      "manufacturer": "duis aliqua ullamco",
-      "quantity": 508,
-      "price": 95,
-      "id": 1800,
-      "viewMode": false
-    },
-    {
-      "description": "Id dolore ullamco ullamco dolor elit aliquip consectetur.",
-      "productName": "reprehenderit esse qui",
-      "manufacturer": "aliqua proident aute",
-      "quantity": 0,
-      "price": 534,
-      "id": 620,
-      "viewMode": false
-    },
-    {
-      "description": "Dolor mollit aliqua exercitation officia proident velit.",
-      "productName": "excepteur elit fugiat",
-      "manufacturer": "et aliquip incididunt",
-      "quantity": 521,
-      "price": 159,
-      "id": 3520,
-      "viewMode": false
-    },
-    {
       "description": "Ut Lorem nostrud aute mollit nulla cupidatat pariatur cillum.",
       "productName": "aliquip incididunt velit",
       "manufacturer": "ad id est",
       "quantity": 609,
       "price": 360,
       "id": 7529,
+      "viewMode": false
+    },
+    {
+      "description": "Duis cillum excepteur mollit ullamco laborum cupidatat elit nisi mollit do.",
+      "productName": "non Lorem duis",
+      "manufacturer": "culpa ex cupidatat",
+      "quantity": 340,
+      "price": 372,
+      "id": 1031,
+      "viewMode": false
+    },
+    {
+      "description": "Proident eiusmod proident laborum in qui.",
+      "productName": "quis esse laborum",
+      "manufacturer": "voluptate magna enim",
+      "quantity": 224,
+      "price": 378,
+      "id": 3865,
+      "viewMode": false
+    },
+    {
+      "description": "Lorem excepteur et ipsum minim irure nulla ea qui consectetur dolore officia ex aute.",
+      "productName": "do ullamco mollit",
+      "manufacturer": "ea ullamco ea",
+      "quantity": 696,
+      "price": 839,
+      "id": 3580,
+      "viewMode": false
+    },
+    {
+      "description": "Dolore aliquip ex laborum est exercitation velit do amet.",
+      "productName": "veniam deserunt magna",
+      "manufacturer": "ipsum irure non",
+      "quantity": 672,
+      "price": 300,
+      "id": 4584,
+      "viewMode": false
+    },
+    {
+      "description": "Labore sint dolore incididunt amet enim dolore fugiat sint Lorem veniam deserunt.",
+      "productName": "enim est duis",
+      "manufacturer": "magna voluptate Lorem",
+      "quantity": 694,
+      "price": 843,
+      "id": 8341,
+      "viewMode": false
+    },
+    {
+      "description": "Labore ex veniam aliqua elit aliqua.",
+      "productName": "mollit minim nostrud",
+      "manufacturer": "velit nisi eu",
+      "quantity": 580,
+      "price": 216,
+      "id": 8096,
+      "viewMode": false
+    },
+    {
+      "description": "Adipisicing est occaecat labore sit quis laborum et.",
+      "productName": "amet quis do",
+      "manufacturer": "ullamco fugiat incididunt",
+      "quantity": 282,
+      "price": 570,
+      "id": 7164,
+      "viewMode": false
+    },
+    {
+      "description": "Reprehenderit dolore proident et fugiat.",
+      "productName": "deserunt laborum duis",
+      "manufacturer": "deserunt ut consequat",
+      "quantity": 860,
+      "price": 276,
+      "id": 5935,
       "viewMode": false
     }
   ],
@@ -191,21 +173,73 @@
       "mobileNumber": "5465465465",
       "password": "test123",
       "id": "66a1e7da-edbd-439a-800b-a3588a594861"
+    },
+    {
+      "userName": "fulano",
+      "email": "fulano@mail.com",
+      "firstName": "Fulano",
+      "lastName": "Menganito",
+      "mobileNumber": "4565465655",
+      "password": "test123",
+      "id": "b93f834f-b985-4c9d-911c-049724ee2ffc"
+    },
+    {
+      "userName": "filomento",
+      "email": "filomento@mail.com",
+      "firstName": "Filomeno",
+      "lastName": "Torentino",
+      "mobileNumber": "4565465465",
+      "password": "test123",
+      "id": "47bec907-7650-4178-83b9-be3ff215243e"
+    },
+    {
+      "userName": "tamalo",
+      "email": "tamalo@mail.com",
+      "firstName": "Tamalo",
+      "lastName": "Rometo",
+      "mobileNumber": "4562135467",
+      "password": "test123",
+      "id": "f870b4a7-f494-4057-a2cf-cc913d294870"
+    },
+    {
+      "userName": "jorge",
+      "email": "jorge@mail.com",
+      "firstName": "Jorge",
+      "lastName": "Ramirez",
+      "mobileNumber": "4567891234",
+      "password": "test123",
+      "id": "4a8a30b4-5d3a-4a29-afd6-d8aea4d6dc9c"
+    },
+    {
+      "userName": "carlos",
+      "email": "carlos@mail.com",
+      "firstName": "Carlos",
+      "lastName": "Trejo",
+      "mobileNumber": "4569873214",
+      "password": "test123",
+      "id": "a934d767-5630-4f0e-8e7a-f5658c18e07f"
+    },
+    {
+      "userName": "daniel",
+      "email": "daniel@mail.com",
+      "firstName": "Daniel",
+      "lastName": "Contreras",
+      "mobileNumber": "5456789134",
+      "password": "test123",
+      "id": "d1944057-fa1c-4563-8550-96d96f0b7138"
+    },
+    {
+      "spinnerOn": false,
+      "userName": "genaro",
+      "email": "genaro@mail.com",
+      "firstName": "Genaro",
+      "lastName": "Cantinflas",
+      "mobileNumber": "5457893589",
+      "password": "test123",
+      "id": "df331112-5ecc-40e0-a307-4d0bbb6a1aac"
     }
   ],
   "visits": [
-    {
-      "visits": 4,
-      "productId": 3829,
-      "productName": "est tempor ullamco",
-      "id": 5421
-    },
-    {
-      "visits": 2,
-      "productId": 3175,
-      "productName": "consequat nostrud sit",
-      "id": 2693
-    },
     {
       "visits": 2,
       "productId": 1493,
@@ -225,28 +259,22 @@
       "id": 7895
     },
     {
-      "visits": 1,
-      "productId": 1800,
-      "productName": "laboris occaecat veniam",
-      "id": 4533
+      "visits": 3,
+      "productId": 1031,
+      "productName": "non Lorem duis",
+      "id": 6874
     },
     {
       "visits": 1,
-      "productId": 620,
-      "productName": "reprehenderit esse qui",
-      "id": 498
+      "productId": 8341,
+      "productName": "enim est duis",
+      "id": 4297
     },
     {
-      "visits": 2,
-      "productId": 4290,
-      "productName": "minim magna elit",
-      "id": 1596
-    },
-    {
-      "visits": 1,
-      "productId": 2063,
-      "productName": "excepteur aliquip dolor",
-      "id": 5109
+      "visits": 3,
+      "productId": 643,
+      "productName": "commodo ut enim",
+      "id": 8094
     }
   ]
 }

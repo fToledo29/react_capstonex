@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Form } from 'react-bootstrap';
+import { Button, Card, Form, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import * as userActions from '../../../../redux/actions/userActions';
 import { bindActionCreators } from 'redux';
@@ -14,6 +14,7 @@ class Register extends React.Component  {
 		super(props);
 
 		this.state = {
+			spinnerOn: false,
 			userName: '',
 			email: '',
 			firstName: '',
@@ -53,10 +54,24 @@ class Register extends React.Component  {
 	}
 
 	onHandleSubmit() {
-		
-		this.props.actions.saveUser(this.state);
+		this.setState({spinnerOn: true});
+		this.props.actions.saveUser(this.state).then((res) => {
+			this.props.actions.loginUser(this.state.userName, this.state.password)
+			.then((data) => {
+				if(data.user.length > 0) {
+					this.props.history.push('/userDetails');
+					this.setState({spinnerOn: false});
+				}
 
-		this.props.history.push('/');
+			}).catch(error => {
+				this.setState({spinnerOn: false});
+				console.log('[Error trying to login]: ', error);
+			});
+		})
+		.catch(error => {
+			this.setState({spinnerOn: false});
+			alert('[Sothing went wrong trying to save new user]: ' + error);
+		});
 	}
 
 	render() {
@@ -149,6 +164,11 @@ class Register extends React.Component  {
 
 
 				</Card>
+
+				{this.state.spinnerOn ? <div className="spinner-container" >
+					<Spinner animation="border" variant="info"/>
+				</div> : null}
+
 			</div>
 		);
 	}

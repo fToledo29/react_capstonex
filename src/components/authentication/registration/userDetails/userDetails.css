@@ -1,0 +1,29 @@
+.center-card {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5rem;
+}
+
+.field-label, .value-field {
+	width: calc(90% / 2);
+	margin: 1rem;
+}
+
+.list-group .list-group-item {
+	display: flex;
+	justify-content: center;
+}
+
+.field-label {
+	display: flex;
+	justify-content: flex-end
+}
+
+.value-field {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.field-label label {
+	font-weight: bold;
+}

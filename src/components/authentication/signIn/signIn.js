@@ -22,7 +22,6 @@ const SignIn = (props) => {
 
 		await props.actions.loginUser(userNameInput.value, passInput.value)
 		.then((data) => {
-			console.log('Data from login request: ', data.user.length > 0);
 			if(data.user.length > 0) {
 				history.push('/products');
 			} else {
