@@ -1,0 +1,16 @@
+.home-content {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 2rem;
+	margin-bottom: 1rem;
+	width: 80%;
+}
+
+.home-content:last-child {
+	padding-bottom: 5rem;
+} 
+
+.home-title {
+	margin: 2rem;
+	text-align: center;
+}
