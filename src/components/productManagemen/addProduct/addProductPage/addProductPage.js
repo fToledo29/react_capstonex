@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as productActions from '../../../../redux/actions/productActions';
 import * as visitsActions from '../../../../redux/actions/visitsActions';
+import './addProductPage.css';
 // import toastr from 'toastr';
 
 
@@ -157,4 +158,4 @@ function mapDispatchToProps(dispatch) {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(AddProductPage));
+export default connect(mapStateToProps, mapDispatchToProps)(AddProductPage);

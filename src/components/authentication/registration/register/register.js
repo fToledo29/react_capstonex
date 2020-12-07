@@ -146,7 +146,6 @@ class Register extends React.Component  {
 
 					<Card.Footer className="sign-in-buttons">
 
-						{/* href="/login"  */}
 						<Button 
 						className="sign-in-button" 
 						variant="info" 

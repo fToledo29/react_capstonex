@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductList AddProductPage Renders correctly 1`] = `
+<Fragment>
+  <h1>
+    Add Product
+  </h1>
+  <WithFormik(AddForm)
+    onSave={[Function]}
+    updateVisits={[Function]}
+    viewMode={false}
+  />
+</Fragment>
+`;

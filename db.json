@@ -1,13 +1,14 @@
 {
   "products": [
     {
-      "description": "Eiusmod velit pariatur culpa cupidatat eu minim non nulla proident incididunt velit dolore.",
-      "productName": "commodo ut enim",
-      "manufacturer": "excepteur aute occaecat",
-      "quantity": 421,
-      "price": 519,
+      "description": "Enim cillum magna laborum pariatur minim incididunt et cillum voluptate ea nostrud non fugiat.",
+      "productName": "magna reprehenderit cillum",
+      "manufacturer": "nulla eu voluptate",
+      "quantity": 570,
+      "price": 64,
       "id": 643,
-      "viewMode": false
+      "viewMode": false,
+      "loggedIn": true
     },
     {
       "description": "Anim nulla aliquip irure dolore fugiat pariatur sunt anim quis eu occaecat.",
@@ -115,6 +116,33 @@
       "quantity": 860,
       "price": 276,
       "id": 5935,
+      "viewMode": false
+    },
+    {
+      "description": "Est exercitation nostrud incididunt enim occaecat cupidatat deserunt cupidatat veniam nostrud qui.",
+      "productName": "veniam cupidatat tempor",
+      "manufacturer": "eiusmod minim est",
+      "quantity": 887,
+      "price": 658,
+      "id": 6087,
+      "viewMode": false
+    },
+    {
+      "description": "Irure ea Lorem id mollit velit quis id deserunt ex nostrud cupidatat sunt laborum.",
+      "productName": "excepteur voluptate cupidatat",
+      "manufacturer": "velit non adipisicing",
+      "quantity": 432,
+      "price": 443,
+      "id": 672,
+      "viewMode": false
+    },
+    {
+      "description": "Fugiat non occaecat sit reprehenderit veniam veniam.",
+      "productName": "aute et aute",
+      "manufacturer": "qui deserunt qui",
+      "quantity": 150,
+      "price": 795,
+      "id": 2573,
       "viewMode": false
     }
   ],
@@ -253,7 +281,7 @@
       "id": 5922
     },
     {
-      "visits": 3,
+      "visits": 4,
       "productId": 1488,
       "productName": "eiusmod commodo aliquip",
       "id": 7895
@@ -271,10 +299,16 @@
       "id": 4297
     },
     {
-      "visits": 3,
+      "visits": 9,
       "productId": 643,
       "productName": "commodo ut enim",
       "id": 8094
+    },
+    {
+      "visits": 1,
+      "productId": 643,
+      "productName": "commodo ut enim",
+      "id": 369
     }
   ]
 }

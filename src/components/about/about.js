@@ -3,7 +3,6 @@ import React from 'react'
 export const About = () => {
 	return (
 		<div>
-			This site shows Products and Users
 
 			<section>
 				<h3>Company's history</h3>

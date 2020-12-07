@@ -1,9 +1,28 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import 'enzyme-to-json';
+import { shallow } from 'enzyme';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('App', () => {
+
+	let wrapper;
+	let props;
+
+	beforeAll(() => {
+
+		props = {
+			vistActions: {} ,
+			actions: {} ,
+			visitData: {} ,
+			product: {} ,
+			match: {params: {id: 1}, isExact: true, path: "", url: ""},
+		};
+
+		wrapper = shallow(<App {...props}/>);
+
+	});
+
+	it('App Renders correctly', () => {
+		expect(wrapper).toMatchSnapshot();
+	});
+});	

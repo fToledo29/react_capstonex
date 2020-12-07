@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App App Renders correctly 1`] = `
+<div
+  className="App"
+>
+  <BrowserRouter>
+    <Connect(Menu) />
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        path="/about"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(SignIn)",
+            "type": [Function],
+          }
+        }
+        path="/login"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(withRouter(Register))",
+            "type": [Function],
+          }
+        }
+        path="/register"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(AllProductsPage)",
+            "type": [Function],
+          }
+        }
+        path="/products"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(AddProductPage)",
+            "type": [Function],
+          }
+        }
+        path="/addProduct"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(withRouter(ViewProductPage))",
+            "type": [Function],
+          }
+        }
+        path="/viwProduct/:id"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(withRouter(ChartsPage))",
+            "type": [Function],
+          }
+        }
+        path="/chart"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(UserDetails)",
+            "type": [Function],
+          }
+        }
+        path="/userDetails"
+      />
+    </Switch>
+  </BrowserRouter>
+</div>
+`;

@@ -1,11 +1,8 @@
 import React from 'react';
 import './App.css';
 import Menu from './components/menu/menu';
-import { 
-	Route,
-	BrowserRouter as Router
-} from 'react-router-dom';
-import Switch from 'react-bootstrap/esm/Switch';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+import Switch from 'react-bootstrap/Switch';
 import { About } from './components/about/about';
 import { Home } from './components/home/home';
 import SignIn from './components/authentication/signIn/signIn';
