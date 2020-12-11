@@ -24,3 +24,7 @@
 .custom-control.custom-switch {
 	padding: 0px;
 }
+
+.invalid-feedback {
+	text-align: left;
+}

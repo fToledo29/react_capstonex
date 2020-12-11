@@ -265,6 +265,57 @@
       "mobileNumber": "5457893589",
       "password": "test123",
       "id": "df331112-5ecc-40e0-a307-4d0bbb6a1aac"
+    },
+    {
+      "spinnerOn": false,
+      "userName": "",
+      "email": "",
+      "firstName": "",
+      "lastName": "",
+      "mobileNumber": "",
+      "password": "",
+      "id": "0e45baee-d56d-4835-85e1-c3051e8f849e"
+    },
+    {
+      "spinnerOn": false,
+      "userName": "",
+      "email": "",
+      "firstName": "",
+      "lastName": "",
+      "mobileNumber": "",
+      "password": "",
+      "id": "d9c6a229-b771-4f8e-ad22-c77c12eaecde"
+    },
+    {
+      "validated": false,
+      "spinnerOn": false,
+      "userName": "",
+      "email": "",
+      "firstName": "",
+      "lastName": "",
+      "mobileNumber": "",
+      "password": "",
+      "id": "54be116b-ff62-462e-84d4-93938d81baca"
+    },
+    {
+      "validated": true,
+      "spinnerOn": false,
+      "userName": "stroncho",
+      "email": "stroncho@mail.com",
+      "firstName": "Stroncho",
+      "lastName": "Tocino",
+      "mobileNumber": "1289856487",
+      "password": "Test123",
+      "id": "a6f4a06e-bf2f-4aed-bd23-bf704d8695b6"
+    },
+    {
+      "userName": "ewrewr",
+      "email": "ewrewr@mail.com",
+      "firstName": "lsdkfdsl",
+      "lastName": "sdlkfdslk",
+      "mobileNumber": "1236549877",
+      "password": "1234567897",
+      "id": "5f028f00-c8c4-4826-b624-282bea66659b"
     }
   ],
   "visits": [

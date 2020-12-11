@@ -7,6 +7,19 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './register.css';
 
+class User {
+
+	constructor(state) {
+		this.userName = state.userName;
+		this.email = state.email;
+		this.firstName = state.firstName;
+		this.lastName = state.lastName;
+		this.mobileNumber = state.mobileNumber;
+		this.password = state.password;
+	}
+
+}
+
 class Register extends React.Component  {
 
 	constructor(props) {
@@ -14,6 +27,7 @@ class Register extends React.Component  {
 		super(props);
 
 		this.state = {
+			validated: false,
 			spinnerOn: false,
 			userName: '',
 			email: '',
@@ -24,6 +38,8 @@ class Register extends React.Component  {
 		};
 
 		this.saveUser = this.saveUser.bind(this);
+
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	saveUser(user) {
@@ -53,9 +69,26 @@ class Register extends React.Component  {
 
 	}
 
+	handleSubmit(event) {
+		const form = event.currentTarget;
+		if (form.checkValidity() === false) {
+			event.preventDefault();
+			event.stopPropagation();
+			this.setState({validated: true});
+		  	return;
+		}
+	  
+		this.setState({validated: true});
+		this.onHandleSubmit();
+		event.preventDefault();
+		event.stopPropagation();
+	};
+
 	onHandleSubmit() {
 		this.setState({spinnerOn: true});
-		this.props.actions.saveUser(this.state).then((res) => {
+		let user = new User(this.state);
+
+		this.props.actions.saveUser(user).then((res) => {
 			this.props.actions.loginUser(this.state.userName, this.state.password)
 			.then((data) => {
 				if(data.user.length > 0) {
@@ -77,7 +110,9 @@ class Register extends React.Component  {
 	render() {
 		return (
 			<div className="register-component">
-				
+
+				<Form noValidate validated={this.state.validated} onSubmit={this.handleSubmit}>
+
 				<Card className="text-center sign-in-card" bg="Info">
 
 					<Card.Header>
@@ -85,10 +120,11 @@ class Register extends React.Component  {
 					</Card.Header>
 
 					<Card.Body>
-						<Form>
+						{/* <Form> */}
 							<Form.Group controlId="register-email">
 								<Form.Label>Email ID</Form.Label>
 								<Form.Control 
+								required
 								pattern="[A-Za-z0-9-_.]+@[A-Za-z0-9-_]+\.[a-z]{1,6}" 
 								type="email" 
 								value={this.state.email}
@@ -97,31 +133,43 @@ class Register extends React.Component  {
 								<Form.Text className="text-muted">
 									Example: jonh123@mymail.com
 								</Form.Text>
+								<Form.Control.Feedback type="invalid">
+									Please Enter a valid email.
+								</Form.Control.Feedback>
 							</Form.Group>
 
 							<Form.Group controlId="register-first-name">
 								<Form.Label>First Name</Form.Label>
 								<Form.Control
+								required
 								value={this.state.firstName}
 								onChange={(e) => this.handleValueChange(e, 'firstName')}  
 								pattern="[A-Za-z ]+" 
 								type="text" 
 								placeholder="Enter First Name" />
+								<Form.Control.Feedback type="invalid">
+									First Name is required!.
+								</Form.Control.Feedback>
 							</Form.Group>
 
 							<Form.Group controlId="register-last-name">
 								<Form.Label>Last Name</Form.Label>
-								<Form.Control 
+								<Form.Control
+								required 
 								value={this.state.lastName}
 								onChange={(e) => this.handleValueChange(e, 'lastName')}
 								pattern="[A-Za-z]+" 
 								type="text" 
-								placeholder="Enter First Name" />
+								placeholder="Enter Last Name" />
+								<Form.Control.Feedback type="invalid">
+									Last Name is required!.
+								</Form.Control.Feedback>
 							</Form.Group>
 
 							<Form.Group controlId="register-mobile-number">
 								<Form.Label>Mobile Number</Form.Label>
 								<Form.Control 
+								required
 								value={this.state.mobileNumber}
 								onChange={(e) => this.handleValueChange(e, 'mobileNumber')}
 								pattern="[0-9 ]{10}" 
@@ -130,18 +178,25 @@ class Register extends React.Component  {
 								<Form.Text className="text-muted">
 									Example: 9876543210
 								</Form.Text>
+								<Form.Control.Feedback type="invalid">
+									Mobile Number is required!
+								</Form.Control.Feedback>
 							</Form.Group>
 
 							<Form.Group controlId="register-password">
 								<Form.Label>Password</Form.Label>
 								<Form.Control 
+								required
 								value={this.state.password}
 								onChange={(e) => this.handleValueChange(e, 'password')}
 								type="password" 
 								placeholder="Password" />
+								<Form.Control.Feedback type="invalid">
+									Password field can't be empty!
+								</Form.Control.Feedback>
 							</Form.Group>
 							
-						</Form>
+						{/* </Form> */}
 					</Card.Body>
 
 					<Card.Footer className="sign-in-buttons">
@@ -155,7 +210,11 @@ class Register extends React.Component  {
 							>I have an account already!</Link>
 						</Button>
 
-						<Button onClick={() => this.onHandleSubmit()} className="sign-in-button" variant="primary" type="submit">
+						<Button
+						// onClick={() => this.onHandleSubmit()} 
+						className="sign-in-button" 
+						variant="primary" 
+						type="submit">
 							Submit
 						</Button>
 
@@ -167,6 +226,8 @@ class Register extends React.Component  {
 				{this.state.spinnerOn ? <div className="spinner-container" >
 					<Spinner animation="border" variant="info"/>
 				</div> : null}
+				
+				</Form>
 
 			</div>
 		);
