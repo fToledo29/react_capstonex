@@ -1,52 +1,6 @@
 {
   "products": [
     {
-      "description": "Enim cillum magna laborum pariatur minim incididunt et cillum voluptate ea nostrud non fugiat.",
-      "productName": "magna reprehenderit cillum",
-      "manufacturer": "nulla eu voluptate",
-      "quantity": 570,
-      "price": 64,
-      "id": 643,
-      "viewMode": false,
-      "loggedIn": true
-    },
-    {
-      "description": "Anim nulla aliquip irure dolore fugiat pariatur sunt anim quis eu occaecat.",
-      "productName": "eiusmod commodo aliquip",
-      "manufacturer": "aliquip enim culpa",
-      "quantity": 48,
-      "price": 539,
-      "id": 1488,
-      "viewMode": false
-    },
-    {
-      "description": "Quis mollit occaecat consectetur pariatur cupidatat.",
-      "productName": "consectetur fugiat culpa",
-      "manufacturer": "incididunt ex dolore",
-      "quantity": 87,
-      "price": 498,
-      "id": 1493,
-      "viewMode": false
-    },
-    {
-      "description": "Reprehenderit sunt ut fugiat commodo eu voluptate incididunt mollit anim laboris.",
-      "productName": "laborum elit cupidatat",
-      "manufacturer": "minim et anim",
-      "quantity": 792,
-      "price": 425,
-      "id": 8203,
-      "viewMode": false
-    },
-    {
-      "description": "Ut Lorem nostrud aute mollit nulla cupidatat pariatur cillum.",
-      "productName": "aliquip incididunt velit",
-      "manufacturer": "ad id est",
-      "quantity": 609,
-      "price": 360,
-      "id": 7529,
-      "viewMode": false
-    },
-    {
       "description": "Duis cillum excepteur mollit ullamco laborum cupidatat elit nisi mollit do.",
       "productName": "non Lorem duis",
       "manufacturer": "culpa ex cupidatat",
@@ -316,27 +270,144 @@
       "mobileNumber": "1236549877",
       "password": "1234567897",
       "id": "5f028f00-c8c4-4826-b624-282bea66659b"
+    },
+    {
+      "userName": "dskfl",
+      "email": "dskfl@fds.cs",
+      "firstName": "kldsfjslk",
+      "lastName": "lksdlkfj",
+      "mobileNumber": "5467854565",
+      "password": "dsfsdf",
+      "id": "be2a3983-99a1-4aed-b395-57d918d6e59a"
+    },
+    {
+      "userName": "dasd",
+      "email": "dasd@ewrwe.fds",
+      "firstName": "sdf",
+      "lastName": "ldkjfdk",
+      "mobileNumber": "4324659898",
+      "password": "sdfsdf",
+      "id": "e5f01c59-2e64-49e5-bbc1-850129d46f24"
+    },
+    {
+      "userName": "sDsd",
+      "email": "sDsd@434.dsds",
+      "firstName": "dsfdsflk",
+      "lastName": "lksdfjlks",
+      "mobileNumber": "3216578563",
+      "password": "dsfsdf",
+      "id": "373c1f97-36c4-4893-a667-a2b7469153e0"
+    },
+    {
+      "userName": "sDsd",
+      "email": "sDsd@434.dsds",
+      "firstName": "dsfdsflk",
+      "lastName": "lksdfjlks",
+      "mobileNumber": "3216578563",
+      "password": "dsfsdf",
+      "id": "b1648acc-9406-4b4b-8e3f-17d744c24c41"
+    },
+    {
+      "userName": "sDsd",
+      "email": "sDsd@434.dsds",
+      "firstName": "dsfdsflk",
+      "lastName": "lksdfjlks",
+      "mobileNumber": "3216578563",
+      "password": "dsfsdf",
+      "id": "d9380c79-5da5-4910-9e56-47e8c80231a7"
+    },
+    {
+      "userName": "sDsd",
+      "email": "sDsd@434.dsds",
+      "firstName": "dsfdsflk",
+      "lastName": "lksdfjlks",
+      "mobileNumber": "3216578563",
+      "password": "dsfsdf",
+      "id": "726ed208-7633-4ac0-ac78-6cac1bbcf407"
+    },
+    {
+      "userName": "sd4sfdsf",
+      "email": "sd4sfdsf@3ds.dsfds",
+      "firstName": "sdfdsfkj",
+      "lastName": "jkdsfjkdfsjk",
+      "mobileNumber": "3248976451",
+      "password": "dsfsdfds",
+      "id": "2fc47d64-d7ab-42b0-aa7f-f847d6243df5"
+    },
+    {
+      "userName": "sddsf",
+      "email": "sddsf@werwer.wer",
+      "firstName": "fsdf",
+      "lastName": "klsdjflk",
+      "mobileNumber": "2316548795",
+      "password": "dsfsd",
+      "id": "8c10099b-f232-45af-833c-0419de7cadaa"
+    },
+    {
+      "userName": "wwer",
+      "email": "wwer@ewrwer.kjkj",
+      "firstName": "dsfsdf",
+      "lastName": "lsdkfjkls",
+      "mobileNumber": "9878766454",
+      "password": "dsfsdf",
+      "id": "76925e16-2d4a-41ae-9c10-8ad25f72f885"
+    },
+    {
+      "userName": "wwer",
+      "email": "wwer@ewrwer.kjkj",
+      "firstName": "dsfsdf",
+      "lastName": "lsdkfjkls",
+      "mobileNumber": "9878766454",
+      "password": "dsfsdf",
+      "id": "b1d69bf9-5a86-41ae-bf18-8fd0734e453c"
+    },
+    {
+      "userName": "wwer",
+      "email": "wwer@ewrwer.kjkj",
+      "firstName": "dsfsdf",
+      "lastName": "lsdkfjkls",
+      "mobileNumber": "9878766454",
+      "password": "dsfsdf",
+      "id": "8811b0f1-f23e-4d1c-975b-b2a43d7d724f"
+    },
+    {
+      "userName": "dfs",
+      "email": "dfs@dfs.khj",
+      "firstName": "dfslksdfnl",
+      "lastName": "lsdkfjdslkf",
+      "mobileNumber": "3219876578",
+      "password": "dsfdsffs",
+      "id": "58d5c87e-92aa-4ace-8df8-b5f1ca153712"
+    },
+    {
+      "userName": "sdf",
+      "email": "sdf@fsd.com",
+      "firstName": "dslkfdsflk",
+      "lastName": "sdlkfsdf",
+      "mobileNumber": "6541985641",
+      "password": "dsfdsf",
+      "id": "e6491499-3b59-4016-b182-104b7e7050e7"
+    },
+    {
+      "userName": "sdf",
+      "email": "sdf@fsd.com",
+      "firstName": "dslkfdsflk",
+      "lastName": "sdlkfsdf",
+      "mobileNumber": "6541985641",
+      "password": "dsfdsf",
+      "id": "74a77e88-ecc0-40a6-8fe8-fa31da4fa021"
+    },
+    {
+      "userName": "sdf",
+      "email": "sdf@fsd.com",
+      "firstName": "dslkfdsflk",
+      "lastName": "sdlkfsdf",
+      "mobileNumber": "6541985641",
+      "password": "dsfdsf",
+      "id": "2c8274c0-abe7-4b0f-859f-6b1447854612"
     }
   ],
   "visits": [
-    {
-      "visits": 2,
-      "productId": 1493,
-      "productName": "consectetur fugiat culpa",
-      "id": 365
-    },
-    {
-      "visits": 1,
-      "productId": 8203,
-      "productName": "laborum elit cupidatat",
-      "id": 5922
-    },
-    {
-      "visits": 4,
-      "productId": 1488,
-      "productName": "eiusmod commodo aliquip",
-      "id": 7895
-    },
     {
       "visits": 3,
       "productId": 1031,
@@ -348,24 +419,6 @@
       "productId": 8341,
       "productName": "enim est duis",
       "id": 4297
-    },
-    {
-      "visits": 9,
-      "productId": 643,
-      "productName": "commodo ut enim",
-      "id": 8094
-    },
-    {
-      "visits": 1,
-      "productId": 643,
-      "productName": "commodo ut enim",
-      "id": 369
-    },
-    {
-      "visits": 1,
-      "productId": 643,
-      "productName": "magna reprehenderit cillum",
-      "id": 3404
     }
   ]
 }

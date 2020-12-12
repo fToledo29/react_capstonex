@@ -1,0 +1,441 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register Register Renders correctly 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Connect(Register)
+      actions={Object {}}
+      match={
+        Object {
+          "isExact": true,
+          "params": Object {
+            "id": 1,
+          },
+          "path": "",
+          "url": "",
+        }
+      }
+      product={Object {}}
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      visitData={Object {}}
+      vistActions={Object {}}
+    >
+      <Register
+        actions={
+          Object {
+            "keepSessionOn": [Function],
+            "loadUserData": [Function],
+            "loginUser": [Function],
+            "logoutUser": [Function],
+            "onLogoutUser": [Function],
+            "saveUser": [Function],
+            "saveUserSuccess": [Function],
+            "sessionOn": [Function],
+          }
+        }
+        match={
+          Object {
+            "isExact": true,
+            "params": Object {
+              "id": 1,
+            },
+            "path": "",
+            "url": "",
+          }
+        }
+        product={Object {}}
+        store={
+          Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+        }
+        visitData={Object {}}
+        vistActions={Object {}}
+      >
+        <div
+          className="register-component"
+        >
+          <Form
+            inline={false}
+            noValidate={true}
+            onSubmit={[Function]}
+            validated={false}
+          >
+            <form
+              className=""
+              noValidate={true}
+              onSubmit={[Function]}
+            >
+              <Card
+                bg="Info"
+                body={false}
+                className="text-center sign-in-card"
+              >
+                <div
+                  className="text-center sign-in-card card bg-Info"
+                >
+                  <CardHeader>
+                    <div
+                      className="card-header"
+                    >
+                      <h3>
+                        Register
+                      </h3>
+                    </div>
+                  </CardHeader>
+                  <CardBody>
+                    <div
+                      className="card-body"
+                    >
+                      <FormGroup
+                        controlId="register-email"
+                      >
+                        <div
+                          className="form-group"
+                        >
+                          <FormLabel
+                            column={false}
+                            srOnly={false}
+                          >
+                            <label
+                              className="form-label"
+                              htmlFor="register-email"
+                            >
+                              Email ID
+                            </label>
+                          </FormLabel>
+                          <FormControl
+                            onChange={[Function]}
+                            pattern="[A-Za-z0-9-_.]+@[A-Za-z0-9-_]+\\\\.[a-z]{1,6}"
+                            placeholder="Enter email"
+                            required={true}
+                            type="email"
+                            value=""
+                          >
+                            <input
+                              className="form-control"
+                              id="register-email"
+                              onChange={[Function]}
+                              pattern="[A-Za-z0-9-_.]+@[A-Za-z0-9-_]+\\\\.[a-z]{1,6}"
+                              placeholder="Enter email"
+                              required={true}
+                              type="email"
+                              value=""
+                            />
+                          </FormControl>
+                          <FormText
+                            className="text-muted"
+                          >
+                            <small
+                              className="text-muted form-text"
+                            >
+                              Example: jonh123@mymail.com
+                            </small>
+                          </FormText>
+                          <Feedback
+                            type="invalid"
+                          >
+                            <div
+                              className="invalid-feedback"
+                            >
+                              Please Enter a valid email.
+                            </div>
+                          </Feedback>
+                        </div>
+                      </FormGroup>
+                      <FormGroup
+                        controlId="register-first-name"
+                      >
+                        <div
+                          className="form-group"
+                        >
+                          <FormLabel
+                            column={false}
+                            srOnly={false}
+                          >
+                            <label
+                              className="form-label"
+                              htmlFor="register-first-name"
+                            >
+                              First Name
+                            </label>
+                          </FormLabel>
+                          <FormControl
+                            onChange={[Function]}
+                            pattern="[A-Za-z ]+"
+                            placeholder="Enter First Name"
+                            required={true}
+                            type="text"
+                            value=""
+                          >
+                            <input
+                              className="form-control"
+                              id="register-first-name"
+                              onChange={[Function]}
+                              pattern="[A-Za-z ]+"
+                              placeholder="Enter First Name"
+                              required={true}
+                              type="text"
+                              value=""
+                            />
+                          </FormControl>
+                          <Feedback
+                            type="invalid"
+                          >
+                            <div
+                              className="invalid-feedback"
+                            >
+                              First Name is required!.
+                            </div>
+                          </Feedback>
+                        </div>
+                      </FormGroup>
+                      <FormGroup
+                        controlId="register-last-name"
+                      >
+                        <div
+                          className="form-group"
+                        >
+                          <FormLabel
+                            column={false}
+                            srOnly={false}
+                          >
+                            <label
+                              className="form-label"
+                              htmlFor="register-last-name"
+                            >
+                              Last Name
+                            </label>
+                          </FormLabel>
+                          <FormControl
+                            onChange={[Function]}
+                            pattern="[A-Za-z]+"
+                            placeholder="Enter Last Name"
+                            required={true}
+                            type="text"
+                            value=""
+                          >
+                            <input
+                              className="form-control"
+                              id="register-last-name"
+                              onChange={[Function]}
+                              pattern="[A-Za-z]+"
+                              placeholder="Enter Last Name"
+                              required={true}
+                              type="text"
+                              value=""
+                            />
+                          </FormControl>
+                          <Feedback
+                            type="invalid"
+                          >
+                            <div
+                              className="invalid-feedback"
+                            >
+                              Last Name is required!.
+                            </div>
+                          </Feedback>
+                        </div>
+                      </FormGroup>
+                      <FormGroup
+                        controlId="register-mobile-number"
+                      >
+                        <div
+                          className="form-group"
+                        >
+                          <FormLabel
+                            column={false}
+                            srOnly={false}
+                          >
+                            <label
+                              className="form-label"
+                              htmlFor="register-mobile-number"
+                            >
+                              Mobile Number
+                            </label>
+                          </FormLabel>
+                          <FormControl
+                            onChange={[Function]}
+                            pattern="[0-9 ]{10}"
+                            placeholder="Enter Mobile Number"
+                            required={true}
+                            type="tex"
+                            value=""
+                          >
+                            <input
+                              className="form-control"
+                              id="register-mobile-number"
+                              onChange={[Function]}
+                              pattern="[0-9 ]{10}"
+                              placeholder="Enter Mobile Number"
+                              required={true}
+                              type="tex"
+                              value=""
+                            />
+                          </FormControl>
+                          <FormText
+                            className="text-muted"
+                          >
+                            <small
+                              className="text-muted form-text"
+                            >
+                              Example: 9876543210
+                            </small>
+                          </FormText>
+                          <Feedback
+                            type="invalid"
+                          >
+                            <div
+                              className="invalid-feedback"
+                            >
+                              Mobile Number is required!
+                            </div>
+                          </Feedback>
+                        </div>
+                      </FormGroup>
+                      <FormGroup
+                        controlId="register-password"
+                      >
+                        <div
+                          className="form-group"
+                        >
+                          <FormLabel
+                            column={false}
+                            srOnly={false}
+                          >
+                            <label
+                              className="form-label"
+                              htmlFor="register-password"
+                            >
+                              Password
+                            </label>
+                          </FormLabel>
+                          <FormControl
+                            onChange={[Function]}
+                            placeholder="Password"
+                            required={true}
+                            type="password"
+                            value=""
+                          >
+                            <input
+                              className="form-control"
+                              id="register-password"
+                              onChange={[Function]}
+                              placeholder="Password"
+                              required={true}
+                              type="password"
+                              value=""
+                            />
+                          </FormControl>
+                          <Feedback
+                            type="invalid"
+                          >
+                            <div
+                              className="invalid-feedback"
+                            >
+                              Password field can't be empty!
+                            </div>
+                          </Feedback>
+                        </div>
+                      </FormGroup>
+                    </div>
+                  </CardBody>
+                  <CardFooter
+                    className="sign-in-buttons"
+                  >
+                    <div
+                      className="sign-in-buttons card-footer"
+                    >
+                      <Button
+                        active={false}
+                        className="sign-in-button"
+                        disabled={false}
+                        type="info"
+                        variant="info"
+                      >
+                        <button
+                          className="sign-in-button btn btn-info"
+                          disabled={false}
+                          type="info"
+                        >
+                          <Link
+                            to="login"
+                          >
+                            <LinkAnchor
+                              href="/login"
+                              navigate={[Function]}
+                            >
+                              <a
+                                href="/login"
+                                onClick={[Function]}
+                              >
+                                I have an account already!
+                              </a>
+                            </LinkAnchor>
+                          </Link>
+                        </button>
+                      </Button>
+                      <Button
+                        active={false}
+                        className="sign-in-button btn-submit"
+                        disabled={false}
+                        id="btn-submit"
+                        type="submit"
+                        variant="primary"
+                      >
+                        <button
+                          className="sign-in-button btn-submit btn btn-primary"
+                          disabled={false}
+                          id="btn-submit"
+                          type="submit"
+                        >
+                          Submit
+                        </button>
+                      </Button>
+                    </div>
+                  </CardFooter>
+                </div>
+              </Card>
+            </form>
+          </Form>
+        </div>
+      </Register>
+    </Connect(Register)>
+  </Router>
+</BrowserRouter>
+`;

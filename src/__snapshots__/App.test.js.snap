@@ -34,7 +34,7 @@ exports[`App App Renders correctly 1`] = `
             "$$typeof": Symbol(react.memo),
             "WrappedComponent": [Function],
             "compare": null,
-            "displayName": "Connect(withRouter(Register))",
+            "displayName": "Connect(Register)",
             "type": [Function],
           }
         }

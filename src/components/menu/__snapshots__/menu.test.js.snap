@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`About Menu Renders correctly 1`] = `
+exports[`Menu Menu Renders correctly 1`] = `
 <div>
   <Navbar
     bg="dark"
