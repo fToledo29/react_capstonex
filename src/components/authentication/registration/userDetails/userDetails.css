@@ -27,3 +27,11 @@
 .field-label label {
 	font-weight: bold;
 }
+
+@media only screen and (max-width: 676px) {
+
+	.center-card {
+		width: 90vw;
+	}
+
+}

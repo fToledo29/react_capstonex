@@ -12,5 +12,19 @@
 
 .home-title {
 	margin: 2rem;
+	margin-top: 0;
 	text-align: center;
+}
+
+@media only screen and (max-width: 676px) {
+
+	.home-content {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 1rem;
+		padding: 0;
+		text-align: justify;
+		width: 80%;
+	}
+
 }
