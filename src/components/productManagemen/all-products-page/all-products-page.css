@@ -110,3 +110,47 @@ button.product-list-button.add {
 		height: 0rem;
 	}
 }
+
+@media only screen and (max-width: 676px) {
+
+	.product-list-buttons {
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.product-list-button {
+		width: 20rem;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.product-list {
+		overflow: auto;
+	}
+	.product-list .product-list {
+		padding: 0;
+	}
+
+}
+
+@media only screen and (max-width: 550px) {
+
+	.product-list-buttons {
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0;
+	}
+
+	.product-list-button {
+		width: 100%;
+	}
+
+	.product-list .search-bar {
+		padding: 0;
+	}
+
+}

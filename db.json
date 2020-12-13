@@ -1,15 +1,6 @@
 {
   "products": [
     {
-      "description": "Duis cillum excepteur mollit ullamco laborum cupidatat elit nisi mollit do.",
-      "productName": "non Lorem duis",
-      "manufacturer": "culpa ex cupidatat",
-      "quantity": 340,
-      "price": 372,
-      "id": 1031,
-      "viewMode": false
-    },
-    {
       "description": "Proident eiusmod proident laborum in qui.",
       "productName": "quis esse laborum",
       "manufacturer": "voluptate magna enim",
@@ -525,12 +516,6 @@
     }
   ],
   "visits": [
-    {
-      "visits": 3,
-      "productId": 1031,
-      "productName": "non Lorem duis",
-      "id": 6874
-    },
     {
       "visits": 2,
       "productId": 8341,
