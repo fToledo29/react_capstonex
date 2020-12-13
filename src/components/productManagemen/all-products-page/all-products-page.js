@@ -132,8 +132,8 @@ class AllProductsPage extends React.Component {
 		this.setState({fadeOut: true});
 
 		setTimeout(() => {
-			this.setState({show: false});
 			this.setState({spinnerOn: false});
+			this.setState({show: false});
 		}, 500)
 
 	}

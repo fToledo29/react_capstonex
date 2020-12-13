@@ -32,7 +32,6 @@
 }
 
 .all-products-title {
-	margin-top: 1.5rem;
 	text-align: center;
 }
 
@@ -113,6 +112,29 @@ button.product-list-button.add {
 
 @media only screen and (max-width: 676px) {
 
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+			height: 0rem;
+		}
+		100% {
+			opacity: 1;
+			height: 24rem;
+		}
+	}
+	
+	@keyframes fadeOut {
+		0% {
+			opacity: 1;
+			height: 24rem;
+		}
+		100% {
+			opacity: 0;
+			visibility: hidden;
+			height: 0rem;
+		}
+	}
+
 	.product-list-buttons {
 		height: auto;
 		display: flex;
@@ -130,6 +152,22 @@ button.product-list-button.add {
 		overflow: auto;
 	}
 	.product-list .product-list {
+		padding: 0;
+	}
+
+	.product-list .field-customizer-container .card {
+		height: auto;
+	}
+
+	.card-body .editor-fields {
+		height: 24rem;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding-left: 2rem;
+	}
+
+	.field-customizer-container {
 		padding: 0;
 	}
 
