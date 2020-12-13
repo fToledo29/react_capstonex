@@ -20,7 +20,9 @@ class User {
 
 }
 
-class Register extends React.Component  {
+export class Register extends React.Component  {
+
+	_isMounted = false;
 
 	constructor(props) {
 
@@ -38,8 +40,21 @@ class Register extends React.Component  {
 		};
 
 		this.saveUser = this.saveUser.bind(this);
-
+	
+		this.onFormSubmit = this.onFormSubmit.bind(this);
+		
+		this.handleValueChange = this.handleValueChange.bind(this);
+		
 		this.handleSubmit = this.handleSubmit.bind(this);
+	
+		this.onHandleSubmit = this.onHandleSubmit.bind(this);
+
+		this.setSpinnerOff = this.setSpinnerOff.bind(this);
+	}
+
+	componentDidMount() {
+		this.setSpinnerOff()
+		this._isMounted = true;
 	}
 
 	saveUser(user) {
@@ -84,6 +99,12 @@ class Register extends React.Component  {
 		event.stopPropagation();
 	};
 
+	setSpinnerOff() {
+		if (this._isMounted) { 
+			this.setState({spinnerOn: false});
+		}
+	}
+
 	onHandleSubmit() {
 		this.setState({spinnerOn: true});
 		let user = new User(this.state);
@@ -92,20 +113,25 @@ class Register extends React.Component  {
 			this.props.actions.loginUser(this.state.userName, this.state.password)
 			.then((data) => {
 				if(data.user.length > 0) {
-					// this.setState({spinnerOn: false});
-					// this.props.history.push('/userDetails');
+					this.setSpinnerOff();
+					this.props.history.push('/userDetails');
 				}
-				// this.setState({spinnerOn: false});
+				this.setSpinnerOff();
 
 			}).catch(error => {
-				this.setState({spinnerOn: false});
+				this.setSpinnerOff();
 				console.log('[Error trying to login]: ', error);
 			});
 		})
 		.catch(error => {
-			this.setState({spinnerOn: false});
+			this.setSpinnerOff();
 			alert('[Sothing went wrong trying to save new user]: ' + error);
 		});
+	}
+
+	componentWillUnmount() {
+		this._isMounted = false;
+		this.setState({spinnerOn: false});
 	}
 
 	render() {
@@ -113,7 +139,7 @@ class Register extends React.Component  {
 			<>
 				<div className="register-component">
 
-					<Form noValidate validated={this.state.validated} onSubmit={this.handleSubmit}>
+					<Form className="register-form" noValidate validated={this.state.validated} onSubmit={this.handleSubmit}>
 
 					<Card className="text-center sign-in-card" bg="Info">
 

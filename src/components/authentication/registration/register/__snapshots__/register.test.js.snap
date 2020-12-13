@@ -91,13 +91,14 @@ exports[`Register Register Renders correctly 1`] = `
           className="register-component"
         >
           <Form
+            className="register-form"
             inline={false}
             noValidate={true}
             onSubmit={[Function]}
             validated={false}
           >
             <form
-              className=""
+              className="register-form"
               noValidate={true}
               onSubmit={[Function]}
             >
