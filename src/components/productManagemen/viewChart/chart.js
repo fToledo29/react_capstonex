@@ -75,7 +75,7 @@ class ChartsPage extends Component {
 				colors: this.colors,
 				plotOptions: {
 					bar: {
-						columnWidth: "85%",
+						columnWidth: "70%",
 						distributed: true,
 					},
 				},

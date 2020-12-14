@@ -7,3 +7,12 @@
 	display: flex;
 	justify-content: center;
 }
+
+@media only screen and (max-width: 550px) {
+
+	.app-chart, .row-chart, .mixed-chart {
+		overflow: auto;
+		display: block;
+	}
+
+}

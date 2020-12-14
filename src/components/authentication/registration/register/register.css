@@ -31,5 +31,28 @@
 }
 
 .sign-in-card {
-	width: 50vw;
+	width: 100%;
+}
+
+@media only screen and (max-width: 676px) {
+
+	.sign-in-card {
+		width: 100%;
+	}
+
+	.sign-in-buttons {
+		flex-direction: column-reverse;
+		justify-content: space-evenly;
+	}
+
+	.sign-in-buttons.card-footer {
+		padding: 0;
+		height: 8rem;
+	}
+
+	.sign-in-buttons .sign-in-button {
+		margin: 0;
+    		width: 100%;
+	}
+
 }

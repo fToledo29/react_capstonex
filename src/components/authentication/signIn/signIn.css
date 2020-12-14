@@ -1,8 +1,6 @@
 .sign-in-container {
-
-	width: 90vw;
-	height: 90vh;
-	padding-top: 6rem;
+	width: 100%;
+	padding-top: 1rem;
 	display: flex;
 	flex-flow: column;
 	position: absolute;
