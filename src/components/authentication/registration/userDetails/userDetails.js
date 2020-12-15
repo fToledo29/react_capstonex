@@ -9,7 +9,7 @@ import './userDetails.css';
 const UserDetails = (props) => {
 	return (
 		<div>
-			{props.userData.user ? <Card border="success" className="text-center sign-in-card center-card" bg="Info">
+			{props.userData.user ? <Card border="success" className="text-center user-details center-card" bg="Info">
 
 				<Card.Header>
 					<h3>User Details</h3>

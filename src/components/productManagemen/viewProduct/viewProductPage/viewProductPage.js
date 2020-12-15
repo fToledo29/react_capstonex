@@ -142,7 +142,7 @@ class ViewProductPage extends React.Component {
 
 	render() {
 		return (
-			<>
+			<div className="view-product">
 				<div className="view-product-title">
 					<h1>{ this.state.viewMode ? 'View Product' : 'Update Product'}</h1>
 				</div>
@@ -160,7 +160,7 @@ class ViewProductPage extends React.Component {
 				loggedIn={this.props.userData.loggedIn}
 
 				></FormikAddForm>
-			</>
+			</div>
 		)
 	}
 }

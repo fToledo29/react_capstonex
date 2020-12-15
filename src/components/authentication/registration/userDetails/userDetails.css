@@ -2,6 +2,8 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5rem;
+	width: 50vw;
+	transition: all ease-in-out .5s;
 }
 
 .field-label, .value-field {
@@ -32,6 +34,14 @@
 
 	.center-card {
 		width: 90vw;
+	}
+
+}
+
+@media only screen and (min-width: 677px) and (max-width: 800px) {
+
+	.center-card {
+		width: 70vw;
 	}
 
 }

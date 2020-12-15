@@ -5,6 +5,7 @@
 		margin-right: auto;
 		margin-top: 1rem;
 		width: 50vw;
+		transition: all ease-in-out .5s;
 	}
 	
 }
@@ -38,6 +39,7 @@
 
 	.sign-in-card {
 		width: 100%;
+		transition: all ease-in-out .5s;
 	}
 
 	.sign-in-buttons {
@@ -52,7 +54,8 @@
 
 	.sign-in-buttons .sign-in-button {
 		margin: 0;
-    		width: 100%;
+		width: 100%;
+		transition: all ease-in-out .5s;
 	}
 
 }

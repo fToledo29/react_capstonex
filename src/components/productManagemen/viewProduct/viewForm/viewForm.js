@@ -40,7 +40,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 	}, [updateVisits, values.id]);
 
 	return (
-		<div>					
+		<div className="product-form-container">					
 			
 			<RequestLoginDialog 
 			show={show}
@@ -63,11 +63,11 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 
 					<Card.Body>
 
-						<div className="product-form-container">
+						<div className="product-form-field-container">
 							<label className="product-form-title">Product Name:</label>
 							
-							{values.viewMode ? <label>{values.productName}</label> : (() => {
-								return <div>
+							{values.viewMode ? <label className="product-form-desc form-control-field">{values.productName}</label> : (() => {
+								return <div className="form-control-field">
 									<Field
 									disabled={!values.loggedIn}
 									className="form-field form-control"
@@ -80,11 +80,11 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 							})() }
 						</div>
 
-						<div className="product-form-container">
+						<div className="product-form-field-container">
 							<label className="product-form-title">Manufacturer:</label>
 							
-							{values.viewMode ? <label>{values.manufacturer}</label> : (() => {
-								return <div>
+							{values.viewMode ? <label className="product-form-desc form-control-field">{values.manufacturer}</label> : (() => {
+								return <div className="form-control-field">
 									<Field
 									disabled={!values.loggedIn}
 									className="form-field form-control"
@@ -97,11 +97,11 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 							})() }
 						</div>
 
-						<div className="product-form-container">
+						<div className="product-form-field-container">
 							<label className="product-form-title">Quantity:</label>
 
-							{values.viewMode ? <label>{values.quantity}</label> : (() => {
-								return <div>
+							{values.viewMode ? <label className="product-form-desc form-control-field">{values.quantity}</label> : (() => {
+								return <div className="form-control-field">
 										<Field 
 										disabled={!values.loggedIn}
 										className="form-field form-control"
@@ -114,11 +114,11 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 							})() }
 						</div>
 
-						<div className="product-form-container">
+						<div className="product-form-field-container">
 							<label className="product-form-title">Price:</label>
 
-							{values.viewMode ? <label>{values.price}</label> : (() => {
-								return <div>
+							{values.viewMode ? <label className="product-form-desc form-control-field">{values.price}</label> : (() => {
+								return <div className="form-control-field">
 										<Field
 										disabled={!values.loggedIn}
 										className="form-field form-control"
@@ -131,11 +131,11 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 							})() }
 						</div>
 
-						<div className="product-form-container">
+						<div className="product-form-field-container">
 							<label className="product-form-title">Description:</label>
 
-							{values.viewMode ? <label className="product-form-desc">{values.description}</label> : (() => {
-								return <div>
+							{values.viewMode ? <label className="product-form-desc form-control-field">{values.description}</label> : (() => {
+								return <div className="form-control-field">
 										<Field
 										disabled={!values.loggedIn}
 										className="form-field form-control"

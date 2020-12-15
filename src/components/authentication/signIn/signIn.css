@@ -1,14 +1,17 @@
 .sign-in-container {
-	width: 100%;
-	padding-top: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	padding-top: 5rem;
 	display: flex;
 	flex-flow: column;
-	position: absolute;
 	align-items: center;
+	transition: all ease-in-out .5s;
 }
 
 .sign-in-card {
 	width: 40vw;
+	transition: all ease-in-out .5s;
 }
 
 .sign-in-control {
@@ -31,6 +34,7 @@
 	height: 2.3rem;
 	display: grid;
 	align-content: center;
+	transition: all ease-in-out .5s;
 }
 
 .sign-in-buttons a {
@@ -60,10 +64,37 @@
 
 	.sign-in-container {
 		width: 100%;
+		padding-top: 1rem;
 	}
 
 	.sign-in-container .sign-in-card.card  {
 		width: 90%;
+	}
+
+}
+
+@media only screen and (min-width: 677px) and (max-width: 900px) {
+
+	.sign-in-container {
+		width: 80%;
+		padding-top: 1rem;
+	}
+
+	.sign-in-container .sign-in-card.card  {
+		width: 80%;
+	}
+
+}
+
+@media only screen and (min-width: 899px) and (max-width: 1000px) {
+
+	.sign-in-container {
+		width: 50vw;
+		padding-top: 1rem;
+	}
+
+	.sign-in-container .sign-in-card.card  {
+		width: 50vw;
 	}
 
 }

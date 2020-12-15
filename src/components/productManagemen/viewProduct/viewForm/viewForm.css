@@ -7,22 +7,26 @@
 	flex-flow: column;
 }
 
-.product-form .product-form-container label {
+.product-form-container, .product-form{
+	transition: all ease-in-out .5s;
+}
+
+.product-form .product-form-field-container label {
 	width: calc(100% / 1.5);
 	display: flex;
 }
 
-.product-form .product-form-container .product-form-desc {
+.product-form .product-form-field-container .product-form-desc {
 	text-align: justify;
 }
 
-.product-form .product-form-container .product-form-title {
+.product-form .product-form-field-container .product-form-title {
 
-	/* width: 10rem; */
 	width: calc(100% / 3);
 	padding-right: 3rem;
 	justify-content: flex-end;
 	display: flex;
+	font-weight: 500;
 }
 
 .add-buttons .add-button {
@@ -44,19 +48,19 @@
 	width: 10rem;
 }
 
-.product-form-container {
+.product-form-field-container {
 	margin: 1rem;
 	display: flex;
 	justify-content: space-between;
 	flex-flow: wrap;
 }
 
-.product-form-container .form-field { 
+.product-form-field-container .form-field { 
 	margin-right: .5rem;
 	width: 20rem;
 }
 
-.product-form-container span {
+.product-form-field-container span {
 	display: block;
 	float: right;
 	text-align: end;
@@ -70,4 +74,56 @@
 
 .edit-button-container {
 	padding: 1rem;
+}
+
+@media only screen and (max-width: 615px) {
+
+	.product-form .product-form-field-container label.form-control-field {
+		width: 100%;
+		display: inline;
+		text-align: center;
+	}
+	
+	.product-form-field-container {
+		width: 100%;
+		margin: 0px;
+		margin-bottom: .8rem;
+		border: solid 1px #ececec;
+	}
+
+	.form-control-field {
+		width: 100%;
+	}
+	
+	.card-body {
+		padding: 0px;
+	}
+	
+	.product-form .product-form-field-container .product-form-title {
+		width: 100%;
+		display: inline !important;
+		padding: 0px;
+		text-align: center;
+		padding: .2rem;
+		border: solid 1px #ecececec;
+    		background-color: #ecececec;
+	}
+	
+	input.form-field.form-control {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	textarea.form-field.form-control {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.add-buttons .add-button {
+		margin: 0;
+		width: 100%;
+		transition: all ease-in-out .5s;
+	  }
 }

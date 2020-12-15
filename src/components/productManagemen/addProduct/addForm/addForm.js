@@ -19,14 +19,14 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 	}, [updateVisits, values.id]);
 
 	return (
-		<div>					
+		<div className="product-form-container">					
 
 			<Form className="product-form">
 				<Card className="text-center product-details-card" bg="Info">
 
 					<Card.Body>
 
-						<div className="product-form-container">
+						<div className="product-form-field-container">
 							<label className="product-form-title">Product Name:</label>
 							
 							<Field
@@ -38,7 +38,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 							{touched.productName && errors.productName && <span style={{color: "red"}}>{errors.productName}</span> }
 						</div>
 
-						<div className="product-form-container">
+						<div className="product-form-field-container">
 							<label className="product-form-title">Manufacturer:</label>
 
 							<Field
@@ -51,7 +51,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 							
 						</div>
 
-						<div className="product-form-container">
+						<div className="product-form-field-container">
 							<label className="product-form-title">Quantity:</label>
 
 							<Field 
@@ -63,7 +63,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 							{touched.quantity && errors.quantity && <span style={{color: "red"}}>{errors.quantity}</span> }
 						</div>
 
-						<div className="product-form-container">
+						<div className="product-form-field-container">
 							<label className="product-form-title">Price:</label>
 
 							<Field
@@ -75,7 +75,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 							{touched.price && errors.price && <span style={{color: "red"}}>{errors.price}</span> }
 						</div>
 
-						<div className="product-form-container">
+						<div className="product-form-field-container">
 							<label className="product-form-title">Description:</label>
 
 							<Field

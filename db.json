@@ -1,22 +1,14 @@
 {
   "products": [
     {
-      "description": "Proident eiusmod proident laborum in qui.",
-      "productName": "quis esse laborum",
-      "manufacturer": "voluptate magna enim",
-      "quantity": 224,
-      "price": 378,
-      "id": 3865,
-      "viewMode": false
-    },
-    {
-      "description": "Lorem excepteur et ipsum minim irure nulla ea qui consectetur dolore officia ex aute.",
-      "productName": "do ullamco mollit",
-      "manufacturer": "ea ullamco ea",
-      "quantity": 696,
-      "price": 839,
+      "description": "Tempor labore ut commodo laboris fugiat incididunt magna Lorem non tempor.",
+      "productName": "do est esse",
+      "manufacturer": "sit duis non",
+      "quantity": 87,
+      "price": 197,
       "id": 3580,
-      "viewMode": false
+      "viewMode": false,
+      "loggedIn": true
     },
     {
       "description": "Dolore aliquip ex laborum est exercitation velit do amet.",
@@ -88,6 +80,15 @@
       "quantity": 150,
       "price": 795,
       "id": 2573,
+      "viewMode": false
+    },
+    {
+      "description": "Nisi id eiusmod ipsum enim magna pariatur consequat Lorem dolore irure.",
+      "productName": "et consectetur cupidatat",
+      "manufacturer": "quis exercitation mollit",
+      "quantity": 213,
+      "price": 632,
+      "id": 3627,
       "viewMode": false
     }
   ],
@@ -524,21 +525,15 @@
     },
     {
       "visits": 1,
-      "productId": 3865,
-      "productName": "quis esse laborum",
-      "id": 8741
-    },
-    {
-      "visits": 1,
       "productId": 8096,
       "productName": "mollit minim nostrud",
       "id": 4433
     },
     {
       "visits": 1,
-      "productId": 3865,
-      "productName": "quis esse laborum",
-      "id": 1033
+      "productId": 3580,
+      "productName": "do ullamco mollit",
+      "id": 6629
     }
   ]
 }
