@@ -20,9 +20,15 @@ class AddProductPage extends React.Component {
 
 		super(props);
 
+		this.state = {
+			updating: true
+		};
+
 		this.saveProduct = this.saveProduct.bind(this);
 
 		this.updateVisits = this.updateVisits.bind(this);
+
+		this.handleChange = this.handleChange.bind(this);
 	}
 
 	componentDidMount() {
@@ -122,6 +128,9 @@ class AddProductPage extends React.Component {
 		}
 	}
 
+	handleChange(updating) {
+		this.setState({updating: updating});
+	}
 
 	render() {
 		return (
@@ -137,6 +146,8 @@ class AddProductPage extends React.Component {
 				price={this.props.product.price}
 				id={this.props.product.id}
 				viewMode={false}
+				updating={this.state.updating}
+				handleChange={this.handleChange}
 
 				></FormikAddForm>
 			</>

@@ -90,6 +90,135 @@
       "price": 632,
       "id": 3627,
       "viewMode": false
+    },
+    {
+      "description": "In id eiusmod eiusmod tempor do in exercitation nostrud duis fugiat.",
+      "productName": "aliqua occaecat laborum",
+      "manufacturer": "est dolore ipsum",
+      "quantity": 327,
+      "price": 213,
+      "id": 7761,
+      "viewMode": false
+    },
+    {
+      "description": "Duis dolore magna aute esse enim occaecat dolore exercitation.",
+      "productName": "ipsum sint sint",
+      "manufacturer": "excepteur quis deserunt",
+      "quantity": 33,
+      "price": 198,
+      "id": 8941,
+      "viewMode": false,
+      "updating": false
+    },
+    {
+      "description": "",
+      "productName": "Testxxx",
+      "manufacturer": "",
+      "quantity": 0,
+      "price": 0,
+      "id": 4635,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "",
+      "productName": "test",
+      "manufacturer": "erre",
+      "quantity": 0,
+      "price": 0,
+      "id": 1319,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "",
+      "productName": "tesstttttt",
+      "manufacturer": "",
+      "quantity": 0,
+      "price": 0,
+      "id": 3174,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "",
+      "productName": "Test",
+      "manufacturer": "",
+      "quantity": 0,
+      "price": 0,
+      "id": 4347,
+      "viewMode": false,
+      "updating": false
+    },
+    {
+      "description": "",
+      "productName": "tesxxccc",
+      "manufacturer": "",
+      "quantity": 0,
+      "price": 0,
+      "id": 2766,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "",
+      "productName": "tests",
+      "manufacturer": "",
+      "quantity": 0,
+      "price": 0,
+      "id": 7940,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "",
+      "productName": "ddddd",
+      "manufacturer": "",
+      "quantity": 0,
+      "price": 0,
+      "id": 835,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "",
+      "productName": "fest",
+      "manufacturer": "",
+      "quantity": 0,
+      "price": 0,
+      "id": 7256,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "test Desc",
+      "productName": "dsddxxx prod",
+      "manufacturer": "Test",
+      "quantity": 2,
+      "price": 2,
+      "id": 623,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "Test desc",
+      "productName": "Prod test",
+      "manufacturer": "Manf",
+      "quantity": 555,
+      "price": 444,
+      "id": 6097,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "Desc prod",
+      "productName": "hhh Test",
+      "manufacturer": "manf",
+      "quantity": 4,
+      "price": 5,
+      "id": 7781,
+      "viewMode": false,
+      "updating": true
     }
   ],
   "users": [
@@ -514,6 +643,78 @@
       "mobileNumber": "5557878983",
       "password": "sdfsfd",
       "id": "661553de-34cd-48ca-b2ca-4c99d3588638"
+    },
+    {
+      "userName": "asas",
+      "email": "asas@test.com",
+      "firstName": "sadsd",
+      "lastName": "assa",
+      "mobileNumber": "5645678973",
+      "password": "test123",
+      "id": "f31d507b-0393-48e9-bc6c-912e6e08e012"
+    },
+    {
+      "userName": "asas",
+      "email": "asas@test.com",
+      "firstName": "sadsd",
+      "lastName": "assa",
+      "mobileNumber": "5645678973",
+      "password": "test123",
+      "id": "767a0361-d8b7-4fe0-aeb1-38f132f9a031"
+    },
+    {
+      "userName": "ggg",
+      "email": "ggg@test.com",
+      "firstName": "fsdfdsfsd",
+      "lastName": "fkjdfjkfd",
+      "mobileNumber": "3218652653",
+      "password": "test123",
+      "id": "c22e4367-73cd-4e4c-8e40-46c381189790"
+    },
+    {
+      "userName": "sddsDD",
+      "email": "sddsDD@te.com",
+      "firstName": "dsfdsfdsss",
+      "lastName": "tteeee",
+      "mobileNumber": "6541897432",
+      "password": "test123",
+      "id": "77c913d6-9a35-4a17-82fe-9ed0f30ab864"
+    },
+    {
+      "userName": "sddsDD",
+      "email": "sddsDD@te.com",
+      "firstName": "dsfdsfdsss",
+      "lastName": "tteeee",
+      "mobileNumber": "6541897432",
+      "password": "test123",
+      "id": "941641ac-f37e-4acc-b347-03d920a28b73"
+    },
+    {
+      "userName": "sddsDD",
+      "email": "sddsDD@te.com",
+      "firstName": "dsfdsfdsss",
+      "lastName": "tteeee",
+      "mobileNumber": "6541897432",
+      "password": "test123",
+      "id": "16f7b69f-3ba5-4fc7-ad9b-ed0f5344b3d7"
+    },
+    {
+      "userName": "sddxxxx",
+      "email": "sddxxxx@te.com",
+      "firstName": "dsfdsfdsssxx",
+      "lastName": "tteeeexxx",
+      "mobileNumber": "6541894556",
+      "password": "te2222",
+      "id": "340bd2ce-ca85-40b4-a64e-a7a6d4c8e4c0"
+    },
+    {
+      "userName": "ferr",
+      "email": "ferr@oo.com",
+      "firstName": "gggTom",
+      "lastName": "ddFer",
+      "mobileNumber": "7898798678",
+      "password": "test123",
+      "id": "f69c8063-1f3d-42ca-860f-9917e3399a3a"
     }
   ],
   "visits": [
@@ -530,10 +731,16 @@
       "id": 4433
     },
     {
-      "visits": 1,
+      "visits": 2,
       "productId": 3580,
       "productName": "do ullamco mollit",
       "id": 6629
+    },
+    {
+      "visits": 1,
+      "productId": 4584,
+      "productName": "veniam deserunt magna",
+      "id": 453
     }
   ]
 }

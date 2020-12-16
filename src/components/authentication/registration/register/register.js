@@ -1,9 +1,8 @@
 import React from 'react';
 import { Button, Card, Form, Spinner } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Prompt } from 'react-router-dom';
 import * as userActions from '../../../../redux/actions/userActions';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './register.css';
 
@@ -29,6 +28,7 @@ export class Register extends React.Component  {
 		super(props);
 
 		this.state = {
+			formDone: true,
 			validated: false,
 			spinnerOn: false,
 			userName: '',
@@ -73,6 +73,8 @@ export class Register extends React.Component  {
 	}
 
 	handleValueChange(e, field) {
+
+		this.setState({formDone: false});
 		
 		const value = e.target.value;
 
@@ -113,6 +115,7 @@ export class Register extends React.Component  {
 			this.props.actions.loginUser(this.state.userName, this.state.password)
 			.then((data) => {
 				if(data.user.length > 0) {
+					this.setState({formDone: true});
 					this.setSpinnerOff();
 					this.props.history.push('/userDetails');
 				}
@@ -138,6 +141,11 @@ export class Register extends React.Component  {
 		return (
 			<>
 				<div className="register-component">
+
+					<Prompt
+					when={!this.state.formDone}
+					message={() => 'Are you sure you want to leave this page?'}
+					/>
 
 					<Form className="register-form" noValidate validated={this.state.validated} onSubmit={this.handleSubmit}>
 

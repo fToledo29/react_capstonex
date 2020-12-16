@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, Prompt, useHistory } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Button,
@@ -14,6 +14,8 @@ import './signIn.css';
 const SignIn = (props) => {
 
 	const [validated,  setValidated] = useState (false);
+
+	const [loggedIn,  setLoggedIn] = useState (false);
 
 	const [userName,  setUserName] = useState ('');
 
@@ -52,6 +54,7 @@ const SignIn = (props) => {
 		await props.actions.loginUser(userName, password)
 		.then((data) => {
 			if(data.user.length > 0) {
+				setLoggedIn(true);
 				history.push('/products');
 			} else {
 				alert(`Username and/or password doesn't match`);
@@ -63,8 +66,17 @@ const SignIn = (props) => {
 		
 	}
 
+	const shouldGo = () => {
+		return (userName !== '' || password !== '') && !loggedIn;
+	}
+
 	return (
 		<div className="sign-in-container">
+
+			<Prompt
+				when={shouldGo()}
+				message={() => 'Are you sure you want to leave this page?'}
+			/>
 
 			<Card className="text-center sign-in-card" bg="Info">
 				<Form validated={validated} onSubmit={login}>

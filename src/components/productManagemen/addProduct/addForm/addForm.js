@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { withFormik, Form, Field } from 'formik';
-import { LoremIpsum } from 'lorem-ipsum';
 import './addForm.css';
 import * as Yup from 'yup';
 import { 
 	Button,
 	Card,
 } from 'react-bootstrap';
+import { Prompt } from 'react-router-dom';
 
 export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 
@@ -19,9 +19,17 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 	}, [updateVisits, values.id]);
 
 	return (
-		<div className="product-form-container">					
+		<div className="product-form-container">	
 
-			<Form className="product-form">
+			<Prompt
+			when={values.updating}
+			message={() => 'Are you sure you want to leave this page?'}
+			/>				
+
+			<Form 
+			className="product-form" 
+			onChange={() => values.handleChange(true)}
+			>
 				<Card className="text-center product-details-card" bg="Info">
 
 					<Card.Body>
@@ -114,33 +122,47 @@ const FormikAddForm = withFormik({
 		price,
 		id,
 		viewMode,
+		updating,
+		handleChange,
 	}){
 
-			const lorem = new LoremIpsum({
-				sentencesPerParagraph: {
-				  max: 2,
-				  min: 1
-				}
-			    });
+			// const lorem = new LoremIpsum({
+			// 	sentencesPerParagraph: {
+			// 	  max: 2,
+			// 	  min: 1
+			// 	}
+			//     });
 
 
 		return {
+			// description:  lorem.generateSentences(1), // description || '',
+			// productName: lorem.generateWords(3), // productName || '',
+			// manufacturer: lorem.generateWords(3), // manufacturer || '',
+			// quantity: Math.floor(Math.random(100) * 900), // quantity || 0,
+			// price: Math.floor(Math.random(100) * 900), // price || 0,
 			updateVisits: updateVisits,
-			description:  lorem.generateSentences(1), // description || '',
-			productName: lorem.generateWords(3), // productName || '',
-			manufacturer: lorem.generateWords(3), // manufacturer || '',
-			quantity: Math.floor(Math.random(100) * 900), // quantity || 0,
-			price: Math.floor(Math.random(100) * 900), // price || 0,
+			description: description || '',
+			productName: productName || '',
+			manufacturer: manufacturer || '',
+			quantity: quantity || 0,
+			price: price || 0,
 			id: id,
 			viewMode: viewMode,
+			updating,
+			handleChange,
 		};
 	},
 	validationSchema: Yup.object().shape({
+		description: Yup.string().required('Description is required!'),
+		manufacturer: Yup.string().required('Manufacturer is required!'),
 		productName: Yup.string().required('Product Name is required!'),
-		quantity: Yup.number().required('Quantity is required!'),
-		price: Yup.number().required('Price is required!'),
+		quantity: Yup.number().moreThan(0).required('Quantity is required!'),
+		price: Yup.number().moreThan(0).required('Price is required!'),
 	}),
 	handleSubmit(values, { props }) {
+
+		values.handleChange(false);
+
 		props.onSave(values);
 	}
 })(AddForm);
