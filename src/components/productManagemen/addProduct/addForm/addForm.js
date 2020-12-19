@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { withFormik, Form, Field } from 'formik';
 import './addForm.css';
 import * as Yup from 'yup';
@@ -10,14 +10,6 @@ import { Prompt } from 'react-router-dom';
 
 export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 
-	const updateVisits = values.updateVisits;
-
-	useEffect(() => {
-		if(values.id) {
-			updateVisits();
-		}
-	}, [updateVisits, values.id]);
-
 	return (
 		<div className="product-form-container">	
 
@@ -27,8 +19,7 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 			/>				
 
 			<Form 
-			className="product-form" 
-			onChange={() => values.handleChange(true)}
+			className="product-form"
 			>
 				<Card className="text-center product-details-card" bg="Info">
 
@@ -114,7 +105,6 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 const FormikAddForm = withFormik({
 	enableReinitialize: true,
 	mapPropsToValues({
-		updateVisits,
 		description,
 		productName,
 		manufacturer,
@@ -127,7 +117,6 @@ const FormikAddForm = withFormik({
 	}){
 
 		return {
-			updateVisits: updateVisits,
 			description: description || '',
 			productName: productName || '',
 			manufacturer: manufacturer || '',
@@ -150,7 +139,16 @@ const FormikAddForm = withFormik({
 
 		values.handleChange(false);
 
-		props.onSave(values);
+		const product = {
+			description: values.description,
+			productName: values.productName,
+			manufacturer: values.manufacturer,
+			quantity: values.quantity,
+			price: values.price,
+			id: values.id,
+		}
+
+		props.onSave(product);
 	}
 })(AddForm);
 

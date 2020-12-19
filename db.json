@@ -4,8 +4,8 @@
       "description": "TV 40\" 4K Smart TV. ",
       "productName": "TV 40\"",
       "manufacturer": "LG",
-      "quantity": 40,
-      "price": 500,
+      "quantity": 401,
+      "price": 65456,
       "id": 7886,
       "viewMode": false,
       "updating": true,
@@ -32,14 +32,15 @@
       "updating": true
     },
     {
-      "description": "sapien est ultricies nunc, non tincidunt erat ante eu enim.",
+      "description": "sapien est ultricies nunc, non tincidunt erat ante eu enim.nc",
       "productName": "XBox",
       "manufacturer": "Microsoft",
       "quantity": 10,
       "price": 3000,
       "id": 6248,
       "viewMode": false,
-      "updating": true
+      "updating": true,
+      "loggedIn": true
     },
     {
       "description": "Nulla imperdiet dui a purus dictum, vitae bibendum lectus porttitor.",
@@ -80,6 +81,74 @@
       "id": 6097,
       "viewMode": false,
       "updating": true
+    },
+    {
+      "description": "Laptop HP 8 GB RAM 500GB HDD Core i7 Processo",
+      "productName": "Laptop",
+      "manufacturer": "Lenovo",
+      "quantity": 15,
+      "price": 1500,
+      "id": 7678,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "test coment",
+      "productName": "test",
+      "manufacturer": "xxxx",
+      "quantity": 663,
+      "price": 442222,
+      "id": 8644,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "test desc",
+      "productName": "Fernando",
+      "manufacturer": "xx",
+      "quantity": 45,
+      "price": 222,
+      "id": 7482,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "sdexxx",
+      "productName": "test11",
+      "manufacturer": "Demo",
+      "quantity": 452,
+      "price": 545,
+      "id": 376,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "sdfds;lsdfjkl\n",
+      "productName": "sdsd",
+      "manufacturer": "ddd",
+      "quantity": 56445,
+      "price": 5241,
+      "id": 8807,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "sd.dslk,sdj",
+      "productName": "dsdsnm,",
+      "manufacturer": "sdkmdsl",
+      "quantity": 32163,
+      "price": 654,
+      "id": 8201,
+      "viewMode": false,
+      "updating": true
+    },
+    {
+      "description": "XXXXCCCC",
+      "productName": "Toledo",
+      "manufacturer": "DDDD",
+      "quantity": 44555,
+      "price": 5423,
+      "id": 6786
     }
   ],
   "users": [
@@ -584,19 +653,19 @@
   ],
   "visits": [
     {
-      "visits": 5,
+      "visits": 12,
       "productId": 7886,
       "productName": "TV 40\"",
       "id": 8663
     },
     {
-      "visits": 2,
+      "visits": 4,
       "productId": 7046,
       "productName": "Laptop",
       "id": 1919
     },
     {
-      "visits": 1,
+      "visits": 2,
       "productId": 6851,
       "productName": "Cellphone",
       "id": 161
@@ -608,7 +677,7 @@
       "id": 5660
     },
     {
-      "visits": 3,
+      "visits": 4,
       "productId": 1263,
       "productName": "iPhone 8",
       "id": 993
@@ -620,7 +689,7 @@
       "id": 1266
     },
     {
-      "visits": 4,
+      "visits": 5,
       "productId": 6248,
       "productName": "XBox",
       "id": 8724
@@ -630,6 +699,36 @@
       "productId": 7886,
       "productName": "TV 40\"",
       "id": 4061
+    },
+    {
+      "visits": 1,
+      "productId": 1263,
+      "productName": "iPhone 8",
+      "id": 2457
+    },
+    {
+      "visits": 1,
+      "productId": 7399,
+      "productName": "Laptop",
+      "id": 183
+    },
+    {
+      "visits": 1,
+      "productId": 7886,
+      "productName": "TV 40\"",
+      "id": 6793
+    },
+    {
+      "visits": 1,
+      "productId": 7886,
+      "productName": "TV 40\"",
+      "id": 2797
+    },
+    {
+      "visits": 1,
+      "productId": 1263,
+      "productName": "iPhone 8",
+      "id": 5719
     }
   ]
 }

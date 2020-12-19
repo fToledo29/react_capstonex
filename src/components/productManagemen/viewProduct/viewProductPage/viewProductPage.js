@@ -21,7 +21,7 @@ class ViewProductPage extends React.Component {
 
 		this.state = {
 			viewMode: false,
-			updating: true
+			updating: false,
 		};
 
 		this.saveProduct = this.saveProduct.bind(this);
@@ -52,6 +52,7 @@ class ViewProductPage extends React.Component {
 	onChangeViewMode(viewMode) {
 
 		this.setState({viewMode: viewMode});
+		this.setState({updating: viewMode});
 	}
 
 	getProduct(productId) {

@@ -1,13 +1,11 @@
 
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import FormikAddForm from '../addForm/addForm';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as productActions from '../../../../redux/actions/productActions';
 import * as visitsActions from '../../../../redux/actions/visitsActions';
 import './addProductPage.css';
-// import toastr from 'toastr';
 
 
 class AddProductPage extends React.Component {
@@ -21,78 +19,20 @@ class AddProductPage extends React.Component {
 		super(props);
 
 		this.state = {
-			updating: true
+			updating: true,
+			product: {
+				description: '',
+				productName: '',
+				manufacturer: '',
+				quantity: 0,
+				price: 0,
+				id: '',
+			}
 		};
 
 		this.saveProduct = this.saveProduct.bind(this);
 
-		this.updateVisits = this.updateVisits.bind(this);
-
 		this.handleChange = this.handleChange.bind(this);
-	}
-
-	componentDidMount() {
-
-		this.productId = this.props.match.params.id;
-
-		if (this.productId) {
-
-			this.getProduct(this.productId);
-		}
-	}
-
-	getProduct(productId) {
-
-		this.props.actions.getProduct(productId)
-		.then((product) => {
-			// TODO: Add toastr
-		})
-		.catch(error => {
-			alert(error);
-		});
-
-		this.props.vistActions.getVisits();
-	}
-
-	updateVisits() {
-		if (this.productId) {
-
-			const productId = parseInt(this.productId, 10);
-
-			const visits = [...this.props.visitData];
-
-			const visit = visits.find((i) => i.productId === productId);
-
-			if(!visit) {
-				const newVisit = {
-					visits: 1,
-					productId: productId,
-					productName: this.props.product.productName,
-				};
-				this.props.vistActions.addVisit(newVisit)
-				.then((res) => {
-		
-					// TODO: Add toastr
-		
-				})
-				.catch(error => {
-					alert(error);
-				});
-			} else {
-
-				const visitsUpdate = visit.visits + 1
-
-				this.props.vistActions.updateVisits({id: visit.id, visits: visitsUpdate})
-				.then((res) => {
-		
-					// TODO: Add toastr
-		
-				})
-				.catch(error => {
-					alert(error);
-				});
-			}
-		}
 	}
 
 	saveProduct(product) {
@@ -138,13 +78,12 @@ class AddProductPage extends React.Component {
 				<h1>Add Product</h1>
 				<FormikAddForm 
 				onSave={this.saveProduct}
-				updateVisits={this.updateVisits}
-				description={this.props.product.description}
-				productName={this.props.product.productName}
-				manufacturer={this.props.product.manufacturer}
-				quantity={this.props.product.quantity}
-				price={this.props.product.price}
-				id={this.props.product.id}
+				description={this.state.product.description}
+				productName={this.state.product.productName}
+				manufacturer={this.state.product.manufacturer}
+				quantity={this.state.product.quantity}
+				price={this.state.product.price}
+				id={this.state.product.id}
 				viewMode={false}
 				updating={this.state.updating}
 				handleChange={this.handleChange}
