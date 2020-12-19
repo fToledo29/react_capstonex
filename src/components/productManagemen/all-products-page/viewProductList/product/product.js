@@ -54,7 +54,7 @@ class Product extends React.Component {
 
 	render() {
 
-		const path = `/viwProduct/${this.props.product.id}`;
+		const path = `/viewProduct/${this.props.product.id}`;
 
 		setProductToUpdate(this.props.product);
 

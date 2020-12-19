@@ -1,239 +1,95 @@
 {
   "products": [
     {
-      "description": "Tempor labore ut commodo laboris fugiat incididunt magna Lorem non tempor.",
-      "productName": "do est esse",
-      "manufacturer": "sit duis non",
-      "quantity": 87,
-      "price": 197,
-      "id": 3580,
+      "description": "TV 40\" 4K Smart TV. ",
+      "productName": "TV 40\"",
+      "manufacturer": "LG",
+      "quantity": 40,
+      "price": 500,
+      "id": 7886,
       "viewMode": false,
+      "updating": true,
       "loggedIn": true
     },
     {
-      "description": "Dolore aliquip ex laborum est exercitation velit do amet.",
-      "productName": "veniam deserunt magna",
-      "manufacturer": "ipsum irure non",
-      "quantity": 672,
-      "price": 300,
-      "id": 4584,
-      "viewMode": false
-    },
-    {
-      "description": "Labore sint dolore incididunt amet enim dolore fugiat sint Lorem veniam deserunt.",
-      "productName": "enim est duis",
-      "manufacturer": "magna voluptate Lorem",
-      "quantity": 694,
-      "price": 843,
-      "id": 8341,
-      "viewMode": false
-    },
-    {
-      "description": "Labore ex veniam aliqua elit aliqua.",
-      "productName": "mollit minim nostrud",
-      "manufacturer": "velit nisi eu",
-      "quantity": 580,
-      "price": 216,
-      "id": 8096,
-      "viewMode": false
-    },
-    {
-      "description": "Adipisicing est occaecat labore sit quis laborum et.",
-      "productName": "amet quis do",
-      "manufacturer": "ullamco fugiat incididunt",
-      "quantity": 282,
-      "price": 570,
-      "id": 7164,
-      "viewMode": false
-    },
-    {
-      "description": "Reprehenderit dolore proident et fugiat.",
-      "productName": "deserunt laborum duis",
-      "manufacturer": "deserunt ut consequat",
-      "quantity": 860,
-      "price": 276,
-      "id": 5935,
-      "viewMode": false
-    },
-    {
-      "description": "Est exercitation nostrud incididunt enim occaecat cupidatat deserunt cupidatat veniam nostrud qui.",
-      "productName": "veniam cupidatat tempor",
-      "manufacturer": "eiusmod minim est",
-      "quantity": 887,
-      "price": 658,
-      "id": 6087,
-      "viewMode": false
-    },
-    {
-      "description": "Irure ea Lorem id mollit velit quis id deserunt ex nostrud cupidatat sunt laborum.",
-      "productName": "excepteur voluptate cupidatat",
-      "manufacturer": "velit non adipisicing",
-      "quantity": 432,
-      "price": 443,
-      "id": 672,
-      "viewMode": false
-    },
-    {
-      "description": "Fugiat non occaecat sit reprehenderit veniam veniam.",
-      "productName": "aute et aute",
-      "manufacturer": "qui deserunt qui",
-      "quantity": 150,
-      "price": 795,
-      "id": 2573,
-      "viewMode": false
-    },
-    {
-      "description": "Nisi id eiusmod ipsum enim magna pariatur consequat Lorem dolore irure.",
-      "productName": "et consectetur cupidatat",
-      "manufacturer": "quis exercitation mollit",
-      "quantity": 213,
-      "price": 632,
-      "id": 3627,
-      "viewMode": false
-    },
-    {
-      "description": "In id eiusmod eiusmod tempor do in exercitation nostrud duis fugiat.",
-      "productName": "aliqua occaecat laborum",
-      "manufacturer": "est dolore ipsum",
-      "quantity": 327,
-      "price": 213,
-      "id": 7761,
-      "viewMode": false
-    },
-    {
-      "description": "Duis dolore magna aute esse enim occaecat dolore exercitation.",
-      "productName": "ipsum sint sint",
-      "manufacturer": "excepteur quis deserunt",
-      "quantity": 33,
-      "price": 198,
-      "id": 8941,
-      "viewMode": false,
-      "updating": false
-    },
-    {
-      "description": "",
-      "productName": "Testxxx",
-      "manufacturer": "",
-      "quantity": 0,
-      "price": 0,
-      "id": 4635,
+      "description": "Laptop Dell\n16 GB RAM\n1TB HDD\nCore i7 Processor ",
+      "productName": "Laptop",
+      "manufacturer": "Dell",
+      "quantity": 10,
+      "price": 2000,
+      "id": 7046,
       "viewMode": false,
       "updating": true
     },
     {
-      "description": "",
-      "productName": "test",
-      "manufacturer": "erre",
-      "quantity": 0,
-      "price": 0,
-      "id": 1319,
+      "description": "Vivamus at est leo. Phasellus interdum ligula ex, eu gravida elit fermentum a. ",
+      "productName": "iPhone 8",
+      "manufacturer": "Apple",
+      "quantity": 8,
+      "price": 2000,
+      "id": 1263,
       "viewMode": false,
       "updating": true
     },
     {
-      "description": "",
-      "productName": "tesstttttt",
-      "manufacturer": "",
-      "quantity": 0,
-      "price": 0,
-      "id": 3174,
+      "description": "sapien est ultricies nunc, non tincidunt erat ante eu enim.",
+      "productName": "XBox",
+      "manufacturer": "Microsoft",
+      "quantity": 10,
+      "price": 3000,
+      "id": 6248,
       "viewMode": false,
       "updating": true
     },
     {
-      "description": "",
-      "productName": "Test",
-      "manufacturer": "",
-      "quantity": 0,
-      "price": 0,
-      "id": 4347,
-      "viewMode": false,
-      "updating": false
-    },
-    {
-      "description": "",
-      "productName": "tesxxccc",
-      "manufacturer": "",
-      "quantity": 0,
-      "price": 0,
-      "id": 2766,
+      "description": "Nulla imperdiet dui a purus dictum, vitae bibendum lectus porttitor.",
+      "productName": "Cellphone",
+      "manufacturer": "Samsung",
+      "quantity": 5,
+      "price": 2000,
+      "id": 6851,
       "viewMode": false,
       "updating": true
     },
     {
-      "description": "",
-      "productName": "tests",
-      "manufacturer": "",
-      "quantity": 0,
-      "price": 0,
-      "id": 7940,
+      "description": "Laptop HP 8 GB RAM 500GB HDD Core i7 Processor",
+      "productName": "Laptop",
+      "manufacturer": "HP",
+      "quantity": 6,
+      "price": 1500,
+      "id": 7399,
       "viewMode": false,
       "updating": true
     },
     {
-      "description": "",
-      "productName": "ddddd",
-      "manufacturer": "",
-      "quantity": 0,
-      "price": 0,
-      "id": 835,
+      "description": "Maecenas nec erat quis enim eleifend mattis in a ipsum.",
+      "productName": "Headphones",
+      "manufacturer": "Bose",
+      "quantity": 5,
+      "price": 1100,
+      "id": 7887,
       "viewMode": false,
       "updating": true
     },
     {
-      "description": "",
-      "productName": "fest",
-      "manufacturer": "",
-      "quantity": 0,
-      "price": 0,
-      "id": 7256,
-      "viewMode": false,
-      "updating": true
-    },
-    {
-      "description": "test Desc",
-      "productName": "dsddxxx prod",
-      "manufacturer": "Test",
-      "quantity": 2,
-      "price": 2,
-      "id": 623,
-      "viewMode": false,
-      "updating": true
-    },
-    {
-      "description": "Test desc",
-      "productName": "Prod test",
-      "manufacturer": "Manf",
-      "quantity": 555,
-      "price": 444,
+      "description": "Pellentesque at dictum dui, ut porta neque",
+      "productName": "Dron",
+      "manufacturer": "Logitech",
+      "quantity": 10,
+      "price": 1500,
       "id": 6097,
-      "viewMode": false,
-      "updating": true
-    },
-    {
-      "description": "Desc prod",
-      "productName": "hhh Test",
-      "manufacturer": "manf",
-      "quantity": 4,
-      "price": 5,
-      "id": 7781,
       "viewMode": false,
       "updating": true
     }
   ],
   "users": [
     {
-      "id": 1,
-      "userName": "jonhConnor",
-      "firstName": "Jonh",
-      "lastName": "Conner",
-      "password": "test123"
-    },
-    {
       "id": 2,
       "userName": "fernandotoledo",
       "firstName": "Fernando",
       "lastName": "Toledo",
+      "email": "fernandotoledo23@gmail.com",
+      "mobileNumber": "2489914897",
       "password": "test123"
     },
     {
@@ -715,32 +571,65 @@
       "mobileNumber": "7898798678",
       "password": "test123",
       "id": "f69c8063-1f3d-42ca-860f-9917e3399a3a"
+    },
+    {
+      "userName": "fernandotoledo",
+      "email": "fernandotoledo@wipro.com",
+      "firstName": "Fernando",
+      "lastName": "Toledo",
+      "mobileNumber": "2984575665",
+      "password": "test123",
+      "id": "08313e73-e8af-452f-9293-f45f20081b72"
     }
   ],
   "visits": [
     {
-      "visits": 2,
-      "productId": 8341,
-      "productName": "enim est duis",
-      "id": 4297
-    },
-    {
-      "visits": 1,
-      "productId": 8096,
-      "productName": "mollit minim nostrud",
-      "id": 4433
+      "visits": 5,
+      "productId": 7886,
+      "productName": "TV 40\"",
+      "id": 8663
     },
     {
       "visits": 2,
-      "productId": 3580,
-      "productName": "do ullamco mollit",
-      "id": 6629
+      "productId": 7046,
+      "productName": "Laptop",
+      "id": 1919
     },
     {
       "visits": 1,
-      "productId": 4584,
-      "productName": "veniam deserunt magna",
-      "id": 453
+      "productId": 6851,
+      "productName": "Cellphone",
+      "id": 161
+    },
+    {
+      "visits": 1,
+      "productId": 7887,
+      "productName": "Headphones",
+      "id": 5660
+    },
+    {
+      "visits": 3,
+      "productId": 1263,
+      "productName": "iPhone 8",
+      "id": 993
+    },
+    {
+      "visits": 1,
+      "productId": 6097,
+      "productName": "Dron",
+      "id": 1266
+    },
+    {
+      "visits": 4,
+      "productId": 6248,
+      "productName": "XBox",
+      "id": 8724
+    },
+    {
+      "visits": 1,
+      "productId": 7886,
+      "productName": "TV 40\"",
+      "id": 4061
     }
   ]
 }

@@ -20,7 +20,8 @@ class ViewProductPage extends React.Component {
 		super(props);
 
 		this.state = {
-			viewMode: false
+			viewMode: false,
+			updating: true
 		};
 
 		this.saveProduct = this.saveProduct.bind(this);
@@ -28,6 +29,8 @@ class ViewProductPage extends React.Component {
 		this.updateVisits = this.updateVisits.bind(this);
 
 		this.onChangeViewMode = this.onChangeViewMode.bind(this);
+
+		this.handleChange = this.handleChange.bind(this);
 	}
 
 	componentDidMount() {
@@ -139,6 +142,9 @@ class ViewProductPage extends React.Component {
 		}
 	}
 
+	handleChange(updating) {
+		this.setState({updating: updating});
+	}
 
 	render() {
 		return (
@@ -158,6 +164,8 @@ class ViewProductPage extends React.Component {
 				viewMode={this.state.viewMode}
 				changeViewMode={this.onChangeViewMode}
 				loggedIn={this.props.userData.loggedIn}
+				updating={this.state.updating}
+				handleChange={this.handleChange}
 
 				></FormikAddForm>
 			</div>

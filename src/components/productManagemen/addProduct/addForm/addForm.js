@@ -126,20 +126,7 @@ const FormikAddForm = withFormik({
 		handleChange,
 	}){
 
-			// const lorem = new LoremIpsum({
-			// 	sentencesPerParagraph: {
-			// 	  max: 2,
-			// 	  min: 1
-			// 	}
-			//     });
-
-
 		return {
-			// description:  lorem.generateSentences(1), // description || '',
-			// productName: lorem.generateWords(3), // productName || '',
-			// manufacturer: lorem.generateWords(3), // manufacturer || '',
-			// quantity: Math.floor(Math.random(100) * 900), // quantity || 0,
-			// price: Math.floor(Math.random(100) * 900), // price || 0,
 			updateVisits: updateVisits,
 			description: description || '',
 			productName: productName || '',

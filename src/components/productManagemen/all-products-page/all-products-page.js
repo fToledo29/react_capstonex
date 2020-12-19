@@ -151,7 +151,9 @@ class AllProductsPage extends React.Component {
 				disabled={!this.props.data.productsToDelete.length === 1}
 				className="product-list-button product-left"
 				variant="info">
-					<Link onClick={() => this.setViewModeProduct()} to={{ pathname: `/viwProduct/${this.props.data.productsToDelete[0].id}` }}> 
+					<Link 
+					onClick={() => this.setViewModeProduct()} 
+					to={{ pathname: `/viewProduct/${this.props.data.productsToDelete[0].id}` }}> 
 						Update Product 
 					</Link>
 				</Button> 
@@ -184,7 +186,7 @@ class AllProductsPage extends React.Component {
 			className="product-list-button"
 			onClick={() => this.onDelete()} 
 			variant="info">
-				Delete Product
+				Delete Product(s)
 			</Button>
 		</>);
 

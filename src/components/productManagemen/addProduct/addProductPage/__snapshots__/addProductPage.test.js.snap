@@ -6,8 +6,10 @@ exports[`ProductList AddProductPage Renders correctly 1`] = `
     Add Product
   </h1>
   <WithFormik(AddForm)
+    handleChange={[Function]}
     onSave={[Function]}
     updateVisits={[Function]}
+    updating={true}
     viewMode={false}
   />
 </Fragment>

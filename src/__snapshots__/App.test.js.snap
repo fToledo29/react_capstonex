@@ -74,7 +74,7 @@ exports[`App App Renders correctly 1`] = `
             "type": [Function],
           }
         }
-        path="/viwProduct/:id"
+        path="/viewProduct/:id"
       />
       <Route
         component={

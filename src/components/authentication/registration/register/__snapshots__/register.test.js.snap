@@ -90,6 +90,10 @@ exports[`Register Register Renders correctly 1`] = `
         <div
           className="register-component"
         >
+          <Prompt
+            message={[Function]}
+            when={false}
+          />
           <Form
             className="register-form"
             inline={false}

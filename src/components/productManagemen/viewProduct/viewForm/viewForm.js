@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { withFormik, Form, Field } from 'formik';
 import { Button, Card, } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
-import { LoremIpsum } from 'lorem-ipsum';
+import { Prompt, useHistory } from 'react-router-dom';
 import * as Yup from 'yup';
 import './viewForm.css';
 import RequestLoginDialog from '../../../authentication/requestLogin/requestLoginDialog';
@@ -40,20 +39,26 @@ export const AddForm = ({ values, errors, touched, isSubmitting }) => {
 	}, [updateVisits, values.id]);
 
 	return (
-		<div className="product-form-container">					
+		<div className="product-form-container">
+
+			<Prompt
+			when={values.updating}
+			message={() => 'Are you sure you want to leave this page?'}
+			/>					
 			
 			<RequestLoginDialog 
 			show={show}
 			handleClose={handleClose}
 			goToLogin={goToLogin} />
 
-			<Form className="product-form">
+			<Form
+			onChange={() => values.handleChange(true)} 
+			className="product-form">
 				<div className="edit-button-container">
 					<Button 
 					className="edit-button"
 					onClick={() => onEdit()}
 					variant="info">
-					{/* // disabled={isSubmitting || updating} */}
 						{values.viewMode ? 'Edit' : 'Cancel'}
 					</Button>
 
@@ -177,35 +182,36 @@ const FormikAddForm = withFormik({
 		viewMode,
 		changeViewMode,
 		loggedIn,
+		updating,
+		handleChange
 	}){
-
-			const lorem = new LoremIpsum({
-				sentencesPerParagraph: {
-				  max: 2,
-				  min: 1
-				}
-			    });
-
 
 		return {
 			updateVisits: updateVisits,
-			description:  lorem.generateSentences(1), // description || '',
-			productName: lorem.generateWords(3), // productName || '',
-			manufacturer: lorem.generateWords(3), // manufacturer || '',
-			quantity: Math.floor(Math.random(100) * 900), // quantity || 0,
-			price: Math.floor(Math.random(100) * 900), // price || 0,
+			description:  description || '',
+			productName: productName || '',
+			manufacturer: manufacturer || '',
+			quantity: quantity || 0,
+			price: price || 0,
 			id: id,
 			viewMode: viewMode,
 			changeViewMode: changeViewMode,
 			loggedIn: loggedIn,
+			updating,
+			handleChange,
 		};
 	},
 	validationSchema: Yup.object().shape({
+		description: Yup.string().required('Description is required!'),
+		manufacturer: Yup.string().required('Manufacturer is required!'),
 		productName: Yup.string().required('Product Name is required!'),
-		quantity: Yup.number().required('Quantity is required!'),
-		price: Yup.number().required('Price is required!'),
+		quantity: Yup.number().moreThan(0).required('Quantity is required!'),
+		price: Yup.number().moreThan(0).required('Price is required!'),
 	}),
 	handleSubmit(values, { props }) {
+
+		values.handleChange(false);
+
 		props.onSave(values);
 	}
 })(AddForm);

@@ -3,88 +3,38 @@
 exports[`Menu Menu Renders correctly 1`] = `
 <div>
   <Navbar
+    animation="false"
     bg="dark"
     collapseOnSelect={false}
-    expand={true}
+    expand="lg"
     variant="dark"
   >
-    <Nav
-      className="mr-auto"
-      fill={false}
-      justify={false}
+    <NavbarToggle
+      animation="false"
+      aria-controls="basic-navbar-nav"
+      label="Toggle navigation"
+    />
+    <NavbarCollapse
+      animation="false"
+      id="basic-navbar-nav"
     >
-      <NavLink
-        activeClassName="active"
-        className="nav-link"
-        exact={true}
-        to="/"
-      >
-        <FontAwesomeIcon
-          border={false}
-          className="icons"
-          fixedWidth={false}
-          flip={null}
-          icon="home"
-          inverse={false}
-          listItem={false}
-          mask={null}
-          pull={null}
-          pulse={false}
-          rotation={null}
-          size="1x"
-          spin={false}
-          swapOpacity={false}
-          symbol={false}
-          title=""
-          transform={null}
-        />
-        <span
-          className="login-label"
-        >
-          Home
-        </span>
-      </NavLink>
-      <NavLink
-        activeClassName="active"
-        className="nav-link menu-about"
-        to="/about"
-      >
-        About
-      </NavLink>
-      <NavLink
-        activeClassName="active"
-        className="nav-link menu-products"
-        to="/products"
-      >
-        Products
-      </NavLink>
-      <NavLink
-        activeClassName="active"
-        className="nav-link menu-chart"
-        to="/chart"
-      >
-        Top Viewed Products
-      </NavLink>
-    </Nav>
-    <Form
-      className="nav-buttons"
-      inline={true}
-    >
-      <Button
-        active={false}
-        disabled={false}
-        variant="outline-info"
+      <Nav
+        className="mr-auto"
+        fill={false}
+        justify={false}
       >
         <NavLink
           activeClassName="active"
-          to="/login"
+          className="nav-link"
+          exact={true}
+          to="/"
         >
           <FontAwesomeIcon
             border={false}
             className="icons"
             fixedWidth={false}
             flip={null}
-            icon="sign-in-alt"
+            icon="home"
             inverse={false}
             listItem={false}
             mask={null}
@@ -99,48 +49,109 @@ exports[`Menu Menu Renders correctly 1`] = `
             transform={null}
           />
           <span
-            className="login-label login"
+            className="login-label"
           >
-            Login
+            Home
           </span>
         </NavLink>
-      </Button>
-      <Button
-        active={false}
-        disabled={false}
-        variant="outline-info"
-      >
         <NavLink
           activeClassName="active"
-          to="/register"
+          className="nav-link menu-about"
+          to="/about"
         >
-          <FontAwesomeIcon
-            border={false}
-            className="icons"
-            fixedWidth={false}
-            flip={null}
-            icon="user-plus"
-            inverse={false}
-            listItem={false}
-            mask={null}
-            pull={null}
-            pulse={false}
-            rotation={null}
-            size="1x"
-            spin={false}
-            swapOpacity={false}
-            symbol={false}
-            title=""
-            transform={null}
-          />
-          <span
-            className="login-label register"
-          >
-            Register
-          </span>
+          About
         </NavLink>
-      </Button>
-    </Form>
+        <NavLink
+          activeClassName="active"
+          className="nav-link menu-products"
+          to="/products"
+        >
+          Products
+        </NavLink>
+        <NavLink
+          activeClassName="active"
+          className="nav-link menu-chart"
+          to="/chart"
+        >
+          Top Viewed Products
+        </NavLink>
+      </Nav>
+      <Form
+        className="nav-buttons"
+        inline={true}
+      >
+        <Button
+          active={false}
+          disabled={false}
+          variant="outline-info"
+        >
+          <NavLink
+            activeClassName="active"
+            to="/login"
+          >
+            <FontAwesomeIcon
+              border={false}
+              className="icons"
+              fixedWidth={false}
+              flip={null}
+              icon="sign-in-alt"
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size="1x"
+              spin={false}
+              swapOpacity={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <span
+              className="login-label login"
+            >
+              Login
+            </span>
+          </NavLink>
+        </Button>
+        <Button
+          active={false}
+          disabled={false}
+          variant="outline-info"
+        >
+          <NavLink
+            activeClassName="active"
+            to="/register"
+          >
+            <FontAwesomeIcon
+              border={false}
+              className="icons"
+              fixedWidth={false}
+              flip={null}
+              icon="user-plus"
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size="1x"
+              spin={false}
+              swapOpacity={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <span
+              className="login-label register"
+            >
+              Register
+            </span>
+          </NavLink>
+        </Button>
+      </Form>
+    </NavbarCollapse>
   </Navbar>
 </div>
 `;
